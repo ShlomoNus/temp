@@ -1,0 +1,61 @@
+<html dir="rtl" lang="he">
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .underLine {
+            text-decoration: underline;
+        }
+
+        .image-container {
+            height: auto;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="image-container"><img src="image.jpg" alt="" /></div>
+        <p class="bold">{{header_text}}</p>
+    </header>
+
+    <br />
+    <div class="recipient">
+        <div class="underLine bold">לכבוד {{name}}</div>
+        <div class="">{{role}}</div>
+        <div class="">{{department}}</div>
+    </div>
+    <br />
+
+    <div class="bold">{{listIntro_1_text}}</div>
+    <div class="bold">{{listIntro_2_text}}</div>
+    <ol>
+        {{#each listItems}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ol>
+    <p class="bold">{{main_text}}</p>
+    <div class="">{{orders_text_1}}<br />{{orders_text_2}}<br /> {{orders_text_3}}</div>
+
+    <p class="">{{footer_text_1}}<br />{{footer_text_2}}<br /></p>
+</body>
+
+</html>
