@@ -5,4 +5,4 @@ command -v npm >/dev/null 2>&1 || {
   [ -f "$HOME/.zshrc" ] && . "$HOME/.zshrc" 2>/dev/null
   [ -f "$HOME/.bashrc" ] && . "$HOME/.bashrc" 2>/dev/null
 }
-npm run lint
+npm run lint:fix
