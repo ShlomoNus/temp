@@ -1,5 +1,5 @@
-import { createDefaultPreset } from 'ts-jest';
-import type { Config } from 'jest';
+import { createDefaultPreset } from 'ts-jest'
+import type { Config } from 'jest'
 
 const config: Config = {
   ...createDefaultPreset(),
@@ -10,6 +10,6 @@ const config: Config = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
   },
-};
+}
 
-export default config;
+export default config

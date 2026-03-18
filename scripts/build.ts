@@ -1,31 +1,31 @@
-import { build as esbuild } from 'esbuild';
-import { TsconfigPathsPlugin } from '@esbuild-plugins/tsconfig-paths';
-import fs from 'fs';
-import JSZip from 'jszip';
-import { resolve } from 'path';
+import { build as esbuild } from 'esbuild'
+import { TsconfigPathsPlugin } from '@esbuild-plugins/tsconfig-paths'
+import fs from 'fs'
+import JSZip from 'jszip'
+import { resolve } from 'path'
 
-const root = process.cwd();
+const root = process.cwd()
 
 /** "service-setup" → "serviceSetup" */
 function packageNameToCamelCase(packageName: string): string {
   return packageName
     .split(/[-_]/)
     .map((part, i) => (i === 0 ? part.toLowerCase() : part.charAt(0).toUpperCase() + part.slice(1).toLowerCase()))
-    .join('');
+    .join('')
 }
 
-const pkg = JSON.parse(fs.readFileSync(resolve(root, 'package.json'), 'utf-8')) as { name: string };
-const lambdaOutputDir = resolve(root, 'lambdaOutput');
-const zipName = `${packageNameToCamelCase(pkg.name)}.zip`;
-const outputFile = resolve(lambdaOutputDir, 'index.js');
-const zipFile = resolve(lambdaOutputDir, zipName);
+const pkg = JSON.parse(fs.readFileSync(resolve(root, 'package.json'), 'utf-8')) as { name: string }
+const lambdaOutputDir = resolve(root, 'lambdaOutput')
+const zipName = `${packageNameToCamelCase(pkg.name)}.zip`
+const outputFile = resolve(lambdaOutputDir, 'index.js')
+const zipFile = resolve(lambdaOutputDir, zipName)
 
-const isProd = process.argv.includes('--prod');
+const isProd = process.argv.includes('--prod')
 
 /** Remove previous lambda output and zip so we start clean */
 async function cleanPreviousBuildAndZip(): Promise<void> {
-  await fs.promises.rm(lambdaOutputDir, { recursive: true, force: true });
-  await fs.promises.mkdir(lambdaOutputDir, { recursive: true });
+  await fs.promises.rm(lambdaOutputDir, { recursive: true, force: true })
+  await fs.promises.mkdir(lambdaOutputDir, { recursive: true })
 }
 
 async function buildLambda(): Promise<void> {
@@ -46,31 +46,31 @@ async function buildLambda(): Promise<void> {
         tsconfig: resolve(root, 'tsconfig.json'),
       }),
     ],
-  });
+  })
 }
 
 async function zipDist(): Promise<void> {
-  const zip = new JSZip();
-  zip.file('index.js', fs.readFileSync(outputFile));
-  const mapFile = `${outputFile}.map`;
+  const zip = new JSZip()
+  zip.file('index.js', fs.readFileSync(outputFile))
+  const mapFile = `${outputFile}.map`
   if (fs.existsSync(mapFile)) {
-    zip.file('index.js.map', fs.readFileSync(mapFile));
+    zip.file('index.js.map', fs.readFileSync(mapFile))
   }
-  const buffer = await zip.generateAsync({ type: 'nodebuffer' });
-  fs.writeFileSync(zipFile, buffer);
+  const buffer = await zip.generateAsync({ type: 'nodebuffer' })
+  fs.writeFileSync(zipFile, buffer)
 }
 
 async function build(): Promise<void> {
-  await cleanPreviousBuildAndZip();
-  await buildLambda();
-  await zipDist();
+  await cleanPreviousBuildAndZip()
+  await buildLambda()
+  await zipDist()
 
-  console.log(`Built Lambda: ${outputFile}`);
-  console.log(`Created zip: ${zipFile}`);
-  console.log(`Lambda handler: index.handler`);
+  console.log(`Built Lambda: ${outputFile}`)
+  console.log(`Created zip: ${zipFile}`)
+  console.log(`Lambda handler: index.handler`)
 }
 
 build().catch((error) => {
-  console.error(error);
-  process.exit(1);
-});
+  console.error(error)
+  process.exit(1)
+})
