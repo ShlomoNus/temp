@@ -13,7 +13,7 @@ export default defineConfig([
   importX.flatConfigs.recommended as any,
   importX.flatConfigs.typescript as any,
   {
-    files: ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}'],
+    files: ['**/*.{tsx}'],
     languageOptions: {
       parser: tsParser,
       parserOptions: {
@@ -38,6 +38,7 @@ export default defineConfig([
   {
     ignores: [
       "dist",
+      "lambdaOutput",
       "node_modules",
       "coverage",
       "eslint.config.js",
@@ -48,6 +49,13 @@ export default defineConfig([
   // --- rules for your source files ---
   {
     files: ["src/**/*.ts"],
+    languageOptions: {
+      parser: tsParser,
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: process.cwd(),
+      },
+    },
     rules: {
       // --- stylistic rules ---
       "@stylistic/semi": ["error", "always", { omitLastInOneLineBlock: true, omitLastInOneLineClassBody: true }],

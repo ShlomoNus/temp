@@ -5,16 +5,27 @@ import JSZip from 'jszip';
 import { resolve } from 'path';
 
 const root = process.cwd();
-const distDir = resolve(root, 'dist');
-const outputFile = resolve(distDir, 'index.js');
-const zipFile = resolve(distDir, 'lambda.zip');
+
+/** "service-setup" → "serviceSetup" */
+function packageNameToCamelCase(packageName: string): string {
+  return packageName
+    .split(/[-_]/)
+    .map((part, i) => (i === 0 ? part.toLowerCase() : part.charAt(0).toUpperCase() + part.slice(1).toLowerCase()))
+    .join('');
+}
+
+const pkg = JSON.parse(fs.readFileSync(resolve(root, 'package.json'), 'utf-8')) as { name: string };
+const lambdaOutputDir = resolve(root, 'lambdaOutput');
+const zipName = `${packageNameToCamelCase(pkg.name)}.zip`;
+const outputFile = resolve(lambdaOutputDir, 'index.js');
+const zipFile = resolve(lambdaOutputDir, zipName);
 
 const isProd = process.argv.includes('--prod');
 
-/** Remove previous build output and zip so we start clean */
+/** Remove previous lambda output and zip so we start clean */
 async function cleanPreviousBuildAndZip(): Promise<void> {
-  await fs.promises.rm(distDir, { recursive: true, force: true });
-  await fs.promises.mkdir(distDir, { recursive: true });
+  await fs.promises.rm(lambdaOutputDir, { recursive: true, force: true });
+  await fs.promises.mkdir(lambdaOutputDir, { recursive: true });
 }
 
 async function buildLambda(): Promise<void> {
@@ -56,6 +67,7 @@ async function build(): Promise<void> {
 
   console.log(`Built Lambda: ${outputFile}`);
   console.log(`Created zip: ${zipFile}`);
+  console.log(`Lambda handler: index.handler`);
 }
 
 build().catch((error) => {
