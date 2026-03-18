@@ -15,7 +15,7 @@
     },
 
     "resolveJsonModule": true,
-    "types": ["node"],
+    "types": ["node", "aws-lambda"],
 
     "sourceMap": true,
 
