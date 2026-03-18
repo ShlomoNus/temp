@@ -5,4 +5,9 @@ command -v npm >/dev/null 2>&1 || {
   [ -f "$HOME/.zshrc" ] && . "$HOME/.zshrc" 2>/dev/null
   [ -f "$HOME/.bashrc" ] && . "$HOME/.bashrc" 2>/dev/null
 }
-npm run lint:fix
+
+# Lint only staged files that ESLint can check
+STAGED=$(git diff --cached --name-only --diff-filter=ACMR | grep -E '\.(ts|tsx|js|jsx|mjs|cjs)$' || true)
+if [ -n "$STAGED" ]; then
+  echo "$STAGED" | xargs npx eslint --fix
+fi
