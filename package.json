@@ -15,12 +15,14 @@
     "build:js": "tsx scripts/build.ts --prod",
     "build:dev": "tsx scripts/build.ts",
     "typecheck": "tsc --noEmit",
-    "build:types": "tsc -p tsconfig.build.json"
+    "build:types": "tsc -p tsconfig.build.json",
+    "package:lambda": "tsx scripts/package-lambda.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/aws-lambda": "^8.10.145",
     "@esbuild-plugins/tsconfig-paths": "^0.1.2",
     "@jest/globals": "^30.3.0",
     "@stylistic/eslint-plugin": "^5.10.0",
@@ -35,6 +37,7 @@
     "husky": "^9.1.7",
     "jest": "^30.3.0",
     "jiti": "^2.4.2",
+    "jszip": "^3.10.1",
     "ts-jest": "^29.4.6",
     "tsx": "^4.21.0",
     "type-fest": "^5.4.4",
