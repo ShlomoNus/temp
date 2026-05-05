@@ -3,9 +3,9 @@
  * Use when you need dependencies loaded from node_modules at runtime.
  * Run after: npm run build. Output: lambdaOutput/<packageName>.zip (with deps).
  */
-import { execSync } from 'node:child_process'
-import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
-import path from 'node:path'
+import { execSync } from 'child_process'
+import { existsSync, readdirSync, readFileSync, writeFileSync } from 'fs'
+import path from 'path'
 import JSZip from 'jszip'
 
 const root = process.cwd()

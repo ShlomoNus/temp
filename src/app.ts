@@ -8,8 +8,10 @@ app.get("/", (_: Request, res: Response) => {
   res.send("Hello, World!");
 });
 
-app.get("/init", (_: Request, res: Response) => {
-  res.json(initHelper());
+app.get("/init", async(_: Request, res: Response) => {
+  const result = await initHelper();
+
+  res.json({ status: result.status, timestamp: result.timestamp });
 });
 
 export { app };

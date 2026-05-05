@@ -1,4 +1,4 @@
-import path from "node:path";
+import path from "path";
 
 import { defineConfig } from "eslint/config";
 import tseslint from "typescript-eslint";
