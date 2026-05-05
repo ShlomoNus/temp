@@ -22,10 +22,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/aws-lambda": "^8.10.145",
     "@esbuild-plugins/tsconfig-paths": "^0.1.2",
     "@jest/globals": "^30.3.0",
     "@stylistic/eslint-plugin": "^5.10.0",
+    "@types/aws-lambda": "^8.10.145",
     "@types/express": "^5.0.6",
     "@types/jest": "^30.0.0",
     "@types/node": "^25.5.0",
@@ -45,6 +45,7 @@
     "typescript-eslint": "^8.57.1"
   },
   "dependencies": {
+    "@codegenie/serverless-express": "^4.17.1",
     "express": "^5.2.1"
   },
   "overrides": {
