@@ -1455,7 +1455,7 @@ export const files: FileItem[] = [
     id: 90158,
     fileName: "הערכת נזק כלכלי באילת",
     category: "היבטים חברתיים כלכליים",
-    subCategory: "אוכלוסיות ומגזרים",
+    subCategory: "היבטים כלכליים",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
