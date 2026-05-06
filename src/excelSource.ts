@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 type FileItem = {
   fileName: string // שם קובץ
   category: string // קטגוריה
@@ -1016,13 +1017,6 @@ export const files: FileItem[] = [
     language: "english"
   },
 
-  {
-    fileName: "הערכת נזק כלכלי באילת",
-    category: "היבטים חברתיים כלכליים",
-    subCategory: "היבטים כלכליים",
-    informationType: "מחקרים",
-    language: "english"
-  },
   {
     fileName: "הערכת נזקים מאקרו כלכליים",
     category: "היבטים חברתיים כלכליים",
