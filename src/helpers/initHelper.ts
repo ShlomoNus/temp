@@ -1,22 +1,17 @@
-import * as XLSX from "xlsx";
+import type * as XLSX from "xlsx";
 
-import { readExcelFromDocs } from "./readExcelFromDocs";
+import {
+  readExcelFromDocs,
+  workbookRowsBySheet,
+  writeWorkbookJsonToDocs
+} from "./readExcelFromDocs";
 
 function logWorkbookTables(workbook: XLSX.WorkBook): void {
-  console.info(`Sheets: ${workbook.SheetNames.join(", ")}`);
+  const rowsBySheet = workbookRowsBySheet(workbook);
 
-  for (const sheetName of workbook.SheetNames) {
-    const sheet = workbook.Sheets[sheetName];
+  console.info(`Sheets: ${Object.keys(rowsBySheet).join(", ")}`);
 
-    if (!sheet) {
-      continue;
-    }
-
-    const rows = XLSX.utils.sheet_to_json<Record<string, unknown>>(sheet, {
-      defval: null,
-      raw: false
-    });
-
+  for (const [sheetName, rows] of Object.entries(rowsBySheet)) {
     console.info(`\n=== ${sheetName} (${rows.length} rows) ===`);
     console.info(JSON.stringify(rows, null, 2));
   }
@@ -24,8 +19,15 @@ function logWorkbookTables(workbook: XLSX.WorkBook): void {
 
 export async function initHelper() {
   const workbook = await readExcelFromDocs("infoCsv");
+  const jsonPath = await writeWorkbookJsonToDocs(workbook, "infoCsv");
+
+  console.info(`Saved Excel data to ${jsonPath}`);
 
   logWorkbookTables(workbook);
 
-  return { status: "initialized", timestamp: new Date().toISOString() };
+  return {
+    status: "initialized",
+    timestamp: new Date().toISOString(),
+    jsonPath
+  };
 }
