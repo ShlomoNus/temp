@@ -860,5 +860,103 @@ export const files: FileItem[] = [
     subCategory: "תפיסה לאומית לצונמי",
     informationType: "תוכניות",
     language: "hebrew"
-  }
+  },
+  {
+    fileName: "פרמטרים להתרעה להפסקת פעילות",
+    category: "התרעה לרעידת אדמה",
+    subCategory: "מערכות התרעה מקומיות",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "תפיסת הציבור את תרועה",
+    category: "התרעה לרעידת אדמה",
+    subCategory: "מערכת \"תרועה\"",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "סקר היתכנות למערכת התרעה",
+    category: "התרעה לרעידת אדמה",
+    subCategory: "מערכת \"תרועה\"",
+    informationType: "דוחות",
+    language: "hebrew"
+  },
+  {
+    fileName: "מדיניות התרעה לרעידות אדמה",
+    category: "התרעה לרעידת אדמה",
+    subCategory: "מערכת \"תרועה\"",
+    informationType: "דוחות",
+    language: "hebrew"
+  },
+  {
+    fileName: "ועדה בינל להקמת מערכת התרעה",
+    category: "התרעה לרעידת אדמה",
+    subCategory: "מערכת \"תרועה\"",
+    informationType: "דוחות",
+    language: "english"
+  },
+  {
+    fileName: "בחינה ראשונית למערכת התרעה",
+    category: "התרעה לרעידת אדמה",
+    subCategory: "מערכת \"תרועה\"",
+    informationType: "דוחות",
+    language: "hebrew"
+  },
+  {
+    fileName: "אופטימיזציה של אלגוריתם התרעה",
+    category: "התרעה לרעידת אדמה",
+    subCategory: "מערכת \"תרועה\"",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "נספחים מדריך היערכות אתרי מורשת",
+    category: "היערכות אתרי מורשת",
+    subCategory: "סיכונים באתרי מורשת",
+    informationType: "מדריכים",
+    language: "hebrew"
+  },
+  {
+    fileName: "נספחים תיק שטח אתרי מורשת",
+    category: "היערכות אתרי מורשת",
+    subCategory: "סיכונים באתרי מורשת",
+    informationType: "מדריכים",
+    language: "hebrew"
+  },
+  {
+    fileName: "מדריך היערכות אתרי מורשת",
+    category: "היערכות אתרי מורשת",
+    subCategory: "סיכונים באתרי מורשת",
+    informationType: "מדריכים",
+    language: "hebrew"
+  },
+  {
+    fileName: "דוח שיקום ארוך טווח",
+    category: "שיקום ארוך טווח",
+    subCategory: "שיקום ארוך טווח",
+    informationType: "תוכניות",
+    language: "hebrew"
+  },
+  {
+    fileName: "סגנון תקשורת סיכונים",
+    category: "היבטים חברתיים כלכליים",
+    subCategory: "מוכנות הציבור",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "סקר תפיסות האוכלוסיה על רעד",
+    category: "היבטים חברתיים כלכליים",
+    subCategory: "מוכנות הציבור",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "הגדרת צורכי אוכלוסיות פגיעות אחרי רעידה",
+    category: "היבטים חברתיים כלכליים",
+    subCategory: "מוכנות הציבור",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
 ];
