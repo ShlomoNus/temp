@@ -959,4 +959,110 @@ export const files: FileItem[] = [
     informationType: "מחקרים",
     language: "hebrew"
   },
+  {
+    fileName: "מוכנות אוכלוסיית החרדים לרעידה",
+    category: "היבטים חברתיים כלכליים",
+    subCategory: "אוכלוסיות ומגזרים",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "מחקר בתי ספר ניסויים",
+    category: "היבטים חברתיים כלכליים",
+    subCategory: "אוכלוסיות ומגזרים",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "מחקר בתי ספר מערך",
+    category: "היבטים חברתיים כלכליים",
+    subCategory: "אוכלוסיות ומגזרים",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "מחקר בתי ספר חוברת לתלמיד",
+    category: "היבטים חברתיים כלכליים",
+    subCategory: "אוכלוסיות ומגזרים",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "מחקר בתי ספר השוואה",
+    category: "היבטים חברתיים כלכליים",
+    subCategory: "אוכלוסיות ומגזרים",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "התנהגות אוכלוסיה עם מוגבלות",
+    category: "היבטים חברתיים כלכליים",
+    subCategory: "אוכלוסיות ומגזרים",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "הנחיות בפישוט לשוני",
+    category: "היבטים חברתיים כלכליים",
+    subCategory: "אוכלוסיות ומגזרים",
+    informationType: "מדריכים",
+    language: "hebrew"
+  },
+  {
+    fileName: "הערכת נזק כלכלי באילת",
+    category: "היבטים חברתיים כלכליים",
+    subCategory: "אוכלוסיות ומגזרים",
+    informationType: "מחקרים",
+    language: "english"
+  },
+
+  {
+    fileName: "הערכת נזק כלכלי באילת",
+    category: "היבטים חברתיים כלכליים",
+    subCategory: "היבטים כלכליים",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "הערכת נזקים מאקרו כלכליים",
+    category: "היבטים חברתיים כלכליים",
+    subCategory: "היבטים כלכליים",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "חוסן תעשיית האירוח בישראל",
+    category: "היבטים חברתיים כלכליים",
+    subCategory: "היבטים כלכליים",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "היערכות לרעד בעסקים קטנים",
+    category: "היבטים חברתיים כלכליים",
+    subCategory: "היבטים כלכליים",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "המערך הרגולטורי לרעידת אדמה",
+    category: "היבטים חברתיים כלכליים",
+    subCategory: "היבטים משפטיים",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "חבילות מדיניות לחיזוק מבנים בפריפריה",
+    category: "היבטים חברתיים כלכליים",
+    subCategory: "מוכנות המדינה",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "גישות בהליך זיהוי אלמונים",
+    category: "היבטים חברתיים כלכליים",
+    subCategory: "מוכנות המדינה",
+    informationType: "מחקרים",
+    language: "hebrew"
+  }
 ];
