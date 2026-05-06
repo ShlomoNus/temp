@@ -293,5 +293,572 @@ export const files: FileItem[] = [
     subCategory: "סיכון לצונמי",
     informationType: "מחקרים",
     language: "english"
+  },
+  {
+    fileName: "סיכום סיכונים בחיפה",
+    category: "גיאולוגיה",
+    subCategory: "סיכונים סייסמיים",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "סיכונים והעתקים בבקעת הירדן",
+    category: "גיאולוגיה",
+    subCategory: "סיכונים סייסמיים",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "מיפוי סיכונים אזור מתלול צורים",
+    category: "גיאולוגיה",
+    subCategory: "סיכונים סייסמיים",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "בסיס נתונים גאודטי עבור הדרום",
+    category: "גיאולוגיה",
+    subCategory: "סיכונים סייסמיים",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "מיפוי סיכונים והעתקים בבית שאן",
+    category: "גיאולוגיה",
+    subCategory: "סיכונים סייסמיים",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "הסיכון לרעידת אדמה בטבריה",
+    category: "גיאולוגיה",
+    subCategory: "סיכונים סייסמיים",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "תכנת ורוניק",
+    category: "גיאולוגיה",
+    subCategory: "סיכונים סייסמיים",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "אפיון תופעות סביבה מרעידות",
+    category: "גיאולוגיה",
+    subCategory: "סיכונים סייסמיים",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "פוסטר הנחיות במשטרה",
+    category: "ועדת ההיגוי",
+    subCategory: "הנחיות ברעידת אדמה",
+    informationType: "עלוני הסברה",
+    language: "hebrew"
+  },
+  {
+    fileName: "פוסטר הנחיות בבתי חולים",
+    category: "ועדת ההיגוי",
+    subCategory: "הנחיות ברעידת אדמה",
+    informationType: "עלוני הסברה",
+    language: "hebrew"
+  },
+  {
+    fileName: "עלון היערכות לרעידות אדמה רוסית",
+    category: "ועדת ההיגוי",
+    subCategory: "הנחיות ברעידת אדמה",
+    informationType: "עלוני הסברה",
+    language: "russian"
+  },
+  {
+    fileName: "עלון היערכות לרעידות אדמה ערבית",
+    category: "ועדת ההיגוי",
+    subCategory: "הנחיות ברעידת אדמה",
+    informationType: "עלוני הסברה",
+    language: "arabic"
+  },
+  {
+    fileName: "עלון היערכות לרעידות אדמה אנגלית",
+    category: "ועדת ההיגוי",
+    subCategory: "הנחיות ברעידת אדמה",
+    informationType: "עלוני הסברה",
+    language: "english"
+  },
+  {
+    fileName: "עלון היערכות לרעידות אדמה עברית",
+    category: "ועדת ההיגוי",
+    subCategory: "הנחיות ברעידת אדמה",
+    informationType: "עלוני הסברה",
+    language: "hebrew"
+  },
+  {
+    fileName: "הנחיות ברעידת אדמה עברית",
+    category: "ועדת ההיגוי",
+    subCategory: "הנחיות ברעידת אדמה",
+    informationType: "עלוני הסברה",
+    language: "hebrew"
+  },
+  {
+    fileName: "הנחיות ברעידת אדמה ערבית",
+    category: "ועדת ההיגוי",
+    subCategory: "הנחיות ברעידת אדמה",
+    informationType: "עלוני הסברה",
+    language: "arabic"
+  },
+  {
+    fileName: "הנחיות ברעידת אדמה רוסית",
+    category: "ועדת ההיגוי",
+    subCategory: "הנחיות ברעידת אדמה",
+    informationType: "עלוני הסברה",
+    language: "russian"
+  },
+  {
+    fileName: "הנחיות ברעידת אדמה אנגלית",
+    category: "ועדת ההיגוי",
+    subCategory: "הנחיות ברעידת אדמה",
+    informationType: "עלוני הסברה",
+    language: "english"
+  },
+  {
+    fileName: "מצגת הסברה",
+    category: "ועדת ההיגוי",
+    subCategory: "הנחיות ברעידת אדמה",
+    informationType: "עלוני הסברה",
+    language: "hebrew"
+  },
+  {
+    fileName: "כרזה בערבית",
+    category: "ועדת ההיגוי",
+    subCategory: "הנחיות ברעידת אדמה",
+    informationType: "עלוני הסברה",
+    language: "arabic"
+  },
+  {
+    fileName: "כרזה בעברית",
+    category: "ועדת ההיגוי",
+    subCategory: "הנחיות ברעידת אדמה",
+    informationType: "עלוני הסברה",
+    language: "hebrew"
+  },
+  {
+    fileName: "מדריך לתכנון מילוט במבני ציבור",
+    category: "ועדת ההיגוי",
+    subCategory: "הנחיות ברעידת אדמה",
+    informationType: "מדריכים",
+    language: "hebrew"
+  },
+  {
+    fileName: "עלון צונמי ערבית",
+    category: "ועדת ההיגוי",
+    subCategory: "הנחיות ברעידת אדמה",
+    informationType: "עלוני הסברה",
+    language: "arabic"
+  },
+  {
+    fileName: "עלון צונמי אנגלית",
+    category: "ועדת ההיגוי",
+    subCategory: "הנחיות ברעידת אדמה",
+    informationType: "עלוני הסברה",
+    language: "english"
+  },
+  {
+    fileName: "עלון צונמי עברית",
+    category: "ועדת ההיגוי",
+    subCategory: "הנחיות ברעידת אדמה",
+    informationType: "עלוני הסברה",
+    language: "hebrew"
+  },
+  {
+    fileName: "ועדה לבחינת הנחיות במוסדות חינוך",
+    category: "ועדת ההיגוי",
+    subCategory: "הנחיות ברעידת אדמה",
+    informationType: "דוחות",
+    language: "hebrew"
+  },
+  {
+    fileName: "הנחיות לאנשים עם מוגבלות - מוסדות",
+    category: "ועדת ההיגוי",
+    subCategory: "הנחיות ברעידת אדמה",
+    informationType: "דוחות",
+    language: "hebrew"
+  },
+  {
+    fileName: "היערכות אנשים עם מוגבלות ערבית",
+    category: "ועדת ההיגוי",
+    subCategory: "הנחיות ברעידת אדמה",
+    informationType: "מדריכים",
+    language: "arabic"
+  },
+  {
+    fileName: "היערכות אנשים עם מוגבלות עברית",
+    category: "ועדת ההיגוי",
+    subCategory: "הנחיות ברעידת אדמה",
+    informationType: "מדריכים",
+    language: "hebrew"
+  },
+  {
+    fileName: "אתר סיוע לאוכלוסיה",
+    category: "היערכות הרשות המקומית",
+    subCategory: "אתר סיוע לאוכלוסייה",
+    informationType: "תוכניות",
+    language: "hebrew"
+  },
+  {
+    fileName: "השוואת שיטות חישוב תגובת אתר",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "מדידות תגובת אתר אזור גלילות",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "תגובת אתר אזור באר שבע",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "תגובת אתר באר שבע",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "תגובת אתר דימונה",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "תגובת אתר שדה דב",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "תגובת אתר רחובות",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "תגובת אתר קרית גת",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "תגובת אתר קריות חיפה",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "תגובת אתר צור יצחק",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "תגובת אתר עראבה",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "תגובת אתר עמק זבולון",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "תגובת אתר נורדיה",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "תגובת אתר מגדל העמק",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "תגובת אתר ירוחם",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "תגובת אתר ומיקרוזונציה אילת",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "תגובת אתר גלילות",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "תגובת אתר גדידה מכר",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "תגובת אתר בעיר טבריה",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "תגובת אתר אשקלון",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "מדידות תגובת אתר אזור דימונה",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "תגובת אתר אכסאל",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "אופן חישוב תגובת אתר",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "איכון מקורות לרעידה בים",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "פיזור מוקדים בגלבוע כרמל",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "הערת מקור רעד מגלי פי",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "כיול הרשת להערכת רעידות רחוקות",
+    category: "סיסמולוגיה",
+    subCategory: "תגובת אתר",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "התפתחות בזמן של רעשי משנה",
+    category: "סיסמולוגיה",
+    subCategory: "רעידות משנה",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "מאגר אקסלוגרמות לתאוצות קרקע",
+    category: "סיסמולוגיה",
+    subCategory: "תאוצת קרקע",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "תאוצות קרקע בתקן הבניה",
+    category: "סיסמולוגיה",
+    subCategory: "תאוצת קרקע",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "מודל מהירות תלת מימדי לאיכון רעידות",
+    category: "סיסמולוגיה",
+    subCategory: "תאוצת קרקע",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "אלגוריתם להערכת תאוצות קרקע",
+    category: "סיסמולוגיה",
+    subCategory: "תאוצת קרקע",
+    informationType: "מחקרים",
+    language: "english"
+  },
+  {
+    fileName: "חיזוק מבני אבן",
+    category: "הנדסה סיסמית",
+    subCategory: "שיפור עמידות מבנים",
+    informationType: "מדריכים",
+    language: "hebrew"
+  },
+  {
+    fileName: "מדריך לחיזוק מבנים",
+    category: "הנדסה סיסמית",
+    subCategory: "שיפור עמידות מבנים",
+    informationType: "מדריכים",
+    language: "hebrew"
+  },
+  {
+    fileName: "דוגמאות לחישוב לפי 413 חלק3",
+    category: "הנדסה סיסמית",
+    subCategory: "שיפור עמידות מבנים",
+    informationType: "מדריכים",
+    language: "hebrew"
+  },
+  {
+    fileName: "סקר רמות סיכון קביל",
+    category: "הנדסה סיסמית",
+    subCategory: "שיפור עמידות מבנים",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "גישות לשדרוג סייסמי",
+    category: "הנדסה סיסמית",
+    subCategory: "שיפור עמידות מבנים",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "עמידות מבנים עם קירות הקשחה",
+    category: "הנדסה סיסמית",
+    subCategory: "שיפור עמידות מבנים",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "עמידות עמודים עטופים ביריעות",
+    category: "הנדסה סיסמית",
+    subCategory: "שיפור עמידות מבנים",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "אופטימיזציה של מבנים מבטון",
+    category: "הנדסה סיסמית",
+    subCategory: "שיפור עמידות מבנים",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "חישוב תקופה בסיסית למבנים",
+    category: "הנדסה סיסמית",
+    subCategory: "שיפור עמידות מבנים",
+    informationType: "תכנון אנטי סייסמי",
+    language: "hebrew"
+  },
+  {
+    fileName: "חציית העתק עי צנרת",
+    category: "הנדסה סיסמית",
+    subCategory: "שיפור עמידות מבנים",
+    informationType: "תכנון אנטי סייסמי",
+    language: "hebrew"
+  },
+  {
+    fileName: "שימוש בבידוד סייסמי במבנים",
+    category: "הנדסה סיסמית",
+    subCategory: "שיפור עמידות מבנים",
+    informationType: "תכנון אנטי סייסמי",
+    language: "hebrew"
+  },
+  {
+    fileName: "תכנון מבנה על העתק פעיל",
+    category: "הנדסה סיסמית",
+    subCategory: "שיפור עמידות מבנים",
+    informationType: "תכנון אנטי סייסמי",
+    language: "hebrew"
+  },
+  {
+    fileName: "פרמטרים של רעידות ותכן מבנים",
+    category: "הנדסה סיסמית",
+    subCategory: "שיפור עמידות מבנים",
+    informationType: "תכנון אנטי סייסמי",
+    language: "hebrew"
+  },
+  {
+    fileName: "חישוב זמן מחזור מבנים",
+    category: "הנדסה סיסמית",
+    subCategory: "שיפור עמידות מבנים",
+    informationType: "תכנון אנטי סייסמי",
+    language: "hebrew"
+  },
+  {
+    fileName: "עיגון מערכות לא מבניות",
+    category: "הנדסה סיסמית",
+    subCategory: "אלמנטים לא מבניים",
+    informationType: "מדריכים",
+    language: "hebrew"
+  },
+  {
+    fileName: "זיהוי והערכת נזק בבתי חולים",
+    category: "הנדסה סיסמית",
+    subCategory: "הערכת נזק למבנים",
+    informationType: "מדריכים",
+    language: "hebrew"
+  },
+  {
+    fileName: "יצירת תמונת מצב מבני חקלאות",
+    category: "הנדסה סיסמית",
+    subCategory: "הערכת נזק למבנים",
+    informationType: "מדריכים",
+    language: "hebrew"
+  },
+  {
+    fileName: "מודל תומך החלטה להתרעת צונמי",
+    category: "היערכות לצונאמי",
+    subCategory: "מערך \"מים אדירים\"",
+    informationType: "מחקרים",
+    language: "hebrew"
+  },
+  {
+    fileName: "תפיסה לאומית לצונמי",
+    category: "היערכות לצונאמי",
+    subCategory: "תפיסה לאומית לצונמי",
+    informationType: "תוכניות",
+    language: "hebrew"
   }
 ];
