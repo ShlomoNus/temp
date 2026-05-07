@@ -12,12 +12,21 @@ app.get("/health", (_: Request, res: Response) => {
 app.get("/loadInitInfo", async(_: Request, res: Response) => {
   try {
     const initResult = await loadInitialDataToDb();
+
+    res.json({ initResult });
+  }
+  catch(error: unknown) {
+    const message = error instanceof Error ? error.message : "Unknown init error";
+
+    res.status(500).json({ error: message });
+  }
+});
+
+app.get("/loadInitSummerize", async(_: Request, res: Response) => {
+  try {
     const summerizeResult = await loadInitSummerize();
 
-    res.json({
-      initResult,
-      summerizeResult
-    });
+    res.json({ summerizeResult });
   }
   catch(error: unknown) {
     const message = error instanceof Error ? error.message : "Unknown init error";
