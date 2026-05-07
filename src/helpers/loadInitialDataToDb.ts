@@ -2,7 +2,6 @@ import { EsBulkResponse } from "@/types/es";
 
 import { CONFIG } from "../CONFIG";
 import { files } from "../excelSource";
-
 import { ensureIndexExists, esRequest, parseJsonSafe } from "../utils/esClient";
 
 const {
