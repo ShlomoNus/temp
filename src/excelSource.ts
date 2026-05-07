@@ -2,6 +2,7 @@
 type FileItem = {
   id: number // מזהה ייחודי אקראי בן 5 ספרות (10000–99999)
   fileName: string // שם קובץ
+  pdfUrl: string // כתובת PDF ב-S3
   category: string // קטגוריה
   subCategory: string // תת קטגוריה
   informationType: string // סוג מידע
@@ -13,1513 +14,1663 @@ type FileItem = {
 export const files: FileItem[] = [
   {
     id: 71381,
-    fileName: "העתק אור עקיבא",
     category: "גיאולוגיה",
     subCategory: "העתקים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "העתק אור עקיבא",
+    pdfUrl: "s3://earthquake-reports/העתק אור עקיבא.pdf"
   },
   {
     id: 49732,
-    fileName: "מיפוי העתקים בברניקי",
     category: "גיאולוגיה",
     subCategory: "העתקים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "מיפוי העתקים בברניקי",
+    pdfUrl: "s3://earthquake-reports/מיפוי העתקים בברניקי.pdf"
   },
   {
     id: 84050,
-    fileName: "עדכון מעמד העתקים 2018",
     category: "גיאולוגיה",
     subCategory: "העתקים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "עדכון מעמד העתקים 2018",
+    pdfUrl: "s3://earthquake-reports/עדכון מעמד העתקים 2018.pdf"
   },
   {
     id: 71043,
-    fileName: "עדכון מעמד העתקים 2022",
     category: "גיאולוגיה",
     subCategory: "העתקים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "עדכון מעמד העתקים 2022",
+    pdfUrl: "s3://earthquake-reports/עדכון מעמד העתקים 2022.pdf"
   },
   {
     id: 28924,
-    fileName: "פעילות טקטונית כרמל ונשר",
     category: "גיאולוגיה",
     subCategory: "העתקים",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "פעילות טקטונית כרמל ונשר",
+    pdfUrl: "s3://earthquake-reports/פעילות טקטונית כרמל ונשר.pdf"
   },
   {
     id: 85806,
-    fileName: "רכס חוסם צפוני בכרמל",
     category: "גיאולוגיה",
     subCategory: "העתקים",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "רכס חוסם צפוני בכרמל",
+    pdfUrl: "s3://earthquake-reports/רכס חוסם צפוני בכרמל.pdf"
   },
   {
     id: 84518,
-    fileName: "קריעת פני שטח בטבריה",
     category: "גיאולוגיה",
     subCategory: "העתקים",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "קריעת פני שטח בטבריה",
+    pdfUrl: "s3://earthquake-reports/קריעת פני שטח בטבריה.pdf"
   },
   {
     id: 43221,
-    fileName: "העתק אחיהוד",
     category: "גיאולוגיה",
     subCategory: "העתקים",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "העתק אחיהוד",
+    pdfUrl: "s3://earthquake-reports/העתק אחיהוד.pdf"
   },
   {
     id: 54062,
-    fileName: "מיקום העתק הכרמל מניתוח תתקרקע",
     category: "גיאולוגיה",
     subCategory: "העתקים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "מיקום העתק הכרמל מניתוח תתקרקע",
+    pdfUrl: "s3://earthquake-reports/מיקום העתק הכרמל מניתוח תתקרקע.pdf"
   },
   {
     id: 20531,
-    fileName: "מדידות רעש לאיתור העתק הכרמל",
     category: "גיאולוגיה",
     subCategory: "העתקים",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "מדידות רעש לאיתור העתק הכרמל",
+    pdfUrl: "s3://earthquake-reports/מדידות רעש לאיתור העתק הכרמל.pdf"
   },
   {
     id: 28385,
-    fileName: "מפת סיכון ארצית להעתקה פעילה",
     category: "גיאולוגיה",
     subCategory: "העתקים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "מפת סיכון ארצית להעתקה פעילה",
+    pdfUrl: "s3://earthquake-reports/מפת סיכון ארצית להעתקה פעילה.pdf"
   },
   {
     id: 86975,
-    fileName: "העתקים פעילים אילת",
     category: "גיאולוגיה",
     subCategory: "העתקים",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "העתקים פעילים אילת",
+    pdfUrl: "s3://earthquake-reports/העתקים פעילים אילת.pdf"
   },
   {
     id: 43725,
-    fileName: "מבנה תלת מימדי למפרץ אילת",
     category: "גיאולוגיה",
     subCategory: "העתקים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "מבנה תלת מימדי למפרץ אילת",
+    pdfUrl: "s3://earthquake-reports/מבנה תלת מימדי למפרץ אילת.pdf"
   },
   {
     id: 51378,
-    fileName: "זמני חזרה של רעידות בכנרת",
     category: "גיאולוגיה",
     subCategory: "העתקים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "זמני חזרה של רעידות בכנרת",
+    pdfUrl: "s3://earthquake-reports/זמני חזרה של רעידות בכנרת.pdf"
   },
   {
     id: 28515,
-    fileName: "העתקים במדרון היבשת וטקטוניקת מלח",
     category: "גיאולוגיה",
     subCategory: "העתקים",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "העתקים במדרון היבשת וטקטוניקת מלח",
+    pdfUrl: "s3://earthquake-reports/העתקים במדרון היבשת וטקטוניקת מלח.pdf"
   },
   {
     id: 33624,
-    fileName: "אפיון העתקים במדרון היבשת",
     category: "גיאולוגיה",
     subCategory: "העתקים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "אפיון העתקים במדרון היבשת",
+    pdfUrl: "s3://earthquake-reports/אפיון העתקים במדרון היבשת.pdf"
   },
   {
     id: 44497,
-    fileName: "הגברת תנודות בעמק זבולון א",
     category: "גיאולוגיה",
     subCategory: "הגברת חריגה",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "הגברת תנודות בעמק זבולון א",
+    pdfUrl: "s3://earthquake-reports/הגברת תנודות בעמק זבולון א.pdf"
   },
   {
     id: 73230,
-    fileName: "הגברת תנודות בשפלה",
     category: "גיאולוגיה",
     subCategory: "הגברת חריגה",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "הגברת תנודות בשפלה",
+    pdfUrl: "s3://earthquake-reports/הגברת תנודות בשפלה.pdf"
   },
   {
     id: 38837,
-    fileName: "הגברת תנודות בעמק זבולון ב",
     category: "גיאולוגיה",
     subCategory: "הגברת חריגה",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "הגברת תנודות בעמק זבולון ב",
+    pdfUrl: "s3://earthquake-reports/הגברת תנודות בעמק זבולון ב.pdf"
   },
   {
     id: 44504,
-    fileName: "היחס בין שטח וגודל גלישות",
     category: "גיאולוגיה",
     subCategory: "גלישת קרקע",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "היחס בין שטח וגודל גלישות",
+    pdfUrl: "s3://earthquake-reports/היחס בין שטח וגודל גלישות.pdf"
   },
   {
     id: 47412,
-    fileName: "גלישות אזור אילת אילות",
     category: "גיאולוגיה",
     subCategory: "גלישת קרקע",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "גלישות אזור אילת אילות",
+    pdfUrl: "s3://earthquake-reports/גלישות אזור אילת אילות.pdf"
   },
   {
     id: 63280,
-    fileName: "גלישות באזור בית שאן",
     category: "גיאולוגיה",
     subCategory: "גלישת קרקע",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "גלישות באזור בית שאן",
+    pdfUrl: "s3://earthquake-reports/גלישות באזור בית שאן.pdf"
   },
   {
     id: 93247,
-    fileName: "סיכון נפילת סלעים חפציבה",
     category: "גיאולוגיה",
     subCategory: "גלישת קרקע",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "סיכון נפילת סלעים חפציבה",
+    pdfUrl: "s3://earthquake-reports/סיכון נפילת סלעים חפציבה.pdf"
   },
   {
     id: 47576,
-    fileName: "טיפוסי כשל מדרון בחיפה",
     category: "גיאולוגיה",
     subCategory: "גלישת קרקע",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "טיפוסי כשל מדרון בחיפה",
+    pdfUrl: "s3://earthquake-reports/טיפוסי כשל מדרון בחיפה.pdf"
   },
   {
     id: 71124,
-    fileName: "מפת סכנה ארצית לגלישות צפון",
     category: "גיאולוגיה",
     subCategory: "גלישת קרקע",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "מפת סכנה ארצית לגלישות צפון",
+    pdfUrl: "s3://earthquake-reports/מפת סכנה ארצית לגלישות צפון.pdf"
   },
   {
     id: 60785,
-    fileName: "מפת סכנה ארצית לגלישות דרום",
     category: "גיאולוגיה",
     subCategory: "גלישת קרקע",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "מפת סכנה ארצית לגלישות דרום",
+    pdfUrl: "s3://earthquake-reports/מפת סכנה ארצית לגלישות דרום.pdf"
   },
   {
     id: 18944,
-    fileName: "גלישות תת ימיות במדרון היבשת",
     category: "גיאולוגיה",
     subCategory: "גלישת קרקע",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "גלישות תת ימיות במדרון היבשת",
+    pdfUrl: "s3://earthquake-reports/גלישות תת ימיות במדרון היבשת.pdf"
   },
   {
     id: 30862,
-    fileName: "אלגוריתם לחיזוי גלישת קרקע",
     category: "גיאולוגיה",
     subCategory: "גלישת קרקע",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "אלגוריתם לחיזוי גלישת קרקע",
+    pdfUrl: "s3://earthquake-reports/אלגוריתם לחיזוי גלישת קרקע.pdf"
   },
   {
     id: 77482,
-    fileName: "התנזלות בבית שאן",
     category: "גיאולוגיה",
     subCategory: "התנזלות קרקע",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "התנזלות בבית שאן",
+    pdfUrl: "s3://earthquake-reports/התנזלות בבית שאן.pdf"
   },
   {
     id: 32438,
-    fileName: "התנזלות בעמק זבולון",
     category: "גיאולוגיה",
     subCategory: "התנזלות קרקע",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "התנזלות בעמק זבולון",
+    pdfUrl: "s3://earthquake-reports/התנזלות בעמק זבולון.pdf"
   },
   {
     id: 15452,
-    fileName: "התנזלות אילת אילות",
     category: "גיאולוגיה",
     subCategory: "התנזלות קרקע",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "התנזלות אילת אילות",
+    pdfUrl: "s3://earthquake-reports/התנזלות אילת אילות.pdf"
   },
   {
     id: 29079,
-    fileName: "הערכה גיאוטכנית להתנזלות בזבולון",
     category: "גיאולוגיה",
     subCategory: "התנזלות קרקע",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "הערכה גיאוטכנית להתנזלות בזבולון",
+    pdfUrl: "s3://earthquake-reports/הערכה גיאוטכנית להתנזלות בזבולון.pdf"
   },
   {
     id: 47840,
-    fileName: "הערכת מיקום ועוצמה מלווינים",
     category: "גיאולוגיה",
     subCategory: "עוצמת רעידה",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "הערכת מיקום ועוצמה מלווינים",
+    pdfUrl: "s3://earthquake-reports/הערכת מיקום ועוצמה מלווינים.pdf"
   },
   {
     id: 34429,
-    fileName: "שאלון עדכני לקביעת עוצמות סייסמיות",
     category: "גיאולוגיה",
     subCategory: "עוצמת רעידה",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "שאלון עדכני לקביעת עוצמות סייסמיות",
+    pdfUrl: "s3://earthquake-reports/שאלון עדכני לקביעת עוצמות סייסמיות.pdf"
   },
   {
     id: 30047,
-    fileName: "אימוץ סולם עוצמה אירופאי",
     category: "גיאולוגיה",
     subCategory: "עוצמת רעידה",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "אימוץ סולם עוצמה אירופאי",
+    pdfUrl: "s3://earthquake-reports/אימוץ סולם עוצמה אירופאי.pdf"
   },
   {
     id: 87285,
-    fileName: "סימולציה לצונמי בים המלח",
     category: "גיאולוגיה",
     subCategory: "סיכון לצונמי",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "סימולציה לצונמי בים המלח",
+    pdfUrl: "s3://earthquake-reports/סימולציה לצונמי בים המלח.pdf"
   },
   {
     id: 64444,
-    fileName: "מודל סיכון לצונמי בת גלים ואילת",
     category: "גיאולוגיה",
     subCategory: "סיכון לצונמי",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "מודל סיכון לצונמי בת גלים ואילת",
+    pdfUrl: "s3://earthquake-reports/מודל סיכון לצונמי בת גלים ואילת.pdf"
   },
   {
     id: 57478,
-    fileName: "הדמיית תרחישי צונמי",
     category: "גיאולוגיה",
     subCategory: "סיכון לצונמי",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "הדמיית תרחישי צונמי",
+    pdfUrl: "s3://earthquake-reports/הדמיית תרחישי צונמי.pdf"
   },
   {
     id: 71996,
-    fileName: "סף מגניטודה לצונמי",
     category: "גיאולוגיה",
     subCategory: "סיכון לצונמי",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "סף מגניטודה לצונמי",
+    pdfUrl: "s3://earthquake-reports/סף מגניטודה לצונמי.pdf"
   },
   {
     id: 71977,
-    fileName: "פגיעת צונמי בתשתיות ימיות",
     category: "גיאולוגיה",
     subCategory: "סיכון לצונמי",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "פגיעת צונמי בתשתיות ימיות",
+    pdfUrl: "s3://earthquake-reports/פגיעת צונמי בתשתיות ימיות.pdf"
   },
   {
     id: 17214,
-    fileName: "ניתוח היסטורי סכנה לצונמי",
     category: "גיאולוגיה",
     subCategory: "סיכון לצונמי",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "ניתוח היסטורי סכנה לצונמי",
+    pdfUrl: "s3://earthquake-reports/ניתוח היסטורי סכנה לצונמי.pdf"
   },
   {
     id: 30476,
-    fileName: "סיכום סיכונים בחיפה",
     category: "גיאולוגיה",
     subCategory: "סיכונים סייסמיים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "סיכום סיכונים בחיפה",
+    pdfUrl: "s3://earthquake-reports/סיכום סיכונים בחיפה.pdf"
   },
   {
     id: 31251,
-    fileName: "סיכונים והעתקים בבקעת הירדן",
     category: "גיאולוגיה",
     subCategory: "סיכונים סייסמיים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "סיכונים והעתקים בבקעת הירדן",
+    pdfUrl: "s3://earthquake-reports/סיכונים והעתקים בבקעת הירדן.pdf"
   },
   {
     id: 52391,
-    fileName: "מיפוי סיכונים אזור מתלול צורים",
     category: "גיאולוגיה",
     subCategory: "סיכונים סייסמיים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "מיפוי סיכונים אזור מתלול צורים",
+    pdfUrl: "s3://earthquake-reports/מיפוי סיכונים אזור מתלול צורים.pdf"
   },
   {
     id: 79389,
-    fileName: "בסיס נתונים גאודטי עבור הדרום",
     category: "גיאולוגיה",
     subCategory: "סיכונים סייסמיים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "בסיס נתונים גאודטי עבור הדרום",
+    pdfUrl: "s3://earthquake-reports/בסיס נתונים גאודטי עבור הדרום.pdf"
   },
   {
     id: 66857,
-    fileName: "מיפוי סיכונים והעתקים בבית שאן",
     category: "גיאולוגיה",
     subCategory: "סיכונים סייסמיים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "מיפוי סיכונים והעתקים בבית שאן",
+    pdfUrl: "s3://earthquake-reports/מיפוי סיכונים והעתקים בבית שאן.pdf"
   },
   {
     id: 46514,
-    fileName: "הסיכון לרעידת אדמה בטבריה",
     category: "גיאולוגיה",
     subCategory: "סיכונים סייסמיים",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "הסיכון לרעידת אדמה בטבריה",
+    pdfUrl: "s3://earthquake-reports/הסיכון לרעידת אדמה בטבריה.pdf"
   },
   {
     id: 13579,
-    fileName: "תכנת ורוניק",
     category: "גיאולוגיה",
     subCategory: "סיכונים סייסמיים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "תכנת ורוניק",
+    pdfUrl: "s3://earthquake-reports/תכנת ורוניק.pdf"
   },
   {
     id: 68266,
-    fileName: "אפיון תופעות סביבה מרעידות",
     category: "גיאולוגיה",
     subCategory: "סיכונים סייסמיים",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "אפיון תופעות סביבה מרעידות",
+    pdfUrl: "s3://earthquake-reports/אפיון תופעות סביבה מרעידות.pdf"
   },
   {
     id: 44293,
-    fileName: "תפיסה לאומית לרעידת אדמה",
     category: "ועדת ההיגוי",
     subCategory: "תוכניות ותפיסות לאומיות",
     informationType: "תוכניות",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "תפיסה לאומית לרעידת אדמה",
+    pdfUrl: "s3://earthquake-reports/תפיסה לאומית לרעידת אדמה.pdf"
   },
   {
     id: 51490,
-    fileName: "פוסטר הנחיות במשטרה",
     category: "ועדת ההיגוי",
     subCategory: "הנחיות ברעידת אדמה",
     informationType: "עלוני הסברה",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "פוסטר הנחיות במשטרה",
+    pdfUrl: "s3://earthquake-reports/פוסטר הנחיות במשטרה.pdf"
   },
   {
     id: 14328,
-    fileName: "פוסטר הנחיות בבתי חולים",
     category: "ועדת ההיגוי",
     subCategory: "הנחיות ברעידת אדמה",
     informationType: "עלוני הסברה",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "פוסטר הנחיות בבתי חולים",
+    pdfUrl: "s3://earthquake-reports/פוסטר הנחיות בבתי חולים.pdf"
   },
   {
     id: 41626,
-    fileName: "עלון היערכות לרעידות אדמה רוסית",
     category: "ועדת ההיגוי",
     subCategory: "הנחיות ברעידת אדמה",
     informationType: "עלוני הסברה",
     language: "russian",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "עלון היערכות לרעידות אדמה רוסית",
+    pdfUrl: "s3://earthquake-reports/עלון היערכות לרעידות אדמה רוסית.pdf"
   },
   {
     id: 49563,
-    fileName: "עלון היערכות לרעידות אדמה ערבית",
     category: "ועדת ההיגוי",
     subCategory: "הנחיות ברעידת אדמה",
     informationType: "עלוני הסברה",
     language: "arabic",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "עלון היערכות לרעידות אדמה ערבית",
+    pdfUrl: "s3://earthquake-reports/עלון היערכות לרעידות אדמה ערבית.pdf"
   },
   {
     id: 52536,
-    fileName: "עלון היערכות לרעידות אדמה אנגלית",
     category: "ועדת ההיגוי",
     subCategory: "הנחיות ברעידת אדמה",
     informationType: "עלוני הסברה",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "עלון היערכות לרעידות אדמה אנגלית",
+    pdfUrl: "s3://earthquake-reports/עלון היערכות לרעידות אדמה אנגלית.pdf"
   },
   {
     id: 45444,
-    fileName: "עלון היערכות לרעידות אדמה עברית",
     category: "ועדת ההיגוי",
     subCategory: "הנחיות ברעידת אדמה",
     informationType: "עלוני הסברה",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "עלון היערכות לרעידות אדמה עברית",
+    pdfUrl: "s3://earthquake-reports/עלון היערכות לרעידות אדמה עברית.pdf"
   },
   {
     id: 80743,
-    fileName: "הנחיות ברעידת אדמה עברית",
     category: "ועדת ההיגוי",
     subCategory: "הנחיות ברעידת אדמה",
     informationType: "עלוני הסברה",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "הנחיות ברעידת אדמה עברית",
+    pdfUrl: "s3://earthquake-reports/הנחיות ברעידת אדמה עברית.pdf"
   },
   {
     id: 71214,
-    fileName: "הנחיות ברעידת אדמה ערבית",
     category: "ועדת ההיגוי",
     subCategory: "הנחיות ברעידת אדמה",
     informationType: "עלוני הסברה",
     language: "arabic",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "הנחיות ברעידת אדמה ערבית",
+    pdfUrl: "s3://earthquake-reports/הנחיות ברעידת אדמה ערבית.pdf"
   },
   {
     id: 53736,
-    fileName: "הנחיות ברעידת אדמה רוסית",
     category: "ועדת ההיגוי",
     subCategory: "הנחיות ברעידת אדמה",
     informationType: "עלוני הסברה",
     language: "russian",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "הנחיות ברעידת אדמה רוסית",
+    pdfUrl: "s3://earthquake-reports/הנחיות ברעידת אדמה רוסית.pdf"
   },
   {
     id: 29684,
-    fileName: "הנחיות ברעידת אדמה אנגלית",
     category: "ועדת ההיגוי",
     subCategory: "הנחיות ברעידת אדמה",
     informationType: "עלוני הסברה",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "הנחיות ברעידת אדמה אנגלית",
+    pdfUrl: "s3://earthquake-reports/הנחיות ברעידת אדמה אנגלית.pdf"
   },
   {
     id: 75622,
-    fileName: "מצגת הסברה",
     category: "ועדת ההיגוי",
     subCategory: "הנחיות ברעידת אדמה",
     informationType: "עלוני הסברה",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "מצגת הסברה",
+    pdfUrl: "s3://earthquake-reports/מצגת הסברה.pdf"
   },
   {
     id: 70638,
-    fileName: "כרזה בערבית",
     category: "ועדת ההיגוי",
     subCategory: "הנחיות ברעידת אדמה",
     informationType: "עלוני הסברה",
     language: "arabic",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "כרזה בערבית",
+    pdfUrl: "s3://earthquake-reports/כרזה בערבית.pdf"
   },
   {
     id: 92552,
-    fileName: "כרזה בעברית",
     category: "ועדת ההיגוי",
     subCategory: "הנחיות ברעידת אדמה",
     informationType: "עלוני הסברה",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "כרזה בעברית",
+    pdfUrl: "s3://earthquake-reports/כרזה בעברית.pdf"
   },
   {
     id: 65565,
-    fileName: "מדריך לתכנון מילוט במבני ציבור",
     category: "ועדת ההיגוי",
     subCategory: "הנחיות ברעידת אדמה",
     informationType: "מדריכים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "מדריך לתכנון מילוט במבני ציבור",
+    pdfUrl: "s3://earthquake-reports/מדריך לתכנון מילוט במבני ציבור.pdf"
   },
   {
     id: 79011,
-    fileName: "עלון צונמי ערבית",
     category: "ועדת ההיגוי",
     subCategory: "הנחיות ברעידת אדמה",
     informationType: "עלוני הסברה",
     language: "arabic",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "עלון צונמי ערבית",
+    pdfUrl: "s3://earthquake-reports/עלון צונמי ערבית.pdf"
   },
   {
     id: 86885,
-    fileName: "עלון צונמי אנגלית",
     category: "ועדת ההיגוי",
     subCategory: "הנחיות ברעידת אדמה",
     informationType: "עלוני הסברה",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "עלון צונמי אנגלית",
+    pdfUrl: "s3://earthquake-reports/עלון צונמי אנגלית.pdf"
   },
   {
     id: 57298,
-    fileName: "עלון צונמי עברית",
     category: "ועדת ההיגוי",
     subCategory: "הנחיות ברעידת אדמה",
     informationType: "עלוני הסברה",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "עלון צונמי עברית",
+    pdfUrl: "s3://earthquake-reports/עלון צונמי עברית.pdf"
   },
   {
     id: 97248,
-    fileName: "ועדה לבחינת הנחיות במוסדות חינוך",
     category: "ועדת ההיגוי",
     subCategory: "הנחיות ברעידת אדמה",
     informationType: "דוחות",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "ועדה לבחינת הנחיות במוסדות חינוך",
+    pdfUrl: "s3://earthquake-reports/ועדה לבחינת הנחיות במוסדות חינוך.pdf"
   },
   {
     id: 47010,
-    fileName: "הנחיות לאנשים עם מוגבלות - מוסדות",
     category: "ועדת ההיגוי",
     subCategory: "הנחיות ברעידת אדמה",
     informationType: "דוחות",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "הנחיות לאנשים עם מוגבלות - מוסדות",
+    pdfUrl: "s3://earthquake-reports/הנחיות לאנשים עם מוגבלות - מוסדות.pdf"
   },
   {
     id: 37556,
-    fileName: "היערכות אנשים עם מוגבלות ערבית",
     category: "ועדת ההיגוי",
     subCategory: "הנחיות ברעידת אדמה",
     informationType: "מדריכים",
     language: "arabic",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "היערכות אנשים עם מוגבלות ערבית",
+    pdfUrl: "s3://earthquake-reports/היערכות אנשים עם מוגבלות ערבית.pdf"
   },
   {
     id: 68111,
-    fileName: "היערכות אנשים עם מוגבלות עברית",
     category: "ועדת ההיגוי",
     subCategory: "הנחיות ברעידת אדמה",
     informationType: "מדריכים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "היערכות אנשים עם מוגבלות עברית",
+    pdfUrl: "s3://earthquake-reports/היערכות אנשים עם מוגבלות עברית.pdf"
   },
   {
     id: 22576,
-    fileName: "אתר סיוע לאוכלוסיה",
     category: "היערכות הרשות המקומית",
     subCategory: "אתר סיוע לאוכלוסייה",
     informationType: "תוכניות",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "אתר סיוע לאוכלוסיה",
+    pdfUrl: "s3://earthquake-reports/אתר סיוע לאוכלוסיה.pdf"
   },
   {
     id: 15928,
-    fileName: "השוואת שיטות חישוב תגובת אתר",
     category: "סיסמולוגיה",
     subCategory: "תגובת אתר",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "השוואת שיטות חישוב תגובת אתר",
+    pdfUrl: "s3://earthquake-reports/השוואת שיטות חישוב תגובת אתר.pdf"
   },
   {
     id: 16416,
-    fileName: "מדידות תגובת אתר אזור גלילות",
     category: "סיסמולוגיה",
     subCategory: "תגובת אתר",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "מדידות תגובת אתר אזור גלילות",
+    pdfUrl: "s3://earthquake-reports/מדידות תגובת אתר אזור גלילות.pdf"
   },
   {
     id: 28546,
-    fileName: "תגובת אתר אזור באר שבע",
     category: "סיסמולוגיה",
     subCategory: "תגובת אתר",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "תגובת אתר אזור באר שבע",
+    pdfUrl: "s3://earthquake-reports/תגובת אתר אזור באר שבע.pdf"
   },
   {
     id: 30456,
-    fileName: "תגובת אתר באר שבע",
     category: "סיסמולוגיה",
     subCategory: "תגובת אתר",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "תגובת אתר באר שבע",
+    pdfUrl: "s3://earthquake-reports/תגובת אתר באר שבע.pdf"
   },
   {
     id: 26894,
-    fileName: "תגובת אתר דימונה",
     category: "סיסמולוגיה",
     subCategory: "תגובת אתר",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "תגובת אתר דימונה",
+    pdfUrl: "s3://earthquake-reports/תגובת אתר דימונה.pdf"
   },
   {
     id: 82139,
-    fileName: "תגובת אתר שדה דב",
     category: "סיסמולוגיה",
     subCategory: "תגובת אתר",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "תגובת אתר שדה דב",
+    pdfUrl: "s3://earthquake-reports/תגובת אתר שדה דב.pdf"
   },
   {
     id: 51746,
-    fileName: "תגובת אתר רחובות",
     category: "סיסמולוגיה",
     subCategory: "תגובת אתר",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "תגובת אתר רחובות",
+    pdfUrl: "s3://earthquake-reports/תגובת אתר רחובות.pdf"
   },
   {
     id: 74519,
-    fileName: "תגובת אתר קרית גת",
     category: "סיסמולוגיה",
     subCategory: "תגובת אתר",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "תגובת אתר קרית גת",
+    pdfUrl: "s3://earthquake-reports/תגובת אתר קרית גת.pdf"
   },
   {
     id: 43031,
-    fileName: "תגובת אתר קריות חיפה",
     category: "סיסמולוגיה",
     subCategory: "תגובת אתר",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "תגובת אתר קריות חיפה",
+    pdfUrl: "s3://earthquake-reports/תגובת אתר קריות חיפה.pdf"
   },
   {
     id: 53266,
-    fileName: "תגובת אתר צור יצחק",
     category: "סיסמולוגיה",
     subCategory: "תגובת אתר",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "תגובת אתר צור יצחק",
+    pdfUrl: "s3://earthquake-reports/תגובת אתר צור יצחק.pdf"
   },
   {
     id: 98228,
-    fileName: "תגובת אתר עראבה",
     category: "סיסמולוגיה",
     subCategory: "תגובת אתר",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "תגובת אתר עראבה",
+    pdfUrl: "s3://earthquake-reports/תגובת אתר עראבה.pdf"
   },
   {
     id: 59734,
-    fileName: "תגובת אתר עמק זבולון",
     category: "סיסמולוגיה",
     subCategory: "תגובת אתר",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "תגובת אתר עמק זבולון",
+    pdfUrl: "s3://earthquake-reports/תגובת אתר עמק זבולון.pdf"
   },
   {
     id: 87664,
-    fileName: "תגובת אתר נורדיה",
     category: "סיסמולוגיה",
     subCategory: "תגובת אתר",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "תגובת אתר נורדיה",
+    pdfUrl: "s3://earthquake-reports/תגובת אתר נורדיה.pdf"
   },
   {
     id: 47158,
-    fileName: "תגובת אתר מגדל העמק",
     category: "סיסמולוגיה",
     subCategory: "תגובת אתר",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "תגובת אתר מגדל העמק",
+    pdfUrl: "s3://earthquake-reports/תגובת אתר מגדל העמק.pdf"
   },
   {
     id: 74423,
-    fileName: "תגובת אתר ירוחם",
     category: "סיסמולוגיה",
     subCategory: "תגובת אתר",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "תגובת אתר ירוחם",
+    pdfUrl: "s3://earthquake-reports/תגובת אתר ירוחם.pdf"
   },
   {
     id: 80980,
-    fileName: "תגובת אתר ומיקרוזונציה אילת",
     category: "סיסמולוגיה",
     subCategory: "תגובת אתר",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "תגובת אתר ומיקרוזונציה אילת",
+    pdfUrl: "s3://earthquake-reports/תגובת אתר ומיקרוזונציה אילת.pdf"
   },
   {
     id: 25990,
-    fileName: "תגובת אתר גלילות",
     category: "סיסמולוגיה",
     subCategory: "תגובת אתר",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "תגובת אתר גלילות",
+    pdfUrl: "s3://earthquake-reports/תגובת אתר גלילות.pdf"
   },
   {
     id: 61312,
-    fileName: "תגובת אתר גדידה מכר",
     category: "סיסמולוגיה",
     subCategory: "תגובת אתר",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "תגובת אתר גדידה מכר",
+    pdfUrl: "s3://earthquake-reports/תגובת אתר גדידה מכר.pdf"
   },
   {
     id: 61669,
-    fileName: "תגובת אתר בעיר טבריה",
     category: "סיסמולוגיה",
     subCategory: "תגובת אתר",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "תגובת אתר בעיר טבריה",
+    pdfUrl: "s3://earthquake-reports/תגובת אתר בעיר טבריה.pdf"
   },
   {
     id: 18079,
-    fileName: "תגובת אתר אשקלון",
     category: "סיסמולוגיה",
     subCategory: "תגובת אתר",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "תגובת אתר אשקלון",
+    pdfUrl: "s3://earthquake-reports/תגובת אתר אשקלון.pdf"
   },
   {
     id: 86901,
-    fileName: "מדידות תגובת אתר אזור דימונה",
     category: "סיסמולוגיה",
     subCategory: "תגובת אתר",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "מדידות תגובת אתר אזור דימונה",
+    pdfUrl: "s3://earthquake-reports/מדידות תגובת אתר אזור דימונה.pdf"
   },
   {
     id: 87745,
-    fileName: "תגובת אתר אכסאל",
     category: "סיסמולוגיה",
     subCategory: "תגובת אתר",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "תגובת אתר אכסאל",
+    pdfUrl: "s3://earthquake-reports/תגובת אתר אכסאל.pdf"
   },
   {
     id: 71571,
-    fileName: "אופן חישוב תגובת אתר",
     category: "סיסמולוגיה",
     subCategory: "תגובת אתר",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "אופן חישוב תגובת אתר",
+    pdfUrl: "s3://earthquake-reports/אופן חישוב תגובת אתר.pdf"
   },
   {
     id: 18351,
-    fileName: "איכון מקורות לרעידה בים",
     category: "סיסמולוגיה",
     subCategory: "מוקד רע\"ד",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "איכון מקורות לרעידה בים",
+    pdfUrl: "s3://earthquake-reports/איכון מקורות לרעידה בים.pdf"
   },
   {
     id: 51099,
-    fileName: "פיזור מוקדים בגלבוע כרמל",
     category: "סיסמולוגיה",
     subCategory: "מוקד רע\"ד",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "פיזור מוקדים בגלבוע כרמל",
+    pdfUrl: "s3://earthquake-reports/פיזור מוקדים בגלבוע כרמל.pdf"
   },
   {
     id: 64623,
-    fileName: "הערת מקור רעד מגלי פי",
     category: "סיסמולוגיה",
     subCategory: "מוקד רע\"ד",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "הערת מקור רעד מגלי פי",
+    pdfUrl: "s3://earthquake-reports/הערת מקור רעד מגלי פי.pdf"
   },
   {
     id: 83427,
-    fileName: "כיול הרשת להערכת רעידות רחוקות",
     category: "סיסמולוגיה",
     subCategory: "מוקד רע\"ד",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "כיול הרשת להערכת רעידות רחוקות",
+    pdfUrl: "s3://earthquake-reports/כיול הרשת להערכת רעידות רחוקות.pdf"
   },
   {
     id: 34157,
-    fileName: "התפתחות בזמן של רעשי משנה",
     category: "סיסמולוגיה",
     subCategory: "רעידות משנה",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "התפתחות בזמן של רעשי משנה",
+    pdfUrl: "s3://earthquake-reports/התפתחות בזמן של רעשי משנה.pdf"
   },
   {
     id: 67452,
-    fileName: "מאגר אקסלוגרמות לתאוצות קרקע",
     category: "סיסמולוגיה",
     subCategory: "תאוצת קרקע",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "מאגר אקסלוגרמות לתאוצות קרקע",
+    pdfUrl: "s3://earthquake-reports/מאגר אקסלוגרמות לתאוצות קרקע.pdf"
   },
   {
     id: 69867,
-    fileName: "מודל מהירות תלת מימדי לאיכון רעידות",
     category: "סיסמולוגיה",
     subCategory: "תאוצת קרקע",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "מודל מהירות תלת מימדי לאיכון רעידות",
+    pdfUrl: "s3://earthquake-reports/מודל מהירות תלת מימדי לאיכון רעידות.pdf"
   },
   {
     id: 75317,
-    fileName: "תאוצות קרקע בתקן הבניה",
     category: "סיסמולוגיה",
     subCategory: "תאוצת קרקע",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "תאוצות קרקע בתקן הבניה",
+    pdfUrl: "s3://earthquake-reports/תאוצות קרקע בתקן הבניה.pdf"
   },
   {
     id: 42104,
-    fileName: "אלגוריתם להערכת תאוצות קרקע",
     category: "סיסמולוגיה",
     subCategory: "תאוצת קרקע",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "אלגוריתם להערכת תאוצות קרקע",
+    pdfUrl: "s3://earthquake-reports/אלגוריתם להערכת תאוצות קרקע.pdf"
   },
   {
     id: 16932,
-    fileName: "חיזוק מבני אבן",
     category: "הנדסה סיסמית",
     subCategory: "שיפור עמידות מבנים",
     informationType: "מדריכים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "חיזוק מבני אבן",
+    pdfUrl: "s3://earthquake-reports/חיזוק מבני אבן.pdf"
   },
   {
     id: 44109,
-    fileName: "מדריך לחיזוק מבנים",
     category: "הנדסה סיסמית",
     subCategory: "שיפור עמידות מבנים",
     informationType: "מדריכים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "מדריך לחיזוק מבנים",
+    pdfUrl: "s3://earthquake-reports/מדריך לחיזוק מבנים.pdf"
   },
   {
     id: 25019,
-    fileName: "דוגמאות לחישוב לפי 413 חלק3",
     category: "הנדסה סיסמית",
     subCategory: "שיפור עמידות מבנים",
     informationType: "מדריכים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "דוגמאות לחישוב לפי 413 חלק3",
+    pdfUrl: "s3://earthquake-reports/דוגמאות לחישוב לפי 413 חלק3.pdf"
   },
   {
     id: 58538,
-    fileName: "סקר רמות סיכון קביל",
     category: "הנדסה סיסמית",
     subCategory: "שיפור עמידות מבנים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "סקר רמות סיכון קביל",
+    pdfUrl: "s3://earthquake-reports/סקר רמות סיכון קביל.pdf"
   },
   {
     id: 92454,
-    fileName: "גישות לשדרוג סייסמי",
     category: "הנדסה סיסמית",
     subCategory: "שיפור עמידות מבנים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "גישות לשדרוג סייסמי",
+    pdfUrl: "s3://earthquake-reports/גישות לשדרוג סייסמי.pdf"
   },
   {
     id: 57250,
-    fileName: "עמידות מבנים עם קירות הקשחה",
     category: "הנדסה סיסמית",
     subCategory: "שיפור עמידות מבנים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "עמידות מבנים עם קירות הקשחה",
+    pdfUrl: "s3://earthquake-reports/עמידות מבנים עם קירות הקשחה.pdf"
   },
   {
     id: 72333,
-    fileName: "עמידות עמודים עטופים ביריעות",
     category: "הנדסה סיסמית",
     subCategory: "שיפור עמידות מבנים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "עמידות עמודים עטופים ביריעות",
+    pdfUrl: "s3://earthquake-reports/עמידות עמודים עטופים ביריעות.pdf"
   },
   {
     id: 71234,
-    fileName: "אופטימיזציה של מבנים מבטון",
     category: "הנדסה סיסמית",
     subCategory: "שיפור עמידות מבנים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "אופטימיזציה של מבנים מבטון",
+    pdfUrl: "s3://earthquake-reports/אופטימיזציה של מבנים מבטון.pdf"
   },
   {
     id: 77055,
-    fileName: "חישוב תקופה בסיסית למבנים",
     category: "הנדסה סיסמית",
     subCategory: "תכנון אנטי סייסמי",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "חישוב תקופה בסיסית למבנים",
+    pdfUrl: "s3://earthquake-reports/חישוב תקופה בסיסית למבנים.pdf"
   },
   {
     id: 79621,
-    fileName: "חציית העתק עי צנרת",
     category: "הנדסה סיסמית",
     subCategory: "תכנון אנטי סייסמי",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "חציית העתק עי צנרת",
+    pdfUrl: "s3://earthquake-reports/חציית העתק עי צנרת.pdf"
   },
   {
     id: 43456,
-    fileName: "שימוש בבידוד סייסמי במבנים",
     category: "הנדסה סיסמית",
     subCategory: "תכנון אנטי סייסמי",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "שימוש בבידוד סייסמי במבנים",
+    pdfUrl: "s3://earthquake-reports/שימוש בבידוד סייסמי במבנים.pdf"
   },
   {
     id: 56246,
-    fileName: "תכנון מבנה על העתק פעיל",
     category: "הנדסה סיסמית",
     subCategory: "תכנון אנטי סייסמי",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "תכנון מבנה על העתק פעיל",
+    pdfUrl: "s3://earthquake-reports/תכנון מבנה על העתק פעיל.pdf"
   },
   {
     id: 87790,
-    fileName: "פרמטרים של רעידות ותכן מבנים",
     category: "הנדסה סיסמית",
     subCategory: "תכנון אנטי סייסמי",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "פרמטרים של רעידות ותכן מבנים",
+    pdfUrl: "s3://earthquake-reports/פרמטרים של רעידות ותכן מבנים.pdf"
   },
   {
     id: 84150,
-    fileName: "חישוב זמן מחזור מבנים",
     category: "הנדסה סיסמית",
     subCategory: "תכנון אנטי סייסמי",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "חישוב זמן מחזור מבנים",
+    pdfUrl: "s3://earthquake-reports/חישוב זמן מחזור מבנים.pdf"
   },
   {
     id: 92276,
-    fileName: "עיגון מערכות לא מבניות",
     category: "הנדסה סיסמית",
     subCategory: "אלמנטים לא מבניים",
     informationType: "מדריכים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "עיגון מערכות לא מבניות",
+    pdfUrl: "s3://earthquake-reports/עיגון מערכות לא מבניות.pdf"
   },
   {
     id: 42255,
-    fileName: "זיהוי והערכת נזק בבתי חולים",
     category: "הנדסה סיסמית",
     subCategory: "הערכת נזק למבנים",
     informationType: "מדריכים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "זיהוי והערכת נזק בבתי חולים",
+    pdfUrl: "s3://earthquake-reports/זיהוי והערכת נזק בבתי חולים.pdf"
   },
   {
     id: 37338,
-    fileName: "יצירת תמונת מצב מבני חקלאות",
     category: "הנדסה סיסמית",
     subCategory: "הערכת נזק למבנים",
     informationType: "מדריכים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "יצירת תמונת מצב מבני חקלאות",
+    pdfUrl: "s3://earthquake-reports/יצירת תמונת מצב מבני חקלאות.pdf"
   },
   {
     id: 64080,
-    fileName: "מודל תומך החלטה להתרעת צונמי",
     category: "היערכות לצונאמי",
     subCategory: "מערך \"מים אדירים\"",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "מודל תומך החלטה להתרעת צונמי",
+    pdfUrl: "s3://earthquake-reports/מודל תומך החלטה להתרעת צונמי.pdf"
   },
   {
     id: 39868,
-    fileName: "תפיסה לאומית לצונמי",
     category: "היערכות לצונאמי",
     subCategory: "תפיסה לאומית לצונמי",
     informationType: "תוכניות",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "תפיסה לאומית לצונמי",
+    pdfUrl: "s3://earthquake-reports/תפיסה לאומית לצונמי.pdf"
   },
   {
     id: 22843,
-    fileName: "פרמטרים להתרעה להפסקת פעילות",
     category: "התרעה לרעידת אדמה",
     subCategory: "מערכות התרעה מקומיות",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "פרמטרים להתרעה להפסקת פעילות",
+    pdfUrl: "s3://earthquake-reports/פרמטרים להתרעה להפסקת פעילות.pdf"
   },
   {
     id: 73218,
-    fileName: "תפיסת הציבור את תרועה",
     category: "התרעה לרעידת אדמה",
     subCategory: "מערכת \"תרועה\"",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "תפיסת הציבור את תרועה",
+    pdfUrl: "s3://earthquake-reports/תפיסת הציבור את תרועה.pdf"
   },
   {
     id: 66336,
-    fileName: "סקר היתכנות למערכת התרעה",
     category: "התרעה לרעידת אדמה",
     subCategory: "מערכת \"תרועה\"",
     informationType: "דוחות",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "סקר היתכנות למערכת התרעה",
+    pdfUrl: "s3://earthquake-reports/סקר היתכנות למערכת התרעה.pdf"
   },
   {
     id: 74535,
-    fileName: "מדיניות התרעה לרעידות אדמה",
     category: "התרעה לרעידת אדמה",
     subCategory: "מערכת \"תרועה\"",
     informationType: "דוחות",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "מדיניות התרעה לרעידות אדמה",
+    pdfUrl: "s3://earthquake-reports/מדיניות התרעה לרעידות אדמה.pdf"
   },
   {
     id: 70208,
-    fileName: "ועדה בינל להקמת מערכת התרעה",
     category: "התרעה לרעידת אדמה",
     subCategory: "מערכת \"תרועה\"",
     informationType: "דוחות",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "ועדה בינל להקמת מערכת התרעה",
+    pdfUrl: "s3://earthquake-reports/ועדה בינל להקמת מערכת התרעה.pdf"
   },
   {
     id: 73445,
-    fileName: "בחינה ראשונית למערכת התרעה",
     category: "התרעה לרעידת אדמה",
     subCategory: "מערכת \"תרועה\"",
     informationType: "דוחות",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "בחינה ראשונית למערכת התרעה",
+    pdfUrl: "s3://earthquake-reports/בחינה ראשונית למערכת התרעה.pdf"
   },
   {
     id: 87158,
-    fileName: "אופטימיזציה של אלגוריתם התרעה",
     category: "התרעה לרעידת אדמה",
     subCategory: "מערכת \"תרועה\"",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "אופטימיזציה של אלגוריתם התרעה",
+    pdfUrl: "s3://earthquake-reports/אופטימיזציה של אלגוריתם התרעה.pdf"
   },
   {
     id: 74130,
-    fileName: "נספחים מדריך היערכות אתרי מורשת",
     category: "היערכות אתרי מורשת",
     subCategory: "סיכונים באתרי מורשת",
     informationType: "מדריכים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "נספחים מדריך היערכות אתרי מורשת",
+    pdfUrl: "s3://earthquake-reports/נספחים מדריך היערכות אתרי מורשת.pdf"
   },
   {
     id: 11343,
-    fileName: "נספחים תיק שטח אתרי מורשת",
     category: "היערכות אתרי מורשת",
     subCategory: "סיכונים באתרי מורשת",
     informationType: "מדריכים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "נספחים תיק שטח אתרי מורשת",
+    pdfUrl: "s3://earthquake-reports/נספחים תיק שטח אתרי מורשת.pdf"
   },
   {
     id: 21774,
-    fileName: "מדריך היערכות אתרי מורשת",
     category: "היערכות אתרי מורשת",
     subCategory: "סיכונים באתרי מורשת",
     informationType: "מדריכים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "מדריך היערכות אתרי מורשת",
+    pdfUrl: "s3://earthquake-reports/מדריך היערכות אתרי מורשת.pdf"
   },
   {
     id: 78076,
-    fileName: "דוח שיקום ארוך טווח",
     category: "שיקום ארוך טווח",
     subCategory: "שיקום ארוך טווח",
     informationType: "תוכניות",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "דוח שיקום ארוך טווח",
+    pdfUrl: "s3://earthquake-reports/דוח שיקום ארוך טווח.pdf"
   },
   {
     id: 10109,
-    fileName: "סגנון תקשורת סיכונים",
     category: "היבטים חברתיים כלכליים",
     subCategory: "מוכנות הציבור",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "סגנון תקשורת סיכונים",
+    pdfUrl: "s3://earthquake-reports/סגנון תקשורת סיכונים.pdf"
   },
   {
     id: 84234,
-    fileName: "סקר תפיסות האוכלוסיה על רעד",
     category: "היבטים חברתיים כלכליים",
     subCategory: "מוכנות הציבור",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "סקר תפיסות האוכלוסיה על רעד",
+    pdfUrl: "s3://earthquake-reports/סקר תפיסות האוכלוסיה על רעד.pdf"
   },
   {
     id: 77601,
-    fileName: "הגדרת צורכי אוכלוסיות פגיעות אחרי רעידה",
     category: "היבטים חברתיים כלכליים",
     subCategory: "מוכנות הציבור",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "הגדרת צורכי אוכלוסיות פגיעות אחרי רעידה",
+    pdfUrl: "s3://earthquake-reports/הגדרת צורכי אוכלוסיות פגיעות אחרי רעידה.pdf"
   },
   {
     id: 88352,
-    fileName: "מוכנות אוכלוסיית החרדים לרעידה",
     category: "היבטים חברתיים כלכליים",
     subCategory: "אוכלוסיות ומגזרים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "מוכנות אוכלוסיית החרדים לרעידה",
+    pdfUrl: "s3://earthquake-reports/מוכנות אוכלוסיית החרדים לרעידה.pdf"
   },
   {
     id: 12972,
-    fileName: "מחקר בתי ספר ניסויים",
     category: "היבטים חברתיים כלכליים",
     subCategory: "אוכלוסיות ומגזרים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "מחקר בתי ספר ניסויים",
+    pdfUrl: "s3://earthquake-reports/מחקר בתי ספר ניסויים.pdf"
   },
   {
     id: 79084,
-    fileName: "מחקר בתי ספר מערך",
     category: "היבטים חברתיים כלכליים",
     subCategory: "אוכלוסיות ומגזרים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "מחקר בתי ספר מערך",
+    pdfUrl: "s3://earthquake-reports/מחקר בתי ספר מערך.pdf"
   },
   {
     id: 83491,
-    fileName: "מחקר בתי ספר חוברת לתלמיד",
     category: "היבטים חברתיים כלכליים",
     subCategory: "אוכלוסיות ומגזרים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "מחקר בתי ספר חוברת לתלמיד",
+    pdfUrl: "s3://earthquake-reports/מחקר בתי ספר חוברת לתלמיד.pdf"
   },
   {
     id: 37831,
-    fileName: "מחקר בתי ספר השוואה",
     category: "היבטים חברתיים כלכליים",
     subCategory: "אוכלוסיות ומגזרים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "מחקר בתי ספר השוואה",
+    pdfUrl: "s3://earthquake-reports/מחקר בתי ספר השוואה.pdf"
   },
   {
     id: 20816,
-    fileName: "התנהגות אוכלוסיה עם מוגבלות",
     category: "היבטים חברתיים כלכליים",
     subCategory: "אוכלוסיות ומגזרים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "התנהגות אוכלוסיה עם מוגבלות",
+    pdfUrl: "s3://earthquake-reports/התנהגות אוכלוסיה עם מוגבלות.pdf"
   },
   {
     id: 48441,
-    fileName: "הנחיות בפישוט לשוני",
     category: "היבטים חברתיים כלכליים",
     subCategory: "אוכלוסיות ומגזרים",
     informationType: "מדריכים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "הנחיות בפישוט לשוני",
+    pdfUrl: "s3://earthquake-reports/הנחיות בפישוט לשוני.pdf"
   },
   {
     id: 90158,
-    fileName: "הערכת נזק כלכלי באילת",
     category: "היבטים חברתיים כלכליים",
     subCategory: "היבטים כלכליים",
     informationType: "מחקרים",
     language: "english",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "הערכת נזק כלכלי באילת",
+    pdfUrl: "s3://earthquake-reports/הערכת נזק כלכלי באילת.pdf"
   },
-
   {
     id: 41871,
-    fileName: "הערכת נזקים מאקרו כלכליים",
     category: "היבטים חברתיים כלכליים",
     subCategory: "היבטים כלכליים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "הערכת נזקים מאקרו כלכליים",
+    pdfUrl: "s3://earthquake-reports/הערכת נזקים מאקרו כלכליים.pdf"
   },
   {
     id: 38075,
-    fileName: "חוסן תעשיית האירוח בישראל",
     category: "היבטים חברתיים כלכליים",
     subCategory: "היבטים כלכליים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "חוסן תעשיית האירוח בישראל",
+    pdfUrl: "s3://earthquake-reports/חוסן תעשיית האירוח בישראל.pdf"
   },
   {
     id: 76408,
-    fileName: "היערכות לרעד בעסקים קטנים",
     category: "היבטים חברתיים כלכליים",
     subCategory: "היבטים כלכליים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "היערכות לרעד בעסקים קטנים",
+    pdfUrl: "s3://earthquake-reports/היערכות לרעד בעסקים קטנים.pdf"
   },
   {
     id: 41185,
-    fileName: "המערך הרגולטורי לרעידת אדמה",
     category: "היבטים חברתיים כלכליים",
     subCategory: "היבטים משפטיים",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "המערך הרגולטורי לרעידת אדמה",
+    pdfUrl: "s3://earthquake-reports/המערך הרגולטורי לרעידת אדמה.pdf"
   },
   {
     id: 36865,
-    fileName: "חבילות מדיניות לחיזוק מבנים בפריפריה",
     category: "היבטים חברתיים כלכליים",
     subCategory: "מוכנות המדינה",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "חבילות מדיניות לחיזוק מבנים בפריפריה",
+    pdfUrl: "s3://earthquake-reports/חבילות מדיניות לחיזוק מבנים בפריפריה.pdf"
   },
   {
     id: 57314,
-    fileName: "גישות בהליך זיהוי אלמונים",
     category: "היבטים חברתיים כלכליים",
     subCategory: "מוכנות המדינה",
     informationType: "מחקרים",
     language: "hebrew",
     isPublish: false,
-    status: "init"
+    status: "init",
+    fileName: "גישות בהליך זיהוי אלמונים",
+    pdfUrl: "s3://earthquake-reports/גישות בהליך זיהוי אלמונים.pdf"
   }
 ];
