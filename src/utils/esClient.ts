@@ -1,4 +1,4 @@
-import { EsRequestParams } from "@/types/es";
+import { Client, estypes } from "@elastic/elasticsearch";
 
 import { CONFIG } from "../CONFIG";
 
@@ -9,88 +9,66 @@ const {
   ES_USERNAME
 } = CONFIG;
 
-function getAuthHeader(): string | undefined {
-  if (ES_API_KEY.trim()) {
-    return `ApiKey ${ES_API_KEY.trim()}`;
-  }
+function createEsClient(): Client {
+  const endpoint = ES_ENDPOINT?.trim();
 
-  if (ES_USERNAME.trim() && ES_PASSWORD.trim()) {
-    const token = Buffer.from(`${ES_USERNAME.trim()}:${ES_PASSWORD.trim()}`).toString("base64");
-
-    return `Basic ${token}`;
-  }
-
-  return undefined;
-}
-
-function normalizeEndpoint(endpoint: string): string {
-  const normalized = endpoint.trim();
-
-  if (!normalized) {
+  if (!endpoint) {
     throw new Error("Missing ES_ENDPOINT env var");
   }
 
-  return normalized.endsWith("/") ? normalized.slice(0, -1) : normalized;
-}
+  const apiKey = ES_API_KEY?.trim();
+  const username = ES_USERNAME?.trim();
+  const password = ES_PASSWORD?.trim();
 
-export async function parseJsonSafe<T>(response: Response): Promise<T | undefined> {
-  const text = await response.text();
-
-  if (!text.trim()) {
-    return undefined;
+  if (apiKey) {
+    return new Client({
+      node: endpoint,
+      auth: {
+        apiKey
+      },
+      tls: {
+        rejectUnauthorized: false
+      }
+    });
   }
 
-  return JSON.parse(text) as T;
-}
-
-export async function esRequest(params: EsRequestParams): Promise<Response> {
-  const {
-    method,
-    path,
-    body,
-    contentType = "application/json"
-  } = params;
-  const endpoint = normalizeEndpoint(ES_ENDPOINT);
-  const auth = getAuthHeader();
-  const headers: Record<string, string> = {
-    "Accept": "application/json",
-    "Content-Type": contentType
-  };
-
-  if (auth) {
-    headers.Authorization = auth;
+  if (username && password) {
+    return new Client({
+      node: endpoint,
+      auth: {
+        username,
+        password
+      },
+      tls: {
+        rejectUnauthorized: false
+      }
+    });
   }
 
-  return fetch(`${endpoint}${path}`, {
-    method,
-    headers,
-    body
+  return new Client({
+    node: endpoint,
+    tls: {
+      rejectUnauthorized: false
+    }
   });
 }
 
-export async function ensureIndexExists(indexName: string, mappingBody: string): Promise<void> {
-  const existsResponse = await esRequest({
-    method: "HEAD",
-    path: `/${encodeURIComponent(indexName)}`
+export const esClient = createEsClient();
+
+export async function ensureIndexExists(
+  indexName: string,
+  indexBody: Omit<estypes.IndicesCreateRequest, "index">
+): Promise<void> {
+  const exists = await esClient.indices.exists({
+    index: indexName
   });
 
-  if (existsResponse.status === 200) {
+  if (exists) {
     return;
   }
 
-  if (existsResponse.status !== 404) {
-    throw new Error(`Failed checking index "${indexName}" existence: HTTP ${existsResponse.status}`);
-  }
-
-  const createResponse = await esRequest({
-    method: "PUT",
-    path: `/${encodeURIComponent(indexName)}`,
-    body: mappingBody
+  await esClient.indices.create({
+    index: indexName,
+    ...indexBody
   });
-
-  if (!createResponse.ok) {
-    const errorText = await createResponse.text();
-
-    throw new Error(`Failed creating index "${indexName}": ${errorText || createResponse.statusText}`);
-  }
 }

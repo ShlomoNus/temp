@@ -1,8 +1,10 @@
-import { EsBulkResponse } from "@/types/es";
+import { estypes } from "@elastic/elasticsearch";
+
+import { FileItem } from "@/types/general";
 
 import { CONFIG } from "../CONFIG";
 import { files } from "../excelSource";
-import { ensureIndexExists, esRequest, parseJsonSafe } from "../utils/esClient";
+import { ensureIndexExists, esClient } from "../utils/esClient";
 
 const {
   ES_INDEX_NAME
@@ -18,7 +20,7 @@ type LoadInitialDataResult = {
   errors: string[]
 };
 
-const ES_INDEX_MAPPING_BODY = JSON.stringify({
+const ES_INDEX_MAPPING_BODY: Omit<estypes.IndicesCreateRequest, "index"> = {
   mappings: {
     properties: {
       id: { type: "integer" },
@@ -39,7 +41,7 @@ const ES_INDEX_MAPPING_BODY = JSON.stringify({
       updatedAt: { type: "date" }
     }
   }
-});
+};
 
 function chunkArray<T>(arr: T[], chunkSize: number): T[][] {
   const out: T[][] = [];
@@ -51,20 +53,26 @@ function chunkArray<T>(arr: T[], chunkSize: number): T[][] {
   return out;
 }
 
-function buildBulkPayload(nowIso: string, chunk: typeof files): string {
-  return chunk
-    .map(item => {
-      const action = { index: { _id: String(item.id) } };
-      const doc = {
-        ...item,
-        createdAt: nowIso,
-        updatedAt: nowIso
-      };
-
-      return `${JSON.stringify(action)}\n${JSON.stringify(doc)}`;
-    })
-    .join("\n")
-    .concat("\n");
+function buildBulkOperations(
+  { indexName, nowIso, chunk }: {
+    indexName: string
+    nowIso: string
+    chunk: FileItem[]
+  }
+): estypes.BulkRequest["operations"] {
+  return chunk.flatMap(item => [
+    {
+      index: {
+        _index: indexName,
+        _id: String(item.id)
+      }
+    },
+    {
+      ...item,
+      createdAt: nowIso,
+      updatedAt: nowIso
+    }
+  ]);
 }
 
 export async function loadInitialDataToDb(): Promise<LoadInitialDataResult> {
@@ -79,24 +87,14 @@ export async function loadInitialDataToDb(): Promise<LoadInitialDataResult> {
   let failed = 0;
 
   for (const chunk of chunks) {
-    const payload = buildBulkPayload(nowIso, chunk);
-    const bulkResponse = await esRequest({
-      method: "POST",
-      path: `/${encodeURIComponent(indexName)}/_bulk?refresh=wait_for`,
-      body: payload,
-      contentType: "application/x-ndjson"
+    const operations = buildBulkOperations({ indexName, nowIso, chunk });
+
+    const bulkResponse = await esClient.bulk({
+      refresh: "wait_for",
+      operations
     });
 
-    if (!bulkResponse.ok) {
-      const text = await bulkResponse.text();
-
-      throw new Error(`Bulk request failed: ${text || bulkResponse.statusText}`);
-    }
-
-    const parsed = await parseJsonSafe<EsBulkResponse>(bulkResponse);
-    const items = parsed?.items ?? [];
-
-    for (const item of items) {
+    for (const item of bulkResponse.items) {
       const indexResult = item.index;
 
       if (!indexResult) {
