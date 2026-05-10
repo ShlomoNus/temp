@@ -1,3 +1,5 @@
+import { type IncomingMessage, type ServerResponse } from "http";
+
 import express, { type Request, type Response } from "express";
 import { pinoHttp } from "pino-http";
 import { serve, setup } from "swagger-ui-express";
@@ -9,7 +11,22 @@ import { logger } from "./utils/logger";
 
 const app = express();
 
-app.use(pinoHttp({ logger }));
+app.use(pinoHttp({
+  logger,
+  serializers: {
+    req(request: IncomingMessage) {
+      return {
+        method: request.method,
+        url: request.url
+      };
+    },
+    res(response: ServerResponse) {
+      return {
+        statusCode: response.statusCode
+      };
+    }
+  }
+}));
 
 app.get("/openapi.json", (_: Request, res: Response) => {
   res.json(openApiDocument);
