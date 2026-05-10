@@ -7,7 +7,7 @@ export const CONFIG = cleanEnv(process.env, {
   LOG_LEVEL: str({ default: "info" }),
   LOG_PRETTY: bool({ default: false }),
   NODE_ENV: str({
-    choices: Object.values(nodeEnvOption)
+    choices: nodeEnvOption
   }),
   S3_PDF_BUCKET: str({ default: "s3://earthquake-reports" }),
   SUMMERIZE_LAMBDA_NAME: str({ default: "" }),

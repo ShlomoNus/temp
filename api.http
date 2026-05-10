@@ -9,6 +9,15 @@ GET {{baseUrl}}/api-docs
 ### Health check
 GET {{baseUrl}}/health
 
+### Get all Elasticsearch document ids
+GET {{baseUrl}}/documents/ids
+
+### Get Elasticsearch document by id
+GET {{baseUrl}}/documents/10000
+
+### Get all Elasticsearch documents
+GET {{baseUrl}}/documents
+
 ### Load initial Elasticsearch data
 GET {{baseUrl}}/loadInitInfo
 

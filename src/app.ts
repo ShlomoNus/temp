@@ -4,15 +4,31 @@ import express, { type Request, type Response } from "express";
 import { pinoHttp } from "pino-http";
 import { serve, setup } from "swagger-ui-express";
 
-import { CONFIG } from "./CONFIG";
 import { openApiDocument } from "./consts/swagger";
+import {
+  getAllDocumentIds,
+  getAllDocuments,
+  getDocumentById
+} from "./handlers/documents";
 import { loadInitialDataToDb } from "./handlers/loadInitialDataToDb";
 import { loadInitSummerize } from "./handlers/loadInitSummerize";
-import { isTestingEnvironment } from "./utils/env";
 import { logger } from "./utils/logger";
+import { isTestingEnvironment } from "./utils/general";
 
 const app = express();
-const isSwaggerEnabled = isTestingEnvironment(CONFIG.NODE_ENV);
+const isTestingEndpointEnabled = isTestingEnvironment();
+
+function blockTestingEndpointAccess(res: Response): boolean {
+  if (isTestingEndpointEnabled) {
+    return false;
+  }
+
+  res.status(403).json({
+    error: "This endpoint is available only in testing environments"
+  });
+
+  return true;
+}
 
 app.use(pinoHttp({
   logger,
@@ -31,7 +47,7 @@ app.use(pinoHttp({
   }
 }));
 
-if (isSwaggerEnabled) {
+if (isTestingEndpointEnabled) {
   app.get("/openapi.json", (_: Request, res: Response) => {
     res.json(openApiDocument);
   });
@@ -41,6 +57,74 @@ if (isSwaggerEnabled) {
 
 app.get("/health", (_: Request, res: Response) => {
   res.send("Hello, World!");
+});
+
+app.get("/documents/ids", async(_: Request, res: Response) => {
+  if (blockTestingEndpointAccess(res)) {
+    return;
+  }
+
+  try {
+    const ids = await getAllDocumentIds();
+
+    res.json({ ids });
+  }
+  catch(error: unknown) {
+    logger.error({ err: error }, "documents: failed to get document ids");
+    const message = error instanceof Error ? error.message : "Unknown documents ids error";
+
+    res.status(500).json({ error: message });
+  }
+});
+
+app.get("/documents/:id", async(req: Request, res: Response) => {
+  if (blockTestingEndpointAccess(res)) {
+    return;
+  }
+
+  try {
+    const documentId = req.params.id;
+
+    if (!documentId || Array.isArray(documentId)) {
+      res.status(400).json({ error: "Missing document id" });
+
+      return;
+    }
+
+    const document = await getDocumentById(documentId);
+
+    if (!document) {
+      res.status(404).json({ error: "Document not found" });
+
+      return;
+    }
+
+    res.json({ document });
+  }
+  catch(error: unknown) {
+    logger.error({ err: error }, "documents: failed to get document by id");
+    const message = error instanceof Error ? error.message : "Unknown document error";
+
+    res.status(500).json({ error: message });
+  }
+});
+
+app.get("/documents", async(_: Request, res: Response) => {
+  if (blockTestingEndpointAccess(res)) {
+    return;
+  }
+
+  try {
+    const documents = await getAllDocuments();
+
+    res.json({ documents });
+  }
+  catch(error: unknown) {
+    logger.error({ err: error }, "documents: failed to get documents");
+    const message = error instanceof Error ? error.message : "Unknown documents error";
+
+    res.status(500).json({ error: message });
+  }
 });
 
 app.get("/loadInitInfo", async(_: Request, res: Response) => {

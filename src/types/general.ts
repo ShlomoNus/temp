@@ -1,3 +1,3 @@
-import { nodeEnvOption } from "@/consts/general";
+import { type nodeEnvOption } from "@/consts/general";
 
-export type NodeEnvOption = typeof nodeEnvOption[keyof typeof nodeEnvOption];
+export type NodeEnvOption = typeof nodeEnvOption[number];
