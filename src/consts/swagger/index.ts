@@ -14,8 +14,8 @@ export const openApiDocument = {
   },
   servers: [
     {
-      url: "http://127.0.0.1:3080",
-      description: "Local test server"
+      url: "/",
+      description: "Current server"
     }
   ],
   paths: {

@@ -12,23 +12,10 @@ import {
 } from "./handlers/documents";
 import { loadInitialDataToDb } from "./handlers/loadInitialDataToDb";
 import { loadInitSummerize } from "./handlers/loadInitSummerize";
-import { isTestingEnvironment } from "./utils/general";
+import { testingEndpointAccessMiddleware } from "./middleware/testingEndpointAccess";
 import { logger } from "./utils/logger";
 
 const app = express();
-const isTestingEndpointEnabled = isTestingEnvironment();
-
-function blockTestingEndpointAccess(res: Response): boolean {
-  if (isTestingEndpointEnabled) {
-    return false;
-  }
-
-  res.status(403).json({
-    error: "This endpoint is available only in testing environments"
-  });
-
-  return true;
-}
 
 app.use(pinoHttp({
   logger,
@@ -47,23 +34,17 @@ app.use(pinoHttp({
   }
 }));
 
-if (isTestingEndpointEnabled) {
-  app.get("/openapi.json", (_: Request, res: Response) => {
-    res.json(openApiDocument);
-  });
+app.get("/openapi.json", testingEndpointAccessMiddleware, (_: Request, res: Response) => {
+  res.json(openApiDocument);
+});
 
-  app.use("/api-docs", serve, setup(openApiDocument));
-}
+app.use("/api-docs", testingEndpointAccessMiddleware, serve, setup(openApiDocument));
 
 app.get("/health", (_: Request, res: Response) => {
   res.send("Hello, World!");
 });
 
-app.get("/documents/ids", async(_: Request, res: Response) => {
-  if (blockTestingEndpointAccess(res)) {
-    return;
-  }
-
+app.get("/documents/ids", testingEndpointAccessMiddleware, async(_: Request, res: Response) => {
   try {
     const ids = await getAllDocumentIds();
 
@@ -77,11 +58,7 @@ app.get("/documents/ids", async(_: Request, res: Response) => {
   }
 });
 
-app.get("/documents/:id", async(req: Request, res: Response) => {
-  if (blockTestingEndpointAccess(res)) {
-    return;
-  }
-
+app.get("/documents/:id", testingEndpointAccessMiddleware, async(req: Request, res: Response) => {
   try {
     const documentId = req.params.id;
 
@@ -109,11 +86,7 @@ app.get("/documents/:id", async(req: Request, res: Response) => {
   }
 });
 
-app.get("/documents", async(_: Request, res: Response) => {
-  if (blockTestingEndpointAccess(res)) {
-    return;
-  }
-
+app.get("/documents", testingEndpointAccessMiddleware, async(_: Request, res: Response) => {
   try {
     const documents = await getAllDocuments();
 
