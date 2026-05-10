@@ -12,8 +12,8 @@ import {
 } from "./handlers/documents";
 import { loadInitialDataToDb } from "./handlers/loadInitialDataToDb";
 import { loadInitSummerize } from "./handlers/loadInitSummerize";
-import { logger } from "./utils/logger";
 import { isTestingEnvironment } from "./utils/general";
+import { logger } from "./utils/logger";
 
 const app = express();
 const isTestingEndpointEnabled = isTestingEnvironment();
