@@ -1,8 +1,8 @@
 /* eslint-disable max-lines */
 
-import { FileItem } from "./types/data";
+import { FileItem } from "@/handlers/loadInitialDataToDb/types/data";
 
-export const files: FileItem[] = [
+export const esBaseData: FileItem[] = [
   {
     id: 71381,
     category: "גיאולוגיה",

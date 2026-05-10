@@ -1,6 +1,6 @@
 import { pino } from "pino";
 
-import { CONFIG } from "../CONFIG";
+import { CONFIG } from "@/CONFIG";
 
 export const logger = pino({
   level: CONFIG.LOG_LEVEL,

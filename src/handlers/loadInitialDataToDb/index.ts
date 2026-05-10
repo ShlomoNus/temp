@@ -1,11 +1,11 @@
 import { estypes } from "@elastic/elasticsearch";
 
-import { FileItem } from "@/types/data";
+import { FileItem } from "@/handlers/loadInitialDataToDb/types/data";
 
-import { CONFIG } from "../CONFIG";
-import { files } from "../excelSource";
-import { ensureIndexExists, esClient } from "../utils/esClient";
-import { logger } from "../utils/logger";
+import { CONFIG } from "@/CONFIG";
+import { esBaseData } from "./consts/data";
+import { ensureIndexExists, esClient } from "@/utils/esClient";
+import { logger } from "@/utils/logger";
 
 const {
   ES_INDEX_NAME
@@ -81,7 +81,7 @@ export async function loadInitialDataToDb(): Promise<LoadInitialDataResult> {
 
   logger.info({
     indexName,
-    totalFiles: files.length,
+    totalFiles: esBaseData.length,
     chunkSize: BULK_CHUNK_SIZE
   }, "loadInitialDataToDb: starting");
 
@@ -90,7 +90,7 @@ export async function loadInitialDataToDb(): Promise<LoadInitialDataResult> {
   logger.info({ indexName }, "loadInitialDataToDb: index is ready");
 
   const nowIso = new Date().toISOString();
-  const chunks = chunkArray(files, BULK_CHUNK_SIZE);
+  const chunks = chunkArray(esBaseData, BULK_CHUNK_SIZE);
   const errors: string[] = [];
   let indexed = 0;
   let failed = 0;
@@ -158,14 +158,14 @@ export async function loadInitialDataToDb(): Promise<LoadInitialDataResult> {
 
   logger.info({
     indexName,
-    total: files.length,
+    total: esBaseData.length,
     indexed,
     failed
   }, "loadInitialDataToDb: completed");
 
   return {
     indexName,
-    total: files.length,
+    total: esBaseData.length,
     indexed,
     failed,
     errors

@@ -1,6 +1,6 @@
 import { Client, estypes } from "@elastic/elasticsearch";
 
-import { CONFIG } from "../CONFIG";
+import { CONFIG } from "@/CONFIG";
 
 const {
   ES_API_KEY,

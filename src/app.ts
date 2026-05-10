@@ -7,7 +7,7 @@ import { serve, setup } from "swagger-ui-express";
 import { CONFIG } from "./CONFIG";
 import { loadInitialDataToDb } from "./handlers/loadInitialDataToDb";
 import { loadInitSummerize } from "./handlers/loadInitSummerize";
-import { openApiDocument } from "./swagger";
+import { openApiDocument } from "./consts/swagger";
 import { isTestingEnvironment } from "./utils/env";
 import { logger } from "./utils/logger";
 

@@ -1,19 +1,15 @@
 import { InvokeCommand, LambdaClient } from "@aws-sdk/client-lambda";
 
-import { CONFIG } from "../CONFIG";
-import { files } from "../excelSource";
+import { CONFIG } from "@/CONFIG";
+import { esBaseData } from "@/handlers/loadInitialDataToDb/consts/data";
+import { GetSummerizeResult } from "./types";
 
 const {
   AWS_REGION,
   SUMMERIZE_LAMBDA_NAME
 } = CONFIG;
 
-type GetSummerizeResult = {
-  lambdaName: string
-  totalFiles: number
-  queued: number
-  failed: number[]
-};
+
 
 export async function loadInitSummerize(): Promise<GetSummerizeResult> {
   const lambdaClient = new LambdaClient({
@@ -21,7 +17,7 @@ export async function loadInitSummerize(): Promise<GetSummerizeResult> {
   });
   const failed: number[] = [];
 
-  for (const { id, pdfUrl } of files) {
+  for (const { id, pdfUrl } of esBaseData) {
     try {
       await lambdaClient.send(
         new InvokeCommand({
@@ -38,8 +34,8 @@ export async function loadInitSummerize(): Promise<GetSummerizeResult> {
 
   return {
     lambdaName: SUMMERIZE_LAMBDA_NAME,
-    totalFiles: files.length,
-    queued: files.length - failed.length,
+    totalFiles: esBaseData.length,
+    queued: esBaseData.length - failed.length,
     failed
   };
 }

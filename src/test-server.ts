@@ -1,4 +1,4 @@
-import { loadLocalEnv } from "./loadEnv";
+import { loadLocalEnv } from "./utils/env";
 
 async function main(): Promise<void> {
   loadLocalEnv();
