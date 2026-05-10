@@ -1,0 +1,16 @@
+@baseUrl = http://127.0.0.1:3080
+
+### OpenAPI document
+GET {{baseUrl}}/openapi.json
+
+### Swagger UI
+GET {{baseUrl}}/api-docs
+
+### Health check
+GET {{baseUrl}}/health
+
+### Load initial Elasticsearch data
+GET {{baseUrl}}/loadInitInfo
+
+### Queue initial summarize Lambda jobs
+GET {{baseUrl}}/loadInitSummerize
