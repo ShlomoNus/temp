@@ -1,6 +1,6 @@
 import { estypes } from "@elastic/elasticsearch";
 
-import { FileItem } from "@/types/general";
+import { FileItem } from "@/types/data";
 
 import { CONFIG } from "../CONFIG";
 import { files } from "../excelSource";

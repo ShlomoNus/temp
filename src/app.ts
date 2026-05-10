@@ -5,13 +5,14 @@ import { pinoHttp } from "pino-http";
 import { serve, setup } from "swagger-ui-express";
 
 import { CONFIG } from "./CONFIG";
-import { loadInitialDataToDb } from "./helpers/loadInitialDataToDb";
-import { loadInitSummerize } from "./helpers/loadInitSummerize";
+import { loadInitialDataToDb } from "./handlers/loadInitialDataToDb";
+import { loadInitSummerize } from "./handlers/loadInitSummerize";
 import { openApiDocument } from "./swagger";
+import { isTestingEnvironment } from "./utils/env";
 import { logger } from "./utils/logger";
 
 const app = express();
-const isSwaggerEnabled = CONFIG.isDev || CONFIG.NODE_ENV === "qa";
+const isSwaggerEnabled = isTestingEnvironment(CONFIG.NODE_ENV);
 
 app.use(pinoHttp({
   logger,

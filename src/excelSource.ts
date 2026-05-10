@@ -1,6 +1,6 @@
 /* eslint-disable max-lines */
 
-import { FileItem } from "./types/general";
+import { FileItem } from "./types/data";
 
 export const files: FileItem[] = [
   {
