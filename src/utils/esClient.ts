@@ -6,6 +6,7 @@ const {
   ES_API_KEY,
   ES_ENDPOINT,
   ES_PASSWORD,
+  ES_TLS_REJECT_UNAUTHORIZED,
   ES_USERNAME
 } = CONFIG;
 
@@ -19,6 +20,9 @@ function createEsClient(): Client {
   const apiKey = ES_API_KEY?.trim();
   const username = ES_USERNAME?.trim();
   const password = ES_PASSWORD?.trim();
+  const tls = {
+    rejectUnauthorized: ES_TLS_REJECT_UNAUTHORIZED
+  };
 
   if (apiKey) {
     return new Client({
@@ -26,9 +30,7 @@ function createEsClient(): Client {
       auth: {
         apiKey
       },
-      tls: {
-        rejectUnauthorized: false
-      }
+      tls
     });
   }
 
@@ -39,17 +41,13 @@ function createEsClient(): Client {
         username,
         password
       },
-      tls: {
-        rejectUnauthorized: false
-      }
+      tls
     });
   }
 
   return new Client({
     node: endpoint,
-    tls: {
-      rejectUnauthorized: false
-    }
+    tls
   });
 }
 
