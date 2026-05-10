@@ -5,6 +5,7 @@ import { FileItem } from "@/types/general";
 import { CONFIG } from "../CONFIG";
 import { files } from "../excelSource";
 import { ensureIndexExists, esClient } from "../utils/esClient";
+import { logger } from "../utils/logger";
 
 const {
   ES_INDEX_NAME
@@ -78,7 +79,15 @@ function buildBulkOperations(
 export async function loadInitialDataToDb(): Promise<LoadInitialDataResult> {
   const indexName = ES_INDEX_NAME.trim() || "earthquake-documents";
 
+  logger.info({
+    indexName,
+    totalFiles: files.length,
+    chunkSize: BULK_CHUNK_SIZE
+  }, "loadInitialDataToDb: starting");
+
+  logger.info({ indexName }, "loadInitialDataToDb: ensuring index exists");
   await ensureIndexExists(indexName, ES_INDEX_MAPPING_BODY);
+  logger.info({ indexName }, "loadInitialDataToDb: index is ready");
 
   const nowIso = new Date().toISOString();
   const chunks = chunkArray(files, BULK_CHUNK_SIZE);
@@ -86,33 +95,73 @@ export async function loadInitialDataToDb(): Promise<LoadInitialDataResult> {
   let indexed = 0;
   let failed = 0;
 
-  for (const chunk of chunks) {
+  for (const [chunkIndex, chunk] of chunks.entries()) {
+    const chunkNumber = chunkIndex + 1;
     const operations = buildBulkOperations({ indexName, nowIso, chunk });
+
+    logger.info({
+      chunkNumber,
+      totalChunks: chunks.length,
+      documents: chunk.length
+    }, "loadInitialDataToDb: indexing chunk");
 
     const bulkResponse = await esClient.bulk({
       refresh: "wait_for",
       operations
     });
 
+    let chunkIndexed = 0;
+    let chunkFailed = 0;
+
     for (const item of bulkResponse.items) {
       const indexResult = item.index;
 
       if (!indexResult) {
         failed += 1;
+        chunkFailed += 1;
+        logger.error({
+          chunkNumber
+        }, "loadInitialDataToDb: bulk item missing index result");
         continue;
       }
 
       if ((indexResult.status ?? 500) >= 300) {
+        const errorMessage = [
+          `${indexResult._id ?? "unknown"}:`,
+          indexResult.error?.type ?? "error",
+          indexResult.error?.reason ?? ""
+        ].join(" ").trim();
+
         failed += 1;
-        errors.push(
-          `${indexResult._id ?? "unknown"}: ${indexResult.error?.type ?? "error"} ${indexResult.error?.reason ?? ""}`.trim()
-        );
+        chunkFailed += 1;
+        errors.push(errorMessage);
+        logger.error({
+          chunkNumber,
+          documentId: indexResult._id,
+          status: indexResult.status,
+          error: indexResult.error
+        }, "loadInitialDataToDb: failed to index document");
       }
       else {
         indexed += 1;
+        chunkIndexed += 1;
       }
     }
+
+    logger.info({
+      chunkNumber,
+      totalChunks: chunks.length,
+      indexed: chunkIndexed,
+      failed: chunkFailed
+    }, "loadInitialDataToDb: finished indexing chunk");
   }
+
+  logger.info({
+    indexName,
+    total: files.length,
+    indexed,
+    failed
+  }, "loadInitialDataToDb: completed");
 
   return {
     indexName,
