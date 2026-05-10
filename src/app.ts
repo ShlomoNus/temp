@@ -4,12 +4,14 @@ import express, { type Request, type Response } from "express";
 import { pinoHttp } from "pino-http";
 import { serve, setup } from "swagger-ui-express";
 
+import { CONFIG } from "./CONFIG";
 import { loadInitialDataToDb } from "./helpers/loadInitialDataToDb";
 import { loadInitSummerize } from "./helpers/loadInitSummerize";
 import { openApiDocument } from "./swagger";
 import { logger } from "./utils/logger";
 
 const app = express();
+const isSwaggerEnabled = CONFIG.isDev || CONFIG.NODE_ENV === "qa";
 
 app.use(pinoHttp({
   logger,
@@ -28,11 +30,13 @@ app.use(pinoHttp({
   }
 }));
 
-app.get("/openapi.json", (_: Request, res: Response) => {
-  res.json(openApiDocument);
-});
+if (isSwaggerEnabled) {
+  app.get("/openapi.json", (_: Request, res: Response) => {
+    res.json(openApiDocument);
+  });
 
-app.use("/api-docs", serve, setup(openApiDocument));
+  app.use("/api-docs", serve, setup(openApiDocument));
+}
 
 app.get("/health", (_: Request, res: Response) => {
   res.send("Hello, World!");
