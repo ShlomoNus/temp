@@ -3,6 +3,8 @@ import path from "path";
 import { config as loadEnv } from "dotenv";
 import { bool, cleanEnv, str } from "envalid";
 
+import { nodeEnvOption } from "./consts/general";
+
 const cwd = process.cwd();
 
 loadEnv({ path: path.resolve(cwd, ".env") });
@@ -15,7 +17,8 @@ export const CONFIG = cleanEnv(process.env, {
   AWS_REGION: str({ default: "il-central-1" }),
   LOG_LEVEL: str({ default: "info" }),
   LOG_PRETTY: bool({ default: false }),
-  NODE_ENV: str({ choices: ["development", "test", "production", "staging", "qa"], default: "development" }),
+  NODE_ENV: str({
+    choices: Object.values(nodeEnvOption)  }),
   S3_PDF_BUCKET: str({ default: "s3://earthquake-reports" }),
   SUMMERIZE_LAMBDA_NAME: str({ default: "" }),
   ES_ENDPOINT: str({ default: "" }),
