@@ -1,5 +1,5 @@
 import express, { type Request, type Response } from "express";
-import pinoHttp from "pino-http";
+import { pinoHttp } from "pino-http";
 import { serve, setup } from "swagger-ui-express";
 
 import { loadInitialDataToDb } from "./helpers/loadInitialDataToDb";
