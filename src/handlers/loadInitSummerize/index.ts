@@ -2,14 +2,13 @@ import { InvokeCommand, LambdaClient } from "@aws-sdk/client-lambda";
 
 import { CONFIG } from "@/CONFIG";
 import { esBaseData } from "@/handlers/loadInitialDataToDb/consts/data";
+
 import { GetSummerizeResult } from "./types";
 
 const {
   AWS_REGION,
   SUMMERIZE_LAMBDA_NAME
 } = CONFIG;
-
-
 
 export async function loadInitSummerize(): Promise<GetSummerizeResult> {
   const lambdaClient = new LambdaClient({

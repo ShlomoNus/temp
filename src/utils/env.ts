@@ -1,6 +1,7 @@
 import path from "path";
 
 import { config as loadEnv } from "dotenv";
+
 import { nodeEnvOption } from "@/consts/general";
 import { NodeEnvOption } from "@/types/general";
 

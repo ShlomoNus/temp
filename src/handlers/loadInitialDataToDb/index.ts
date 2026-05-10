@@ -1,11 +1,11 @@
 import { estypes } from "@elastic/elasticsearch";
 
-import { FileItem } from "@/handlers/loadInitialDataToDb/types/data";
-
 import { CONFIG } from "@/CONFIG";
-import { esBaseData } from "./consts/data";
+import { FileItem } from "@/handlers/loadInitialDataToDb/types/data";
 import { ensureIndexExists, esClient } from "@/utils/esClient";
 import { logger } from "@/utils/logger";
+
+import { esBaseData } from "./consts/data";
 
 const {
   ES_INDEX_NAME

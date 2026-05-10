@@ -1,6 +1,6 @@
 export type GetSummerizeResult = {
-    lambdaName: string
-    totalFiles: number
-    queued: number
-    failed: number[]
-  };
+  lambdaName: string
+  totalFiles: number
+  queued: number
+  failed: number[]
+};
