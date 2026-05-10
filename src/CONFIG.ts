@@ -13,6 +13,8 @@ loadEnv({
 
 export const CONFIG = cleanEnv(process.env, {
   AWS_REGION: str({ default: "il-central-1" }),
+  LOG_LEVEL: str({ default: "info" }),
+  LOG_PRETTY: bool({ default: false }),
   S3_PDF_BUCKET: str({ default: "s3://earthquake-reports" }),
   SUMMERIZE_LAMBDA_NAME: str({ default: "" }),
   ES_ENDPOINT: str({ default: "" }),
