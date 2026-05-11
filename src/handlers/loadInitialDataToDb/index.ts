@@ -31,7 +31,8 @@ const ES_INDEX_MAPPING_BODY: Omit<estypes.IndicesCreateRequest, "index"> = {
           raw: { type: "keyword" }
         }
       },
-      pdfUrl: { type: "keyword" },
+      url: { type: "keyword" },
+      type: { type: "keyword" },
       category: { type: "keyword" },
       subCategory: { type: "keyword" },
       informationType: { type: "keyword" },

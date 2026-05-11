@@ -33,8 +33,12 @@ export const openApiDocument = {
           fileName: {
             type: "string"
           },
-          pdfUrl: {
+          url: {
             type: "string"
+          },
+          type: {
+            type: "string",
+            enum: ["pdf", "audio", "video"]
           },
           category: {
             type: "string"

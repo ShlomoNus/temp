@@ -12,7 +12,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "העתק אור עקיבא",
-    pdfUrl: "s3://earthquake-reports/העתק אור עקיבא.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/העתק אור עקיבא.pdf"
   },
   {
     id: 49732,
@@ -23,7 +24,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "מיפוי העתקים בברניקי",
-    pdfUrl: "s3://earthquake-reports/מיפוי העתקים בברניקי.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/מיפוי העתקים בברניקי.pdf"
   },
   {
     id: 84050,
@@ -34,7 +36,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "עדכון מעמד העתקים 2018",
-    pdfUrl: "s3://earthquake-reports/עדכון מעמד העתקים 2018.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/עדכון מעמד העתקים 2018.pdf"
   },
   {
     id: 71043,
@@ -45,7 +48,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "עדכון מעמד העתקים 2022",
-    pdfUrl: "s3://earthquake-reports/עדכון מעמד העתקים 2022.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/עדכון מעמד העתקים 2022.pdf"
   },
   {
     id: 28924,
@@ -56,7 +60,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "פעילות טקטונית כרמל ונשר",
-    pdfUrl: "s3://earthquake-reports/פעילות טקטונית כרמל ונשר.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/פעילות טקטונית כרמל ונשר.pdf"
   },
   {
     id: 85806,
@@ -67,7 +72,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "רכס חוסם צפוני בכרמל",
-    pdfUrl: "s3://earthquake-reports/רכס חוסם צפוני בכרמל.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/רכס חוסם צפוני בכרמל.pdf"
   },
   {
     id: 84518,
@@ -78,7 +84,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "קריעת פני שטח בטבריה",
-    pdfUrl: "s3://earthquake-reports/קריעת פני שטח בטבריה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/קריעת פני שטח בטבריה.pdf"
   },
   {
     id: 43221,
@@ -89,7 +96,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "העתק אחיהוד",
-    pdfUrl: "s3://earthquake-reports/העתק אחיהוד.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/העתק אחיהוד.pdf"
   },
   {
     id: 54062,
@@ -100,7 +108,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "מיקום העתק הכרמל מניתוח תתקרקע",
-    pdfUrl: "s3://earthquake-reports/מיקום העתק הכרמל מניתוח תתקרקע.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/מיקום העתק הכרמל מניתוח תתקרקע.pdf"
   },
   {
     id: 20531,
@@ -111,7 +120,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "מדידות רעש לאיתור העתק הכרמל",
-    pdfUrl: "s3://earthquake-reports/מדידות רעש לאיתור העתק הכרמל.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/מדידות רעש לאיתור העתק הכרמל.pdf"
   },
   {
     id: 28385,
@@ -122,7 +132,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "מפת סיכון ארצית להעתקה פעילה",
-    pdfUrl: "s3://earthquake-reports/מפת סיכון ארצית להעתקה פעילה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/מפת סיכון ארצית להעתקה פעילה.pdf"
   },
   {
     id: 86975,
@@ -133,7 +144,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "העתקים פעילים אילת",
-    pdfUrl: "s3://earthquake-reports/העתקים פעילים אילת.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/העתקים פעילים אילת.pdf"
   },
   {
     id: 43725,
@@ -144,7 +156,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "מבנה תלת מימדי למפרץ אילת",
-    pdfUrl: "s3://earthquake-reports/מבנה תלת מימדי למפרץ אילת.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/מבנה תלת מימדי למפרץ אילת.pdf"
   },
   {
     id: 51378,
@@ -155,7 +168,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "זמני חזרה של רעידות בכנרת",
-    pdfUrl: "s3://earthquake-reports/זמני חזרה של רעידות בכנרת.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/זמני חזרה של רעידות בכנרת.pdf"
   },
   {
     id: 28515,
@@ -166,7 +180,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "העתקים במדרון היבשת וטקטוניקת מלח",
-    pdfUrl: "s3://earthquake-reports/העתקים במדרון היבשת וטקטוניקת מלח.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/העתקים במדרון היבשת וטקטוניקת מלח.pdf"
   },
   {
     id: 33624,
@@ -177,7 +192,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "אפיון העתקים במדרון היבשת",
-    pdfUrl: "s3://earthquake-reports/אפיון העתקים במדרון היבשת.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/אפיון העתקים במדרון היבשת.pdf"
   },
   {
     id: 44497,
@@ -188,7 +204,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "הגברת תנודות בעמק זבולון א",
-    pdfUrl: "s3://earthquake-reports/הגברת תנודות בעמק זבולון א.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/הגברת תנודות בעמק זבולון א.pdf"
   },
   {
     id: 73230,
@@ -199,7 +216,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "הגברת תנודות בשפלה",
-    pdfUrl: "s3://earthquake-reports/הגברת תנודות בשפלה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/הגברת תנודות בשפלה.pdf"
   },
   {
     id: 38837,
@@ -210,7 +228,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "הגברת תנודות בעמק זבולון ב",
-    pdfUrl: "s3://earthquake-reports/הגברת תנודות בעמק זבולון ב.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/הגברת תנודות בעמק זבולון ב.pdf"
   },
   {
     id: 44504,
@@ -221,7 +240,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "היחס בין שטח וגודל גלישות",
-    pdfUrl: "s3://earthquake-reports/היחס בין שטח וגודל גלישות.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/היחס בין שטח וגודל גלישות.pdf"
   },
   {
     id: 47412,
@@ -232,7 +252,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "גלישות אזור אילת אילות",
-    pdfUrl: "s3://earthquake-reports/גלישות אזור אילת אילות.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/גלישות אזור אילת אילות.pdf"
   },
   {
     id: 63280,
@@ -243,7 +264,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "גלישות באזור בית שאן",
-    pdfUrl: "s3://earthquake-reports/גלישות באזור בית שאן.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/גלישות באזור בית שאן.pdf"
   },
   {
     id: 93247,
@@ -254,7 +276,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "סיכון נפילת סלעים חפציבה",
-    pdfUrl: "s3://earthquake-reports/סיכון נפילת סלעים חפציבה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/סיכון נפילת סלעים חפציבה.pdf"
   },
   {
     id: 47576,
@@ -265,7 +288,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "טיפוסי כשל מדרון בחיפה",
-    pdfUrl: "s3://earthquake-reports/טיפוסי כשל מדרון בחיפה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/טיפוסי כשל מדרון בחיפה.pdf"
   },
   {
     id: 71124,
@@ -276,7 +300,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "מפת סכנה ארצית לגלישות צפון",
-    pdfUrl: "s3://earthquake-reports/מפת סכנה ארצית לגלישות צפון.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/מפת סכנה ארצית לגלישות צפון.pdf"
   },
   {
     id: 60785,
@@ -287,7 +312,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "מפת סכנה ארצית לגלישות דרום",
-    pdfUrl: "s3://earthquake-reports/מפת סכנה ארצית לגלישות דרום.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/מפת סכנה ארצית לגלישות דרום.pdf"
   },
   {
     id: 18944,
@@ -298,7 +324,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "גלישות תת ימיות במדרון היבשת",
-    pdfUrl: "s3://earthquake-reports/גלישות תת ימיות במדרון היבשת.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/גלישות תת ימיות במדרון היבשת.pdf"
   },
   {
     id: 30862,
@@ -309,7 +336,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "אלגוריתם לחיזוי גלישת קרקע",
-    pdfUrl: "s3://earthquake-reports/אלגוריתם לחיזוי גלישת קרקע.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/אלגוריתם לחיזוי גלישת קרקע.pdf"
   },
   {
     id: 77482,
@@ -320,7 +348,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "התנזלות בבית שאן",
-    pdfUrl: "s3://earthquake-reports/התנזלות בבית שאן.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/התנזלות בבית שאן.pdf"
   },
   {
     id: 32438,
@@ -331,7 +360,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "התנזלות בעמק זבולון",
-    pdfUrl: "s3://earthquake-reports/התנזלות בעמק זבולון.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/התנזלות בעמק זבולון.pdf"
   },
   {
     id: 15452,
@@ -342,7 +372,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "התנזלות אילת אילות",
-    pdfUrl: "s3://earthquake-reports/התנזלות אילת אילות.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/התנזלות אילת אילות.pdf"
   },
   {
     id: 29079,
@@ -353,7 +384,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "הערכה גיאוטכנית להתנזלות בזבולון",
-    pdfUrl: "s3://earthquake-reports/הערכה גיאוטכנית להתנזלות בזבולון.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/הערכה גיאוטכנית להתנזלות בזבולון.pdf"
   },
   {
     id: 47840,
@@ -364,7 +396,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "הערכת מיקום ועוצמה מלווינים",
-    pdfUrl: "s3://earthquake-reports/הערכת מיקום ועוצמה מלווינים.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/הערכת מיקום ועוצמה מלווינים.pdf"
   },
   {
     id: 34429,
@@ -375,7 +408,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "שאלון עדכני לקביעת עוצמות סייסמיות",
-    pdfUrl: "s3://earthquake-reports/שאלון עדכני לקביעת עוצמות סייסמיות.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/שאלון עדכני לקביעת עוצמות סייסמיות.pdf"
   },
   {
     id: 30047,
@@ -386,7 +420,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "אימוץ סולם עוצמה אירופאי",
-    pdfUrl: "s3://earthquake-reports/אימוץ סולם עוצמה אירופאי.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/אימוץ סולם עוצמה אירופאי.pdf"
   },
   {
     id: 87285,
@@ -397,7 +432,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "סימולציה לצונמי בים המלח",
-    pdfUrl: "s3://earthquake-reports/סימולציה לצונמי בים המלח.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/סימולציה לצונמי בים המלח.pdf"
   },
   {
     id: 64444,
@@ -408,7 +444,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "מודל סיכון לצונמי בת גלים ואילת",
-    pdfUrl: "s3://earthquake-reports/מודל סיכון לצונמי בת גלים ואילת.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/מודל סיכון לצונמי בת גלים ואילת.pdf"
   },
   {
     id: 57478,
@@ -419,7 +456,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "הדמיית תרחישי צונמי",
-    pdfUrl: "s3://earthquake-reports/הדמיית תרחישי צונמי.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/הדמיית תרחישי צונמי.pdf"
   },
   {
     id: 71996,
@@ -430,7 +468,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "סף מגניטודה לצונמי",
-    pdfUrl: "s3://earthquake-reports/סף מגניטודה לצונמי.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/סף מגניטודה לצונמי.pdf"
   },
   {
     id: 71977,
@@ -441,7 +480,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "פגיעת צונמי בתשתיות ימיות",
-    pdfUrl: "s3://earthquake-reports/פגיעת צונמי בתשתיות ימיות.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/פגיעת צונמי בתשתיות ימיות.pdf"
   },
   {
     id: 17214,
@@ -452,7 +492,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "ניתוח היסטורי סכנה לצונמי",
-    pdfUrl: "s3://earthquake-reports/ניתוח היסטורי סכנה לצונמי.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/ניתוח היסטורי סכנה לצונמי.pdf"
   },
   {
     id: 30476,
@@ -463,7 +504,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "סיכום סיכונים בחיפה",
-    pdfUrl: "s3://earthquake-reports/סיכום סיכונים בחיפה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/סיכום סיכונים בחיפה.pdf"
   },
   {
     id: 31251,
@@ -474,7 +516,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "סיכונים והעתקים בבקעת הירדן",
-    pdfUrl: "s3://earthquake-reports/סיכונים והעתקים בבקעת הירדן.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/סיכונים והעתקים בבקעת הירדן.pdf"
   },
   {
     id: 52391,
@@ -485,7 +528,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "מיפוי סיכונים אזור מתלול צורים",
-    pdfUrl: "s3://earthquake-reports/מיפוי סיכונים אזור מתלול צורים.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/מיפוי סיכונים אזור מתלול צורים.pdf"
   },
   {
     id: 79389,
@@ -496,7 +540,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "בסיס נתונים גאודטי עבור הדרום",
-    pdfUrl: "s3://earthquake-reports/בסיס נתונים גאודטי עבור הדרום.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/בסיס נתונים גאודטי עבור הדרום.pdf"
   },
   {
     id: 66857,
@@ -507,7 +552,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "מיפוי סיכונים והעתקים בבית שאן",
-    pdfUrl: "s3://earthquake-reports/מיפוי סיכונים והעתקים בבית שאן.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/מיפוי סיכונים והעתקים בבית שאן.pdf"
   },
   {
     id: 46514,
@@ -518,7 +564,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "הסיכון לרעידת אדמה בטבריה",
-    pdfUrl: "s3://earthquake-reports/הסיכון לרעידת אדמה בטבריה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/הסיכון לרעידת אדמה בטבריה.pdf"
   },
   {
     id: 13579,
@@ -529,7 +576,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "תכנת ורוניק",
-    pdfUrl: "s3://earthquake-reports/תכנת ורוניק.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/תכנת ורוניק.pdf"
   },
   {
     id: 68266,
@@ -540,7 +588,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "אפיון תופעות סביבה מרעידות",
-    pdfUrl: "s3://earthquake-reports/אפיון תופעות סביבה מרעידות.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/אפיון תופעות סביבה מרעידות.pdf"
   },
   {
     id: 44293,
@@ -551,7 +600,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "תפיסה לאומית לרעידת אדמה",
-    pdfUrl: "s3://earthquake-reports/תפיסה לאומית לרעידת אדמה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/תפיסה לאומית לרעידת אדמה.pdf"
   },
   {
     id: 51490,
@@ -562,7 +612,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "פוסטר הנחיות במשטרה",
-    pdfUrl: "s3://earthquake-reports/פוסטר הנחיות במשטרה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/פוסטר הנחיות במשטרה.pdf"
   },
   {
     id: 14328,
@@ -573,7 +624,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "פוסטר הנחיות בבתי חולים",
-    pdfUrl: "s3://earthquake-reports/פוסטר הנחיות בבתי חולים.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/פוסטר הנחיות בבתי חולים.pdf"
   },
   {
     id: 41626,
@@ -584,7 +636,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "עלון היערכות לרעידות אדמה רוסית",
-    pdfUrl: "s3://earthquake-reports/עלון היערכות לרעידות אדמה רוסית.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/עלון היערכות לרעידות אדמה רוסית.pdf"
   },
   {
     id: 49563,
@@ -595,7 +648,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "עלון היערכות לרעידות אדמה ערבית",
-    pdfUrl: "s3://earthquake-reports/עלון היערכות לרעידות אדמה ערבית.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/עלון היערכות לרעידות אדמה ערבית.pdf"
   },
   {
     id: 52536,
@@ -606,7 +660,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "עלון היערכות לרעידות אדמה אנגלית",
-    pdfUrl: "s3://earthquake-reports/עלון היערכות לרעידות אדמה אנגלית.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/עלון היערכות לרעידות אדמה אנגלית.pdf"
   },
   {
     id: 45444,
@@ -617,7 +672,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "עלון היערכות לרעידות אדמה עברית",
-    pdfUrl: "s3://earthquake-reports/עלון היערכות לרעידות אדמה עברית.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/עלון היערכות לרעידות אדמה עברית.pdf"
   },
   {
     id: 80743,
@@ -628,7 +684,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "הנחיות ברעידת אדמה עברית",
-    pdfUrl: "s3://earthquake-reports/הנחיות ברעידת אדמה עברית.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/הנחיות ברעידת אדמה עברית.pdf"
   },
   {
     id: 71214,
@@ -639,7 +696,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "הנחיות ברעידת אדמה ערבית",
-    pdfUrl: "s3://earthquake-reports/הנחיות ברעידת אדמה ערבית.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/הנחיות ברעידת אדמה ערבית.pdf"
   },
   {
     id: 53736,
@@ -650,7 +708,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "הנחיות ברעידת אדמה רוסית",
-    pdfUrl: "s3://earthquake-reports/הנחיות ברעידת אדמה רוסית.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/הנחיות ברעידת אדמה רוסית.pdf"
   },
   {
     id: 29684,
@@ -661,7 +720,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "הנחיות ברעידת אדמה אנגלית",
-    pdfUrl: "s3://earthquake-reports/הנחיות ברעידת אדמה אנגלית.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/הנחיות ברעידת אדמה אנגלית.pdf"
   },
   {
     id: 75622,
@@ -672,7 +732,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "מצגת הסברה",
-    pdfUrl: "s3://earthquake-reports/מצגת הסברה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/מצגת הסברה.pdf"
   },
   {
     id: 70638,
@@ -683,7 +744,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "כרזה בערבית",
-    pdfUrl: "s3://earthquake-reports/כרזה בערבית.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/כרזה בערבית.pdf"
   },
   {
     id: 92552,
@@ -694,7 +756,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "כרזה בעברית",
-    pdfUrl: "s3://earthquake-reports/כרזה בעברית.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/כרזה בעברית.pdf"
   },
   {
     id: 65565,
@@ -705,7 +768,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "מדריך לתכנון מילוט במבני ציבור",
-    pdfUrl: "s3://earthquake-reports/מדריך לתכנון מילוט במבני ציבור.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/מדריך לתכנון מילוט במבני ציבור.pdf"
   },
   {
     id: 79011,
@@ -716,7 +780,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "עלון צונמי ערבית",
-    pdfUrl: "s3://earthquake-reports/עלון צונמי ערבית.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/עלון צונמי ערבית.pdf"
   },
   {
     id: 86885,
@@ -727,7 +792,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "עלון צונמי אנגלית",
-    pdfUrl: "s3://earthquake-reports/עלון צונמי אנגלית.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/עלון צונמי אנגלית.pdf"
   },
   {
     id: 57298,
@@ -738,7 +804,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "עלון צונמי עברית",
-    pdfUrl: "s3://earthquake-reports/עלון צונמי עברית.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/עלון צונמי עברית.pdf"
   },
   {
     id: 97248,
@@ -749,7 +816,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "ועדה לבחינת הנחיות במוסדות חינוך",
-    pdfUrl: "s3://earthquake-reports/ועדה לבחינת הנחיות במוסדות חינוך.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/ועדה לבחינת הנחיות במוסדות חינוך.pdf"
   },
   {
     id: 47010,
@@ -760,7 +828,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "הנחיות לאנשים עם מוגבלות - מוסדות",
-    pdfUrl: "s3://earthquake-reports/הנחיות לאנשים עם מוגבלות - מוסדות.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/הנחיות לאנשים עם מוגבלות - מוסדות.pdf"
   },
   {
     id: 37556,
@@ -771,7 +840,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "היערכות אנשים עם מוגבלות ערבית",
-    pdfUrl: "s3://earthquake-reports/היערכות אנשים עם מוגבלות ערבית.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/היערכות אנשים עם מוגבלות ערבית.pdf"
   },
   {
     id: 68111,
@@ -782,7 +852,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "היערכות אנשים עם מוגבלות עברית",
-    pdfUrl: "s3://earthquake-reports/היערכות אנשים עם מוגבלות עברית.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/היערכות אנשים עם מוגבלות עברית.pdf"
   },
   {
     id: 22576,
@@ -793,7 +864,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "אתר סיוע לאוכלוסיה",
-    pdfUrl: "s3://earthquake-reports/אתר סיוע לאוכלוסיה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/אתר סיוע לאוכלוסיה.pdf"
   },
   {
     id: 15928,
@@ -804,7 +876,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "השוואת שיטות חישוב תגובת אתר",
-    pdfUrl: "s3://earthquake-reports/השוואת שיטות חישוב תגובת אתר.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/השוואת שיטות חישוב תגובת אתר.pdf"
   },
   {
     id: 16416,
@@ -815,7 +888,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "מדידות תגובת אתר אזור גלילות",
-    pdfUrl: "s3://earthquake-reports/מדידות תגובת אתר אזור גלילות.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/מדידות תגובת אתר אזור גלילות.pdf"
   },
   {
     id: 28546,
@@ -826,7 +900,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "תגובת אתר אזור באר שבע",
-    pdfUrl: "s3://earthquake-reports/תגובת אתר אזור באר שבע.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/תגובת אתר אזור באר שבע.pdf"
   },
   {
     id: 30456,
@@ -837,7 +912,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "תגובת אתר באר שבע",
-    pdfUrl: "s3://earthquake-reports/תגובת אתר באר שבע.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/תגובת אתר באר שבע.pdf"
   },
   {
     id: 26894,
@@ -848,7 +924,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "תגובת אתר דימונה",
-    pdfUrl: "s3://earthquake-reports/תגובת אתר דימונה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/תגובת אתר דימונה.pdf"
   },
   {
     id: 82139,
@@ -859,7 +936,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "תגובת אתר שדה דב",
-    pdfUrl: "s3://earthquake-reports/תגובת אתר שדה דב.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/תגובת אתר שדה דב.pdf"
   },
   {
     id: 51746,
@@ -870,7 +948,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "תגובת אתר רחובות",
-    pdfUrl: "s3://earthquake-reports/תגובת אתר רחובות.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/תגובת אתר רחובות.pdf"
   },
   {
     id: 74519,
@@ -881,7 +960,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "תגובת אתר קרית גת",
-    pdfUrl: "s3://earthquake-reports/תגובת אתר קרית גת.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/תגובת אתר קרית גת.pdf"
   },
   {
     id: 43031,
@@ -892,7 +972,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "תגובת אתר קריות חיפה",
-    pdfUrl: "s3://earthquake-reports/תגובת אתר קריות חיפה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/תגובת אתר קריות חיפה.pdf"
   },
   {
     id: 53266,
@@ -903,7 +984,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "תגובת אתר צור יצחק",
-    pdfUrl: "s3://earthquake-reports/תגובת אתר צור יצחק.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/תגובת אתר צור יצחק.pdf"
   },
   {
     id: 98228,
@@ -914,7 +996,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "תגובת אתר עראבה",
-    pdfUrl: "s3://earthquake-reports/תגובת אתר עראבה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/תגובת אתר עראבה.pdf"
   },
   {
     id: 59734,
@@ -925,7 +1008,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "תגובת אתר עמק זבולון",
-    pdfUrl: "s3://earthquake-reports/תגובת אתר עמק זבולון.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/תגובת אתר עמק זבולון.pdf"
   },
   {
     id: 87664,
@@ -936,7 +1020,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "תגובת אתר נורדיה",
-    pdfUrl: "s3://earthquake-reports/תגובת אתר נורדיה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/תגובת אתר נורדיה.pdf"
   },
   {
     id: 47158,
@@ -947,7 +1032,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "תגובת אתר מגדל העמק",
-    pdfUrl: "s3://earthquake-reports/תגובת אתר מגדל העמק.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/תגובת אתר מגדל העמק.pdf"
   },
   {
     id: 74423,
@@ -958,7 +1044,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "תגובת אתר ירוחם",
-    pdfUrl: "s3://earthquake-reports/תגובת אתר ירוחם.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/תגובת אתר ירוחם.pdf"
   },
   {
     id: 80980,
@@ -969,7 +1056,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "תגובת אתר ומיקרוזונציה אילת",
-    pdfUrl: "s3://earthquake-reports/תגובת אתר ומיקרוזונציה אילת.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/תגובת אתר ומיקרוזונציה אילת.pdf"
   },
   {
     id: 25990,
@@ -980,7 +1068,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "תגובת אתר גלילות",
-    pdfUrl: "s3://earthquake-reports/תגובת אתר גלילות.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/תגובת אתר גלילות.pdf"
   },
   {
     id: 61312,
@@ -991,7 +1080,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "תגובת אתר גדידה מכר",
-    pdfUrl: "s3://earthquake-reports/תגובת אתר גדידה מכר.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/תגובת אתר גדידה מכר.pdf"
   },
   {
     id: 61669,
@@ -1002,7 +1092,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "תגובת אתר בעיר טבריה",
-    pdfUrl: "s3://earthquake-reports/תגובת אתר בעיר טבריה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/תגובת אתר בעיר טבריה.pdf"
   },
   {
     id: 18079,
@@ -1013,7 +1104,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "תגובת אתר אשקלון",
-    pdfUrl: "s3://earthquake-reports/תגובת אתר אשקלון.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/תגובת אתר אשקלון.pdf"
   },
   {
     id: 86901,
@@ -1024,7 +1116,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "מדידות תגובת אתר אזור דימונה",
-    pdfUrl: "s3://earthquake-reports/מדידות תגובת אתר אזור דימונה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/מדידות תגובת אתר אזור דימונה.pdf"
   },
   {
     id: 87745,
@@ -1035,7 +1128,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "תגובת אתר אכסאל",
-    pdfUrl: "s3://earthquake-reports/תגובת אתר אכסאל.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/תגובת אתר אכסאל.pdf"
   },
   {
     id: 71571,
@@ -1046,7 +1140,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "אופן חישוב תגובת אתר",
-    pdfUrl: "s3://earthquake-reports/אופן חישוב תגובת אתר.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/אופן חישוב תגובת אתר.pdf"
   },
   {
     id: 18351,
@@ -1057,7 +1152,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "איכון מקורות לרעידה בים",
-    pdfUrl: "s3://earthquake-reports/איכון מקורות לרעידה בים.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/איכון מקורות לרעידה בים.pdf"
   },
   {
     id: 51099,
@@ -1068,7 +1164,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "פיזור מוקדים בגלבוע כרמל",
-    pdfUrl: "s3://earthquake-reports/פיזור מוקדים בגלבוע כרמל.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/פיזור מוקדים בגלבוע כרמל.pdf"
   },
   {
     id: 64623,
@@ -1079,7 +1176,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "הערת מקור רעד מגלי פי",
-    pdfUrl: "s3://earthquake-reports/הערת מקור רעד מגלי פי.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/הערת מקור רעד מגלי פי.pdf"
   },
   {
     id: 83427,
@@ -1090,7 +1188,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "כיול הרשת להערכת רעידות רחוקות",
-    pdfUrl: "s3://earthquake-reports/כיול הרשת להערכת רעידות רחוקות.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/כיול הרשת להערכת רעידות רחוקות.pdf"
   },
   {
     id: 34157,
@@ -1101,7 +1200,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "התפתחות בזמן של רעשי משנה",
-    pdfUrl: "s3://earthquake-reports/התפתחות בזמן של רעשי משנה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/התפתחות בזמן של רעשי משנה.pdf"
   },
   {
     id: 67452,
@@ -1112,7 +1212,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "מאגר אקסלוגרמות לתאוצות קרקע",
-    pdfUrl: "s3://earthquake-reports/מאגר אקסלוגרמות לתאוצות קרקע.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/מאגר אקסלוגרמות לתאוצות קרקע.pdf"
   },
   {
     id: 69867,
@@ -1123,7 +1224,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "מודל מהירות תלת מימדי לאיכון רעידות",
-    pdfUrl: "s3://earthquake-reports/מודל מהירות תלת מימדי לאיכון רעידות.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/מודל מהירות תלת מימדי לאיכון רעידות.pdf"
   },
   {
     id: 75317,
@@ -1134,7 +1236,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "תאוצות קרקע בתקן הבניה",
-    pdfUrl: "s3://earthquake-reports/תאוצות קרקע בתקן הבניה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/תאוצות קרקע בתקן הבניה.pdf"
   },
   {
     id: 42104,
@@ -1145,7 +1248,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "אלגוריתם להערכת תאוצות קרקע",
-    pdfUrl: "s3://earthquake-reports/אלגוריתם להערכת תאוצות קרקע.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/אלגוריתם להערכת תאוצות קרקע.pdf"
   },
   {
     id: 16932,
@@ -1156,7 +1260,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "חיזוק מבני אבן",
-    pdfUrl: "s3://earthquake-reports/חיזוק מבני אבן.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/חיזוק מבני אבן.pdf"
   },
   {
     id: 44109,
@@ -1167,7 +1272,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "מדריך לחיזוק מבנים",
-    pdfUrl: "s3://earthquake-reports/מדריך לחיזוק מבנים.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/מדריך לחיזוק מבנים.pdf"
   },
   {
     id: 25019,
@@ -1178,7 +1284,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "דוגמאות לחישוב לפי 413 חלק3",
-    pdfUrl: "s3://earthquake-reports/דוגמאות לחישוב לפי 413 חלק3.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/דוגמאות לחישוב לפי 413 חלק3.pdf"
   },
   {
     id: 58538,
@@ -1189,7 +1296,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "סקר רמות סיכון קביל",
-    pdfUrl: "s3://earthquake-reports/סקר רמות סיכון קביל.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/סקר רמות סיכון קביל.pdf"
   },
   {
     id: 92454,
@@ -1200,7 +1308,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "גישות לשדרוג סייסמי",
-    pdfUrl: "s3://earthquake-reports/גישות לשדרוג סייסמי.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/גישות לשדרוג סייסמי.pdf"
   },
   {
     id: 57250,
@@ -1211,7 +1320,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "עמידות מבנים עם קירות הקשחה",
-    pdfUrl: "s3://earthquake-reports/עמידות מבנים עם קירות הקשחה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/עמידות מבנים עם קירות הקשחה.pdf"
   },
   {
     id: 72333,
@@ -1222,7 +1332,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "עמידות עמודים עטופים ביריעות",
-    pdfUrl: "s3://earthquake-reports/עמידות עמודים עטופים ביריעות.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/עמידות עמודים עטופים ביריעות.pdf"
   },
   {
     id: 71234,
@@ -1233,7 +1344,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "אופטימיזציה של מבנים מבטון",
-    pdfUrl: "s3://earthquake-reports/אופטימיזציה של מבנים מבטון.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/אופטימיזציה של מבנים מבטון.pdf"
   },
   {
     id: 77055,
@@ -1244,7 +1356,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "חישוב תקופה בסיסית למבנים",
-    pdfUrl: "s3://earthquake-reports/חישוב תקופה בסיסית למבנים.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/חישוב תקופה בסיסית למבנים.pdf"
   },
   {
     id: 79621,
@@ -1255,7 +1368,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "חציית העתק עי צנרת",
-    pdfUrl: "s3://earthquake-reports/חציית העתק עי צנרת.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/חציית העתק עי צנרת.pdf"
   },
   {
     id: 43456,
@@ -1266,7 +1380,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "שימוש בבידוד סייסמי במבנים",
-    pdfUrl: "s3://earthquake-reports/שימוש בבידוד סייסמי במבנים.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/שימוש בבידוד סייסמי במבנים.pdf"
   },
   {
     id: 56246,
@@ -1277,7 +1392,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "תכנון מבנה על העתק פעיל",
-    pdfUrl: "s3://earthquake-reports/תכנון מבנה על העתק פעיל.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/תכנון מבנה על העתק פעיל.pdf"
   },
   {
     id: 87790,
@@ -1288,7 +1404,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "פרמטרים של רעידות ותכן מבנים",
-    pdfUrl: "s3://earthquake-reports/פרמטרים של רעידות ותכן מבנים.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/פרמטרים של רעידות ותכן מבנים.pdf"
   },
   {
     id: 84150,
@@ -1299,7 +1416,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "חישוב זמן מחזור מבנים",
-    pdfUrl: "s3://earthquake-reports/חישוב זמן מחזור מבנים.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/חישוב זמן מחזור מבנים.pdf"
   },
   {
     id: 92276,
@@ -1310,7 +1428,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "עיגון מערכות לא מבניות",
-    pdfUrl: "s3://earthquake-reports/עיגון מערכות לא מבניות.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/עיגון מערכות לא מבניות.pdf"
   },
   {
     id: 42255,
@@ -1321,7 +1440,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "זיהוי והערכת נזק בבתי חולים",
-    pdfUrl: "s3://earthquake-reports/זיהוי והערכת נזק בבתי חולים.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/זיהוי והערכת נזק בבתי חולים.pdf"
   },
   {
     id: 37338,
@@ -1332,7 +1452,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "יצירת תמונת מצב מבני חקלאות",
-    pdfUrl: "s3://earthquake-reports/יצירת תמונת מצב מבני חקלאות.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/יצירת תמונת מצב מבני חקלאות.pdf"
   },
   {
     id: 64080,
@@ -1343,7 +1464,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "מודל תומך החלטה להתרעת צונמי",
-    pdfUrl: "s3://earthquake-reports/מודל תומך החלטה להתרעת צונמי.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/מודל תומך החלטה להתרעת צונמי.pdf"
   },
   {
     id: 39868,
@@ -1354,7 +1476,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "תפיסה לאומית לצונמי",
-    pdfUrl: "s3://earthquake-reports/תפיסה לאומית לצונמי.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/תפיסה לאומית לצונמי.pdf"
   },
   {
     id: 22843,
@@ -1365,7 +1488,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "פרמטרים להתרעה להפסקת פעילות",
-    pdfUrl: "s3://earthquake-reports/פרמטרים להתרעה להפסקת פעילות.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/פרמטרים להתרעה להפסקת פעילות.pdf"
   },
   {
     id: 73218,
@@ -1376,7 +1500,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "תפיסת הציבור את תרועה",
-    pdfUrl: "s3://earthquake-reports/תפיסת הציבור את תרועה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/תפיסת הציבור את תרועה.pdf"
   },
   {
     id: 66336,
@@ -1387,7 +1512,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "סקר היתכנות למערכת התרעה",
-    pdfUrl: "s3://earthquake-reports/סקר היתכנות למערכת התרעה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/סקר היתכנות למערכת התרעה.pdf"
   },
   {
     id: 74535,
@@ -1398,7 +1524,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "מדיניות התרעה לרעידות אדמה",
-    pdfUrl: "s3://earthquake-reports/מדיניות התרעה לרעידות אדמה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/מדיניות התרעה לרעידות אדמה.pdf"
   },
   {
     id: 70208,
@@ -1409,7 +1536,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "ועדה בינל להקמת מערכת התרעה",
-    pdfUrl: "s3://earthquake-reports/ועדה בינל להקמת מערכת התרעה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/ועדה בינל להקמת מערכת התרעה.pdf"
   },
   {
     id: 73445,
@@ -1420,7 +1548,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "בחינה ראשונית למערכת התרעה",
-    pdfUrl: "s3://earthquake-reports/בחינה ראשונית למערכת התרעה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/בחינה ראשונית למערכת התרעה.pdf"
   },
   {
     id: 87158,
@@ -1431,7 +1560,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "אופטימיזציה של אלגוריתם התרעה",
-    pdfUrl: "s3://earthquake-reports/אופטימיזציה של אלגוריתם התרעה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/אופטימיזציה של אלגוריתם התרעה.pdf"
   },
   {
     id: 74130,
@@ -1442,7 +1572,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "נספחים מדריך היערכות אתרי מורשת",
-    pdfUrl: "s3://earthquake-reports/נספחים מדריך היערכות אתרי מורשת.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/נספחים מדריך היערכות אתרי מורשת.pdf"
   },
   {
     id: 11343,
@@ -1453,7 +1584,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "נספחים תיק שטח אתרי מורשת",
-    pdfUrl: "s3://earthquake-reports/נספחים תיק שטח אתרי מורשת.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/נספחים תיק שטח אתרי מורשת.pdf"
   },
   {
     id: 21774,
@@ -1464,7 +1596,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "מדריך היערכות אתרי מורשת",
-    pdfUrl: "s3://earthquake-reports/מדריך היערכות אתרי מורשת.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/מדריך היערכות אתרי מורשת.pdf"
   },
   {
     id: 78076,
@@ -1475,7 +1608,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "דוח שיקום ארוך טווח",
-    pdfUrl: "s3://earthquake-reports/דוח שיקום ארוך טווח.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/דוח שיקום ארוך טווח.pdf"
   },
   {
     id: 10109,
@@ -1486,7 +1620,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "סגנון תקשורת סיכונים",
-    pdfUrl: "s3://earthquake-reports/סגנון תקשורת סיכונים.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/סגנון תקשורת סיכונים.pdf"
   },
   {
     id: 84234,
@@ -1497,7 +1632,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "סקר תפיסות האוכלוסיה על רעד",
-    pdfUrl: "s3://earthquake-reports/סקר תפיסות האוכלוסיה על רעד.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/סקר תפיסות האוכלוסיה על רעד.pdf"
   },
   {
     id: 77601,
@@ -1508,7 +1644,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "הגדרת צורכי אוכלוסיות פגיעות אחרי רעידה",
-    pdfUrl: "s3://earthquake-reports/הגדרת צורכי אוכלוסיות פגיעות אחרי רעידה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/הגדרת צורכי אוכלוסיות פגיעות אחרי רעידה.pdf"
   },
   {
     id: 88352,
@@ -1519,7 +1656,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "מוכנות אוכלוסיית החרדים לרעידה",
-    pdfUrl: "s3://earthquake-reports/מוכנות אוכלוסיית החרדים לרעידה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/מוכנות אוכלוסיית החרדים לרעידה.pdf"
   },
   {
     id: 12972,
@@ -1530,7 +1668,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "מחקר בתי ספר ניסויים",
-    pdfUrl: "s3://earthquake-reports/מחקר בתי ספר ניסויים.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/מחקר בתי ספר ניסויים.pdf"
   },
   {
     id: 79084,
@@ -1541,7 +1680,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "מחקר בתי ספר מערך",
-    pdfUrl: "s3://earthquake-reports/מחקר בתי ספר מערך.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/מחקר בתי ספר מערך.pdf"
   },
   {
     id: 83491,
@@ -1552,7 +1692,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "מחקר בתי ספר חוברת לתלמיד",
-    pdfUrl: "s3://earthquake-reports/מחקר בתי ספר חוברת לתלמיד.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/מחקר בתי ספר חוברת לתלמיד.pdf"
   },
   {
     id: 37831,
@@ -1563,7 +1704,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "מחקר בתי ספר השוואה",
-    pdfUrl: "s3://earthquake-reports/מחקר בתי ספר השוואה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/מחקר בתי ספר השוואה.pdf"
   },
   {
     id: 20816,
@@ -1574,7 +1716,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "התנהגות אוכלוסיה עם מוגבלות",
-    pdfUrl: "s3://earthquake-reports/התנהגות אוכלוסיה עם מוגבלות.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/התנהגות אוכלוסיה עם מוגבלות.pdf"
   },
   {
     id: 48441,
@@ -1585,7 +1728,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "הנחיות בפישוט לשוני",
-    pdfUrl: "s3://earthquake-reports/הנחיות בפישוט לשוני.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/הנחיות בפישוט לשוני.pdf"
   },
   {
     id: 90158,
@@ -1596,7 +1740,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "הערכת נזק כלכלי באילת",
-    pdfUrl: "s3://earthquake-reports/הערכת נזק כלכלי באילת.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/הערכת נזק כלכלי באילת.pdf"
   },
   {
     id: 41871,
@@ -1607,7 +1752,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "הערכת נזקים מאקרו כלכליים",
-    pdfUrl: "s3://earthquake-reports/הערכת נזקים מאקרו כלכליים.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/הערכת נזקים מאקרו כלכליים.pdf"
   },
   {
     id: 38075,
@@ -1618,7 +1764,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "חוסן תעשיית האירוח בישראל",
-    pdfUrl: "s3://earthquake-reports/חוסן תעשיית האירוח בישראל.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/חוסן תעשיית האירוח בישראל.pdf"
   },
   {
     id: 76408,
@@ -1629,7 +1776,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "היערכות לרעד בעסקים קטנים",
-    pdfUrl: "s3://earthquake-reports/היערכות לרעד בעסקים קטנים.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/היערכות לרעד בעסקים קטנים.pdf"
   },
   {
     id: 41185,
@@ -1640,7 +1788,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "המערך הרגולטורי לרעידת אדמה",
-    pdfUrl: "s3://earthquake-reports/המערך הרגולטורי לרעידת אדמה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/המערך הרגולטורי לרעידת אדמה.pdf"
   },
   {
     id: 36865,
@@ -1651,7 +1800,8 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "חבילות מדיניות לחיזוק מבנים בפריפריה",
-    pdfUrl: "s3://earthquake-reports/חבילות מדיניות לחיזוק מבנים בפריפריה.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/חבילות מדיניות לחיזוק מבנים בפריפריה.pdf"
   },
   {
     id: 57314,
@@ -1662,6 +1812,7 @@ export const esBaseData: FileItem[] = [
     isPublish: false,
     status: "init",
     fileName: "גישות בהליך זיהוי אלמונים",
-    pdfUrl: "s3://earthquake-reports/גישות בהליך זיהוי אלמונים.pdf"
+    type: "pdf",
+    url: "s3://s3-content-earthquake-dev/גישות בהליך זיהוי אלמונים.pdf"
   }
 ];

@@ -22,7 +22,8 @@ PUT /earthquake-documents
           "raw": { "type": "keyword" }
         }
       },
-      "pdfUrl": { "type": "keyword" },
+      "url": { "type": "keyword" },
+      "type": { "type": "keyword" },
       "category": { "type": "keyword" },
       "subCategory": { "type": "keyword" },
       "informationType": { "type": "keyword" },
