@@ -4,6 +4,9 @@ import { nodeEnvOption } from "./consts/general";
 
 export const CONFIG = cleanEnv(process.env, {
   AWS_REGION: str({ default: "il-central-1" }),
+  AWS_ACCESS_KEY_ID: str({ default: "" }),
+  AWS_SECRET_ACCESS_KEY: str({ default: "" }),
+  AWS_SESSION_TOKEN: str({ default: "" }),
   LOG_LEVEL: str({ default: "info" }),
   LOG_PRETTY: bool({ default: false }),
   NODE_ENV: str({

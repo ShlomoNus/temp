@@ -18,6 +18,9 @@ GET {{baseUrl}}/documents/10000
 ### Get all Elasticsearch documents
 GET {{baseUrl}}/documents
 
+### Verify esBaseData URLs exist in S3
+GET {{baseUrl}}/verifyEsBaseDataS3
+
 ### Load initial Elasticsearch data
 GET {{baseUrl}}/loadInitInfo
 

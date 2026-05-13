@@ -100,5 +100,62 @@ export const swaggerRoutes = {
         }
       }
     }
+  },
+  "/verifyEsBaseDataS3": {
+    get: {
+      summary: "Verify esBaseData S3 URLs exist (HeadObject per entry)",
+      responses: {
+        200: {
+          description: "Per-row S3 HeadObject results for esBaseData",
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                properties: {
+                  verifyResult: {
+                    type: "object",
+                    properties: {
+                      total: { type: "number" },
+                      found: { type: "number" },
+                      missing: { type: "number" },
+                      invalidUrl: { type: "number" },
+                      error: { type: "number" },
+                      items: {
+                        type: "array",
+                        items: {
+                          type: "object",
+                          properties: {
+                            id: { type: "number" },
+                            url: { type: "string" },
+                            status: {
+                              type: "string",
+                              enum: ["found", "missing", "invalid_url", "error"]
+                            },
+                            detail: { type: "string" }
+                          },
+                          required: ["id", "url", "status"]
+                        }
+                      }
+                    },
+                    required: ["total", "found", "missing", "invalidUrl", "error", "items"]
+                  }
+                },
+                required: ["verifyResult"]
+              }
+            }
+          }
+        },
+        500: {
+          description: "S3 verification failed",
+          content: {
+            "application/json": {
+              schema: {
+                $ref: "#/components/schemas/ErrorResponse"
+              }
+            }
+          }
+        }
+      }
+    }
   }
 } as const;

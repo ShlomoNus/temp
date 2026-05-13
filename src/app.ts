@@ -12,6 +12,7 @@ import {
 } from "./handlers/documents";
 import { loadInitialDataToDb } from "./handlers/loadInitialDataToDb";
 import { loadInitSummerize } from "./handlers/loadInitSummerize";
+import { verifyEsBaseDataS3Urls } from "./handlers/verifyEsBaseDataS3";
 import { testingEndpointAccessMiddleware } from "./middleware/testingEndpointAccess";
 import { logger } from "./utils/logger";
 
@@ -95,6 +96,20 @@ app.get("/documents", testingEndpointAccessMiddleware, async(_: Request, res: Re
   catch(error: unknown) {
     logger.error({ err: error }, "documents: failed to get documents");
     const message = error instanceof Error ? error.message : "Unknown documents error";
+
+    res.status(500).json({ error: message });
+  }
+});
+
+app.get("/verifyEsBaseDataS3", async(_: Request, res: Response) => {
+  try {
+    const verifyResult = await verifyEsBaseDataS3Urls();
+
+    res.json({ verifyResult });
+  }
+  catch(error: unknown) {
+    logger.error({ err: error }, "verifyEsBaseDataS3: failed");
+    const message = error instanceof Error ? error.message : "Unknown S3 verify error";
 
     res.status(500).json({ error: message });
   }
