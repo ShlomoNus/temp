@@ -56,17 +56,19 @@ export const esClient = createEsClient();
 export async function ensureIndexExists(
   indexName: string,
   indexBody: Omit<estypes.IndicesCreateRequest, "index">
-): Promise<void> {
+): Promise<{ created: boolean }> {
   const exists = await esClient.indices.exists({
     index: indexName
   });
 
   if (exists) {
-    return;
+    return { created: false };
   }
 
   await esClient.indices.create({
     index: indexName,
     ...indexBody
   });
+
+  return { created: true };
 }

@@ -1,14 +1,27 @@
-export type FileMediaType = "pdf" | "audio" | "video";
+import { Simplify } from "type-fest";
+
+export type FileMediaType = "docs" | "images" | "audio" | "video";
+
+type Status = "init" | "deleted" | "updated";
+type MediaType = "audio" | "video" | "leaflets" | "studies" | "guides" | "reports" | "plans";
 
 export type FileItem = {
-  id: number // מזהה ייחודי אקראי בן 5 ספרות (10000–99999)
-  fileName: string // שם קובץ
-  url: string // כתובת קובץ ב-S3
+  id: number
   type: FileMediaType
-  category: string // קטגוריה
-  subCategory: string // תת קטגוריה
-  informationType: string // סוג מידע
-  language: string // שפה
+  status: Status
   isPublish: boolean
-  status: string
+  fileUrl: string
+  name: string
+  mediaType: MediaType
+  category: string
+  subCategory: string
+  language: string
 };
+
+export type FileItemFinal = Simplify<FileItem & {
+  summary: string
+  longSummary: string
+  publishDate: string
+  size: string
+  lastModified: Date
+}>;

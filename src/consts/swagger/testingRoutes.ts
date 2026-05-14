@@ -153,5 +153,101 @@ export const testingSwaggerRoutes = {
         }
       }
     }
+  },
+  "/es/index": {
+    put: {
+      summary: "Create Elasticsearch index with mapping if missing (ES_INDEX_NAME)",
+      responses: {
+        200: {
+          description: "Index ensured (created or already present)",
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                properties: {
+                  ensureResult: {
+                    type: "object",
+                    properties: {
+                      indexName: { type: "string" },
+                      created: { type: "boolean" },
+                      message: { type: "string" }
+                    },
+                    required: ["indexName", "created"]
+                  }
+                },
+                required: ["ensureResult"]
+              }
+            }
+          }
+        },
+        403: {
+          description: "Endpoint is blocked outside testing environments",
+          content: {
+            "application/json": {
+              schema: {
+                $ref: "#/components/schemas/ErrorResponse"
+              }
+            }
+          }
+        },
+        500: {
+          description: "Failed to create or verify index",
+          content: {
+            "application/json": {
+              schema: {
+                $ref: "#/components/schemas/ErrorResponse"
+              }
+            }
+          }
+        }
+      }
+    },
+    delete: {
+      summary: "Delete Elasticsearch index (ES_INDEX_NAME)",
+      responses: {
+        200: {
+          description: "Index deleted or already absent",
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                properties: {
+                  deleteResult: {
+                    type: "object",
+                    properties: {
+                      indexName: { type: "string" },
+                      deleted: { type: "boolean" },
+                      message: { type: "string" }
+                    },
+                    required: ["indexName", "deleted"]
+                  }
+                },
+                required: ["deleteResult"]
+              }
+            }
+          }
+        },
+        403: {
+          description: "Endpoint is blocked outside testing environments",
+          content: {
+            "application/json": {
+              schema: {
+                $ref: "#/components/schemas/ErrorResponse"
+              }
+            }
+          }
+        },
+        500: {
+          description: "Failed to delete index",
+          content: {
+            "application/json": {
+              schema: {
+                $ref: "#/components/schemas/ErrorResponse"
+              }
+            }
+          }
+        }
+      }
+    }
   }
 } as const;

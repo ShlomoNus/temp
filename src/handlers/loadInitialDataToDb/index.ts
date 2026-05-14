@@ -1,49 +1,13 @@
 import { estypes } from "@elastic/elasticsearch";
 
-import { CONFIG } from "@/CONFIG";
-import { FileItem } from "@/handlers/loadInitialDataToDb/types/data";
-import { ensureIndexExists, esClient } from "@/utils/esClient";
+import { ensureEsDocumentsIndex } from "@/handlers/ensureEsIndex";
+import { esClient } from "@/utils/esClient";
 import { logger } from "@/utils/logger";
 
-import { esBaseData } from "./consts/data";
-
-const {
-  ES_INDEX_NAME
-} = CONFIG;
+import { esBaseData } from "./consts";
+import { LoadInitialDataResult, FileItem } from "./types";
 
 const BULK_CHUNK_SIZE = 200;
-
-type LoadInitialDataResult = {
-  indexName: string
-  total: number
-  indexed: number
-  failed: number
-  errors: string[]
-};
-
-const ES_INDEX_MAPPING_BODY: Omit<estypes.IndicesCreateRequest, "index"> = {
-  mappings: {
-    properties: {
-      id: { type: "integer" },
-      fileName: {
-        type: "text",
-        fields: {
-          raw: { type: "keyword" }
-        }
-      },
-      url: { type: "keyword" },
-      type: { type: "keyword" },
-      category: { type: "keyword" },
-      subCategory: { type: "keyword" },
-      informationType: { type: "keyword" },
-      language: { type: "keyword" },
-      isPublish: { type: "boolean" },
-      status: { type: "keyword" },
-      createdAt: { type: "date" },
-      updatedAt: { type: "date" }
-    }
-  }
-};
 
 function chunkArray<T>(arr: T[], chunkSize: number): T[][] {
   const out: T[][] = [];
@@ -78,16 +42,14 @@ function buildBulkOperations(
 }
 
 export async function loadInitialDataToDb(): Promise<LoadInitialDataResult> {
-  const indexName = ES_INDEX_NAME.trim() || "earthquake-documents";
-
   logger.info({
-    indexName,
     totalFiles: esBaseData.length,
     chunkSize: BULK_CHUNK_SIZE
   }, "loadInitialDataToDb: starting");
 
-  logger.info({ indexName }, "loadInitialDataToDb: ensuring index exists");
-  await ensureIndexExists(indexName, ES_INDEX_MAPPING_BODY);
+  logger.info("loadInitialDataToDb: ensuring index exists");
+  const { indexName } = await ensureEsDocumentsIndex();
+
   logger.info({ indexName }, "loadInitialDataToDb: index is ready");
 
   const nowIso = new Date().toISOString();

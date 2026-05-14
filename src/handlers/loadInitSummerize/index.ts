@@ -16,13 +16,13 @@ export async function loadInitSummerize(): Promise<GetSummerizeResult> {
   });
   const failed: number[] = [];
 
-  for (const { id, url, type } of esBaseData) {
+  for (const { id, fileUrl, type } of esBaseData) {
     try {
       await lambdaClient.send(
         new InvokeCommand({
           FunctionName: SUMMERIZE_LAMBDA_NAME,
           InvocationType: "Event",
-          Payload: Buffer.from(JSON.stringify({ id, url, type }), "utf8")
+          Payload: Buffer.from(JSON.stringify({ id, fileUrl, type }), "utf8")
         })
       );
     }

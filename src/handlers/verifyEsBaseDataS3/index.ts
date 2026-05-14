@@ -14,7 +14,7 @@ type ParsedS3Uri = {
 
 export type VerifyEsBaseDataS3Item = {
   id: number
-  url: string
+  fileUrl: string
   status: "found" | "missing" | "invalid_url" | "error"
   detail?: string
 };
@@ -28,12 +28,12 @@ export type VerifyEsBaseDataS3Result = {
   items: VerifyEsBaseDataS3Item[]
 };
 
-function parseS3Uri(url: string): ParsedS3Uri | null {
-  if (!url.startsWith(S3_URL_PREFIX)) {
+function parseS3Uri(fileUrl: string): ParsedS3Uri | null {
+  if (!fileUrl.startsWith(S3_URL_PREFIX)) {
     return null;
   }
 
-  const rest = url.slice(S3_URL_PREFIX.length);
+  const rest = fileUrl.slice(S3_URL_PREFIX.length);
   const slash = rest.indexOf("/");
 
   if (slash <= 0 || slash >= rest.length - 1) {
@@ -94,12 +94,12 @@ async function verifyOne(
   client: S3Client,
   item: FileItem
 ): Promise<VerifyEsBaseDataS3Item> {
-  const parsed = parseS3Uri(item.url);
+  const parsed = parseS3Uri(item.fileUrl);
 
   if (!parsed) {
     return {
       id: item.id,
-      url: item.url,
+      fileUrl: item.fileUrl,
       status: "invalid_url",
       detail: "Expected s3://bucket/key"
     };
@@ -108,14 +108,14 @@ async function verifyOne(
   const result = await headObjectExists(client, parsed);
 
   if (result.ok) {
-    return { id: item.id, url: item.url, status: "found" };
+    return { id: item.id, fileUrl: item.fileUrl, status: "found" };
   }
 
   if (result.notFound) {
-    return { id: item.id, url: item.url, status: "missing", detail: result.message };
+    return { id: item.id, fileUrl: item.fileUrl, status: "missing", detail: result.message };
   }
 
-  return { id: item.id, url: item.url, status: "error", detail: result.message };
+  return { id: item.id, fileUrl: item.fileUrl, status: "error", detail: result.message };
 }
 
 type MapInChunksOptions<T, R> = {
