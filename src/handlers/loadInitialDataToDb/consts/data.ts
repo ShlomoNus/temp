@@ -1,6 +1,6 @@
 /* eslint-disable max-lines */
 
-import { FileItem } from "@/handlers/loadInitialDataToDb/types/data";
+import { FileItem } from "@/types/data";
 
 export const esBaseData: FileItem[] = [
   {
