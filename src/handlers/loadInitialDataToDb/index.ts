@@ -4,19 +4,14 @@ import { CONFIG } from "@/CONFIG";
 import { ensureIndexExists, esClient } from "@/utils/esClient";
 import { logger } from "@/utils/logger";
 
-import { esBaseData } from "./consts";
+import { esBaseData, ES_INDEX_MAPPING_BODY } from "./consts";
 import { LoadInitialDataResult, FileItem } from "./types";
-import { ES_INDEX_MAPPING_BODY } from "./consts";
 
 const {
   ES_INDEX_NAME
 } = CONFIG;
 
 const BULK_CHUNK_SIZE = 200;
-
-
-
-
 
 function chunkArray<T>(arr: T[], chunkSize: number): T[][] {
   const out: T[][] = [];

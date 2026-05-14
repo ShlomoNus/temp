@@ -33,7 +33,7 @@ function parseS3Uri(fileUrl: string): ParsedS3Uri | null {
     return null;
   }
 
-    const rest = fileUrl.slice(S3_URL_PREFIX.length);
+  const rest = fileUrl.slice(S3_URL_PREFIX.length);
   const slash = rest.indexOf("/");
 
   if (slash <= 0 || slash >= rest.length - 1) {
@@ -112,7 +112,7 @@ async function verifyOne(
   }
 
   if (result.notFound) {
-      return { id: item.id, fileUrl: item.fileUrl, status: "missing", detail: result.message };
+    return { id: item.id, fileUrl: item.fileUrl, status: "missing", detail: result.message };
   }
 
   return { id: item.id, fileUrl: item.fileUrl, status: "error", detail: result.message };
