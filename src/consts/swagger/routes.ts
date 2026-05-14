@@ -17,6 +17,66 @@ export const swaggerRoutes = {
       }
     }
   },
+  "/add": {
+    post: {
+      summary: "Add Elasticsearch document (server-generated 5-digit id)",
+      requestBody: {
+        required: true,
+        content: {
+          "application/json": {
+            schema: {
+              $ref: "#/components/schemas/AddDocumentRequest"
+            }
+          }
+        }
+      },
+      responses: {
+        201: {
+          description: "Document indexed",
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                properties: {
+                  document: {
+                    $ref: "#/components/schemas/AddDocumentStored"
+                  }
+                },
+                required: ["document"]
+              }
+            }
+          }
+        },
+        400: {
+          description: "Validation failed (including publish rule: isPublish requires summary or longSummary)",
+          content: {
+            "application/json": {
+              schema: {
+                oneOf: [
+                  {
+                    $ref: "#/components/schemas/AddDocumentValidationError"
+                  },
+                  {
+                    $ref: "#/components/schemas/ErrorResponse"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        500: {
+          description: "Failed to index document",
+          content: {
+            "application/json": {
+              schema: {
+                $ref: "#/components/schemas/ErrorResponse"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   "/loadInitInfo": {
     get: {
       summary: "Load initial Elasticsearch data",
