@@ -5,6 +5,7 @@ import { pinoHttp } from "pino-http";
 import { serve, setup } from "swagger-ui-express";
 
 import { openApiDocument } from "./consts/swagger";
+import { deleteEsIndex } from "./handlers/deleteEsIndex";
 import {
   getAllDocumentIds,
   getAllDocuments,
@@ -96,6 +97,22 @@ app.get("/documents", testingEndpointAccessMiddleware, async(_: Request, res: Re
   catch(error: unknown) {
     logger.error({ err: error }, "documents: failed to get documents");
     const message = error instanceof Error ? error.message : "Unknown documents error";
+
+    res.status(500).json({ error: message });
+  }
+});
+
+app.delete("/es/index", testingEndpointAccessMiddleware, async(_: Request, res: Response) => {
+  try {
+    const deleteResult = await deleteEsIndex();
+
+    logger.info({ deleteResult }, "deleteEsIndex: completed");
+
+    res.json({ deleteResult });
+  }
+  catch(error: unknown) {
+    logger.error({ err: error }, "deleteEsIndex: failed");
+    const message = error instanceof Error ? error.message : "Unknown delete index error";
 
     res.status(500).json({ error: message });
   }

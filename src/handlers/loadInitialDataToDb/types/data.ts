@@ -1,3 +1,4 @@
+import {Simplify} from "type-fest";
 export type FileMediaType = "docs" | "images" | "audio" | "video";
 
 type Status = "init" | "deleted" | "updated";
@@ -16,10 +17,10 @@ export type FileItem = {
   language: string
 };
 
-export type FileItemFinal = FileItem & {
+export type FileItemFinal = Simplify<FileItem & {
   summary: string
   longSummary: string
   publishDate: string
   size: string
   lastModified: Date
-};
+}>;
