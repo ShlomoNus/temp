@@ -4,16 +4,16 @@ type Status = "init" | "deleted" | "updated";
 type MediaType = "audio" | "video" | "leaflets" | "studies" | "guides" | "reports" | "plans";
 
 export type FileItem = {
-  id: number // מזהה ייחודי אקראי בן 5 ספרות (10000–99999)
+  id: number 
   type: FileMediaType
   status: Status
   isPublish: boolean
-  fileUrl: string // כתובת קובץ ב-S3
-  name: string // שם קובץ
+  fileUrl: string 
+  name: string 
   mediaType: MediaType
-  category: string // קטגוריה
-  subCategory: string // תת קטגוריה
-  language: string // שפה
+  category: string 
+  subCategory: string 
+  language: string 
 };
 
 export type FileItemWithEsData = FileItem & {
