@@ -49,6 +49,7 @@ export async function loadInitialDataToDb(): Promise<LoadInitialDataResult> {
 
   logger.info("loadInitialDataToDb: ensuring index exists");
   const { indexName } = await ensureEsDocumentsIndex();
+
   logger.info({ indexName }, "loadInitialDataToDb: index is ready");
 
   const nowIso = new Date().toISOString();

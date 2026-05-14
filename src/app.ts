@@ -6,12 +6,12 @@ import { serve, setup } from "swagger-ui-express";
 
 import { openApiDocument } from "./consts/swagger";
 import { deleteEsIndex } from "./handlers/deleteEsIndex";
-import { ensureEsDocumentsIndex } from "./handlers/ensureEsIndex";
 import {
   getAllDocumentIds,
   getAllDocuments,
   getDocumentById
 } from "./handlers/documents";
+import { ensureEsDocumentsIndex } from "./handlers/ensureEsIndex";
 import { loadInitialDataToDb } from "./handlers/loadInitialDataToDb";
 import { loadInitSummerize } from "./handlers/loadInitSummerize";
 import { verifyEsBaseDataS3Urls } from "./handlers/verifyEsBaseDataS3";

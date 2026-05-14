@@ -1,7 +1,6 @@
 import { CONFIG } from "@/CONFIG";
-import { ensureIndexExists } from "@/utils/esClient";
-
 import { ES_INDEX_MAPPING_BODY } from "@/handlers/loadInitialDataToDb/consts/mapping";
+import { ensureIndexExists } from "@/utils/esClient";
 
 export type EnsureEsIndexResult = {
   indexName: string
