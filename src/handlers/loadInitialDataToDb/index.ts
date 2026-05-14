@@ -1,11 +1,12 @@
 import { estypes } from "@elastic/elasticsearch";
 
 import { CONFIG } from "@/CONFIG";
-import { FileItem } from "@/handlers/loadInitialDataToDb/types/data";
 import { ensureIndexExists, esClient } from "@/utils/esClient";
 import { logger } from "@/utils/logger";
 
-import { esBaseData } from "./consts/data";
+import { esBaseData } from "./consts";
+import { LoadInitialDataResult, FileItem } from "./types";
+import { ES_INDEX_MAPPING_BODY } from "./consts";
 
 const {
   ES_INDEX_NAME
@@ -13,37 +14,9 @@ const {
 
 const BULK_CHUNK_SIZE = 200;
 
-type LoadInitialDataResult = {
-  indexName: string
-  total: number
-  indexed: number
-  failed: number
-  errors: string[]
-};
 
-const ES_INDEX_MAPPING_BODY: Omit<estypes.IndicesCreateRequest, "index"> = {
-  mappings: {
-    properties: {
-      id: { type: "integer" },
-      fileName: {
-        type: "text",
-        fields: {
-          raw: { type: "keyword" }
-        }
-      },
-      url: { type: "keyword" },
-      type: { type: "keyword" },
-      category: { type: "keyword" },
-      subCategory: { type: "keyword" },
-      informationType: { type: "keyword" },
-      language: { type: "keyword" },
-      isPublish: { type: "boolean" },
-      status: { type: "keyword" },
-      createdAt: { type: "date" },
-      updatedAt: { type: "date" }
-    }
-  }
-};
+
+
 
 function chunkArray<T>(arr: T[], chunkSize: number): T[][] {
   const out: T[][] = [];

@@ -30,23 +30,24 @@ export const openApiDocument = {
           id: {
             type: "number"
           },
-          fileName: {
+          name: {
             type: "string"
           },
-          url: {
+          fileUrl: {
             type: "string"
           },
           type: {
             type: "string",
-            enum: ["pdf", "audio", "video"]
+            enum: ["docs", "images", "audio", "video"]
+          },
+          mediaType: {
+            type: "string",
+            enum: ["audio", "video", "leaflets", "studies", "guides", "reports", "plans"]
           },
           category: {
             type: "string"
           },
           subCategory: {
-            type: "string"
-          },
-          informationType: {
             type: "string"
           },
           language: {
