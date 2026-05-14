@@ -1,4 +1,5 @@
-import {Simplify} from "type-fest";
+import { Simplify } from "type-fest";
+
 export type FileMediaType = "docs" | "images" | "audio" | "video";
 
 type Status = "init" | "deleted" | "updated";
