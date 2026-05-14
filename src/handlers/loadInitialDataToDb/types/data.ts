@@ -4,19 +4,19 @@ type Status = "init" | "deleted" | "updated";
 type MediaType = "audio" | "video" | "leaflets" | "studies" | "guides" | "reports" | "plans";
 
 export type FileItem = {
-  id: number 
+  id: number
   type: FileMediaType
   status: Status
   isPublish: boolean
-  fileUrl: string 
-  name: string 
+  fileUrl: string
+  name: string
   mediaType: MediaType
-  category: string 
-  subCategory: string 
-  language: string 
+  category: string
+  subCategory: string
+  language: string
 };
 
-export type FileItemWithEsData = FileItem & {
+export type FileItemFinal = FileItem & {
   summary: string
   longSummary: string
   publishDate: string
