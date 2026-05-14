@@ -1,4 +1,4 @@
-import { CONFIG } from "@/CONFIG";
+import { getEsDocumentsIndexName } from "@/handlers/ensureEsIndex";
 import { esClient } from "@/utils/esClient";
 
 export type DeleteEsIndexResult = {
@@ -8,7 +8,7 @@ export type DeleteEsIndexResult = {
 };
 
 export async function deleteEsIndex(): Promise<DeleteEsIndexResult> {
-  const indexName = CONFIG.ES_INDEX_NAME.trim() || "earthquake-documents";
+  const indexName = getEsDocumentsIndexName();
 
   const existed = await esClient.indices.exists({
     index: indexName

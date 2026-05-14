@@ -6,6 +6,7 @@ import { serve, setup } from "swagger-ui-express";
 
 import { openApiDocument } from "./consts/swagger";
 import { deleteEsIndex } from "./handlers/deleteEsIndex";
+import { ensureEsDocumentsIndex } from "./handlers/ensureEsIndex";
 import {
   getAllDocumentIds,
   getAllDocuments,
@@ -97,6 +98,22 @@ app.get("/documents", testingEndpointAccessMiddleware, async(_: Request, res: Re
   catch(error: unknown) {
     logger.error({ err: error }, "documents: failed to get documents");
     const message = error instanceof Error ? error.message : "Unknown documents error";
+
+    res.status(500).json({ error: message });
+  }
+});
+
+app.put("/es/index", testingEndpointAccessMiddleware, async(_: Request, res: Response) => {
+  try {
+    const ensureResult = await ensureEsDocumentsIndex();
+
+    logger.info({ ensureResult }, "ensureEsIndex: completed");
+
+    res.json({ ensureResult });
+  }
+  catch(error: unknown) {
+    logger.error({ err: error }, "ensureEsIndex: failed");
+    const message = error instanceof Error ? error.message : "Unknown ensure index error";
 
     res.status(500).json({ error: message });
   }

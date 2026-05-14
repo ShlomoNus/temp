@@ -1,15 +1,11 @@
 import { estypes } from "@elastic/elasticsearch";
 
-import { CONFIG } from "@/CONFIG";
-import { ensureIndexExists, esClient } from "@/utils/esClient";
+import { ensureEsDocumentsIndex } from "@/handlers/ensureEsIndex";
+import { esClient } from "@/utils/esClient";
 import { logger } from "@/utils/logger";
 
-import { esBaseData, ES_INDEX_MAPPING_BODY } from "./consts";
+import { esBaseData } from "./consts";
 import { LoadInitialDataResult, FileItem } from "./types";
-
-const {
-  ES_INDEX_NAME
-} = CONFIG;
 
 const BULK_CHUNK_SIZE = 200;
 
@@ -46,16 +42,13 @@ function buildBulkOperations(
 }
 
 export async function loadInitialDataToDb(): Promise<LoadInitialDataResult> {
-  const indexName = ES_INDEX_NAME.trim() || "earthquake-documents";
-
   logger.info({
-    indexName,
     totalFiles: esBaseData.length,
     chunkSize: BULK_CHUNK_SIZE
   }, "loadInitialDataToDb: starting");
 
-  logger.info({ indexName }, "loadInitialDataToDb: ensuring index exists");
-  await ensureIndexExists(indexName, ES_INDEX_MAPPING_BODY);
+  logger.info("loadInitialDataToDb: ensuring index exists");
+  const { indexName } = await ensureEsDocumentsIndex();
   logger.info({ indexName }, "loadInitialDataToDb: index is ready");
 
   const nowIso = new Date().toISOString();
