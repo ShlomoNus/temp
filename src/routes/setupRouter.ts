@@ -2,12 +2,28 @@ import { Router, type Request, type Response } from "express";
 import { ZodError } from "zod";
 
 import { addDocument } from "@/handlers/addDocument";
+import { getAllDocuments } from "@/handlers/documents";
 import { loadInitialDataToDb } from "@/handlers/loadInitialDataToDb";
 import { loadInitSummerize } from "@/handlers/loadInitSummerize";
+import { DocumentNotFoundError, updateDocument } from "@/handlers/updateDocument";
 import { verifyEsBaseDataS3Urls } from "@/handlers/verifyEsBaseDataS3";
 import { logger } from "@/utils/logger";
 
 const setupRouter = Router();
+
+setupRouter.get("/getAll", async(_: Request, res: Response) => {
+  try {
+    const documents = await getAllDocuments();
+
+    res.json({ documents });
+  }
+  catch(error: unknown) {
+    logger.error({ err: error }, "getAll: failed to get documents");
+    const message = error instanceof Error ? error.message : "Unknown get all documents error";
+
+    res.status(500).json({ error: message });
+  }
+});
 
 setupRouter.post("/add", async(req: Request, res: Response) => {
   try {
@@ -32,6 +48,48 @@ setupRouter.post("/add", async(req: Request, res: Response) => {
 
     logger.error({ err: error }, "addDocument: failed");
     const msg = error instanceof Error ? error.message : "Unknown add document error";
+
+    res.status(500).json({ error: msg });
+  }
+});
+
+setupRouter.put("/update/:id", async(req: Request, res: Response) => {
+  try {
+    const documentId = req.params.id;
+
+    if (!documentId || Array.isArray(documentId)) {
+      res.status(400).json({ error: "Missing document id" });
+
+      return;
+    }
+
+    const { document } = await updateDocument(documentId, req.body);
+
+    res.json({ document });
+  }
+  catch(error: unknown) {
+    if (error instanceof ZodError) {
+      const firstIssue = error.issues[0];
+      const message = error.issues.length === 1 && firstIssue !== undefined
+        ? firstIssue.message
+        : "Request validation failed";
+
+      res.status(400).json({
+        error: message,
+        issues: error.issues
+      });
+
+      return;
+    }
+
+    if (error instanceof DocumentNotFoundError) {
+      res.status(404).json({ error: error.message });
+
+      return;
+    }
+
+    logger.error({ err: error }, "updateDocument: failed");
+    const msg = error instanceof Error ? error.message : "Unknown update document error";
 
     res.status(500).json({ error: msg });
   }
