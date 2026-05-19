@@ -1,7 +1,7 @@
 {
-  "name": "service-setup",
+  "name": "MOD.earthquake-reports-archive-etl",
   "version": "1.0.0",
-  "description": "",
+  "description": "Archive ETL for the earthquake reports",
   "main": "index.js",
   "type": "module",
   "scripts": {
