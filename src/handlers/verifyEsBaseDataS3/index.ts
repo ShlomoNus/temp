@@ -2,7 +2,7 @@ import { HeadObjectCommand, S3Client, type S3ClientConfig } from "@aws-sdk/clien
 
 import { CONFIG } from "@/CONFIG";
 import { esBaseData } from "@/handlers/loadInitialDataToDb/consts/data";
-import type { FileItem } from "@/handlers/loadInitialDataToDb/types/data";
+import type { FileItem } from "@/types/data";
 
 const S3_URL_PREFIX = "s3://";
 const HEAD_CONCURRENCY = 10;

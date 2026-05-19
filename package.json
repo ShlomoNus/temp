@@ -1,7 +1,7 @@
 {
-  "name": "service-setup",
+  "name": "MOD.earthquake-reports-archive-etl",
   "version": "1.0.0",
-  "description": "",
+  "description": "Archive ETL for the earthquake reports",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -17,7 +17,10 @@
     "build:dev": "tsx scripts/build.ts",
     "typecheck": "tsc --noEmit",
     "build:types": "tsc -p tsconfig.build.json",
-    "package:lambda": "tsx scripts/package-lambda.ts"
+    "package:lambda": "tsx scripts/package-lambda.ts",
+    "docker:start": "docker compose -f docker-compose.yml up -d",
+    "docker:stop": "docker compose -f docker-compose.yml down",
+    "docker:restart": "npm run docker:stop && npm run docker:start"
   },
   "keywords": [],
   "author": "",

@@ -108,52 +108,6 @@ export const testingSwaggerRoutes = {
       }
     }
   },
-  "/documents": {
-    get: {
-      summary: "Get all Elasticsearch documents",
-      responses: {
-        200: {
-          description: "Documents",
-          content: {
-            "application/json": {
-              schema: {
-                type: "object",
-                properties: {
-                  documents: {
-                    type: "array",
-                    items: {
-                      $ref: "#/components/schemas/EsDocument"
-                    }
-                  }
-                },
-                required: ["documents"]
-              }
-            }
-          }
-        },
-        403: {
-          description: "Endpoint is blocked outside testing environments",
-          content: {
-            "application/json": {
-              schema: {
-                $ref: "#/components/schemas/ErrorResponse"
-              }
-            }
-          }
-        },
-        500: {
-          description: "Failed to fetch documents",
-          content: {
-            "application/json": {
-              schema: {
-                $ref: "#/components/schemas/ErrorResponse"
-              }
-            }
-          }
-        }
-      }
-    }
-  },
   "/es/index": {
     put: {
       summary: "Create Elasticsearch index with mapping if missing (ES_INDEX_NAME)",

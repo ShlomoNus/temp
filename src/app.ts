@@ -1,7 +1,7 @@
 import { type IncomingMessage, type ServerResponse } from "http";
 
 import compression from "compression";
-import express from "express";
+import express, { json } from "express";
 import helmet from "helmet";
 import { pinoHttp } from "pino-http";
 
@@ -11,6 +11,8 @@ import { testingRouter } from "./routes/testingRouter";
 import { logger } from "./utils/logger";
 
 const app = express();
+
+app.use(json());
 
 app.use(helmet({
   contentSecurityPolicy: false

@@ -1,2 +1,3 @@
 export * from "./loadInitialDataResult";
-export * from "./data";
+
+export * from "@/types/data";

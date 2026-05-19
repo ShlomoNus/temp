@@ -17,6 +17,184 @@ export const swaggerRoutes = {
       }
     }
   },
+  "/getAll": {
+    get: {
+      summary: "Get all Elasticsearch documents",
+      responses: {
+        200: {
+          description: "Documents",
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                properties: {
+                  documents: {
+                    type: "array",
+                    items: {
+                      $ref: "#/components/schemas/EsDocument"
+                    }
+                  }
+                },
+                required: ["documents"]
+              }
+            }
+          }
+        },
+        500: {
+          description: "Failed to fetch documents",
+          content: {
+            "application/json": {
+              schema: {
+                $ref: "#/components/schemas/ErrorResponse"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "/add": {
+    post: {
+      summary: "Add Elasticsearch document (server-generated 5-digit id)",
+      requestBody: {
+        required: true,
+        content: {
+          "application/json": {
+            schema: {
+              $ref: "#/components/schemas/AddDocumentRequest"
+            }
+          }
+        }
+      },
+      responses: {
+        201: {
+          description: "Document indexed",
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                properties: {
+                  document: {
+                    $ref: "#/components/schemas/AddDocumentStored"
+                  }
+                },
+                required: ["document"]
+              }
+            }
+          }
+        },
+        400: {
+          description: "Validation failed (including publish rule: isPublish requires summary or longSummary)",
+          content: {
+            "application/json": {
+              schema: {
+                oneOf: [
+                  {
+                    $ref: "#/components/schemas/AddDocumentValidationError"
+                  },
+                  {
+                    $ref: "#/components/schemas/ErrorResponse"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        500: {
+          description: "Failed to index document",
+          content: {
+            "application/json": {
+              schema: {
+                $ref: "#/components/schemas/ErrorResponse"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "/update/{id}": {
+    put: {
+      summary: "Update Elasticsearch document by id (id cannot be changed)",
+      parameters: [
+        {
+          name: "id",
+          in: "path",
+          required: true,
+          schema: {
+            type: "string",
+            pattern: "^\\d{5}$"
+          },
+          description: "5-digit document id"
+        }
+      ],
+      requestBody: {
+        required: true,
+        content: {
+          "application/json": {
+            schema: {
+              $ref: "#/components/schemas/AddDocumentRequest"
+            }
+          }
+        }
+      },
+      responses: {
+        200: {
+          description: "Document updated",
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                properties: {
+                  document: {
+                    $ref: "#/components/schemas/AddDocumentStored"
+                  }
+                },
+                required: ["document"]
+              }
+            }
+          }
+        },
+        400: {
+          description: "Invalid id or request body validation failed",
+          content: {
+            "application/json": {
+              schema: {
+                oneOf: [
+                  {
+                    $ref: "#/components/schemas/AddDocumentValidationError"
+                  },
+                  {
+                    $ref: "#/components/schemas/ErrorResponse"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        404: {
+          description: "Document not found",
+          content: {
+            "application/json": {
+              schema: {
+                $ref: "#/components/schemas/ErrorResponse"
+              }
+            }
+          }
+        },
+        500: {
+          description: "Failed to update document",
+          content: {
+            "application/json": {
+              schema: {
+                $ref: "#/components/schemas/ErrorResponse"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   "/loadInitInfo": {
     get: {
       summary: "Load initial Elasticsearch data",

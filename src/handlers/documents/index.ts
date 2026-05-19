@@ -1,7 +1,7 @@
 import { estypes } from "@elastic/elasticsearch";
 
 import { CONFIG } from "@/CONFIG";
-import { FileItem } from "@/handlers/loadInitialDataToDb/types/data";
+import { FileItem } from "@/types/data";
 import { esClient } from "@/utils/esClient";
 
 const {

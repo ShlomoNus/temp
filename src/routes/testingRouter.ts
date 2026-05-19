@@ -5,7 +5,6 @@ import { openApiDocument } from "@/consts/swagger";
 import { deleteEsIndex } from "@/handlers/deleteEsIndex";
 import {
   getAllDocumentIds,
-  getAllDocuments,
   getDocumentById
 } from "@/handlers/documents";
 import { ensureEsDocumentsIndex } from "@/handlers/ensureEsIndex";
@@ -63,20 +62,6 @@ testingRouter.get("/documents/:id", async(req: Request, res: Response) => {
   catch(error: unknown) {
     logger.error({ err: error }, "documents: failed to get document by id");
     const message = error instanceof Error ? error.message : "Unknown document error";
-
-    res.status(500).json({ error: message });
-  }
-});
-
-testingRouter.get("/documents", async(_: Request, res: Response) => {
-  try {
-    const documents = await getAllDocuments();
-
-    res.json({ documents });
-  }
-  catch(error: unknown) {
-    logger.error({ err: error }, "documents: failed to get documents");
-    const message = error instanceof Error ? error.message : "Unknown documents error";
 
     res.status(500).json({ error: message });
   }
