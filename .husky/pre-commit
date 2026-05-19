@@ -1,13 +1,11 @@
-#!/bin/sh
-# Load shell env when run from IDE (Cursor/VS Code) so npm is on PATH
-command -v npm >/dev/null 2>&1 || {
-  [ -f "$HOME/.nvm/nvm.sh" ] && . "$HOME/.nvm/nvm.sh"
-  [ -f "$HOME/.zshrc" ] && . "$HOME/.zshrc" 2>/dev/null
-  [ -f "$HOME/.bashrc" ] && . "$HOME/.bashrc" 2>/dev/null
-}
+#!/usr/bin/env sh
 
-# Lint only staged files that ESLint can check
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
 STAGED=$(git diff --cached --name-only --diff-filter=ACMR | grep -E '\.(ts|tsx|js|jsx|mjs|cjs)$' || true)
+
 if [ -n "$STAGED" ]; then
   echo "$STAGED" | xargs npx eslint --fix
+  echo "$STAGED" | xargs git add
 fi
