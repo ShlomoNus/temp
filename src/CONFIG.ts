@@ -14,6 +14,7 @@ export const CONFIG = cleanEnv(process.env, {
   }),
   S3_PDF_BUCKET: str({ default: "s3://earthquake-reports" }),
   SUMMERIZE_LAMBDA_NAME: str({ default: "" }),
+  AI_LAMBDA_URL: str({ default: "" }),
   ES_ENDPOINT: str({ default: "" }),
   ES_INDEX_NAME: str({ default: "earthquake-documents" }),
   ES_API_KEY: str({ default: "" }),
