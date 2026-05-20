@@ -3,16 +3,13 @@ import { randomInt } from "node:crypto";
 import { errors } from "@elastic/elasticsearch";
 
 import { ensureEsDocumentsIndex, getEsDocumentsIndexName } from "@/handlers/ensureEsIndex";
-import type { FileItemFinal } from "@/types/data";
+import type { ArchiveDocument } from "@/types/data";
 import { esClient } from "@/utils/esClient";
 
 import { addDocumentBodySchema, type AddDocumentBodyInput } from "./schema";
 
 export type AddDocumentResult = {
-  document: FileItemFinal & {
-    createdAt: string
-    updatedAt: string
-  }
+  document: ArchiveDocument
 };
 
 const ID_ATTEMPTS = 40;

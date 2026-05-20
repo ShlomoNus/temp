@@ -1,11 +1,10 @@
-import { Simplify } from "type-fest";
-
 export type FileMediaType = "docs" | "images" | "audio" | "video";
 
 type Status = "init" | "deleted" | "updated";
-type MediaType = "audio" | "video" | "leaflets" | "studies" | "guides" | "reports" | "plans";
 
-export type FileItem = {
+export type MediaType = "audio" | "video" | "leaflets" | "studies" | "guides" | "reports" | "plans";
+
+export type ArchiveDocument = {
   id: number
   type: FileMediaType
   status: Status
@@ -16,12 +15,14 @@ export type FileItem = {
   category: string
   subCategory: string
   language: string
-};
-
-export type FileItemFinal = Simplify<FileItem & {
   summary: string
   longSummary: string
   publishDate: string
   size: string
   lastModified: Date
-}>;
+  createdAt: string
+  updatedAt: string
+};
+
+/** Catalog seed row (timestamps set when indexing). */
+export type ArchiveDocumentSeed = Omit<ArchiveDocument, "createdAt" | "updatedAt" | "lastModified">;

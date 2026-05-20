@@ -67,7 +67,7 @@ export const testingSwaggerRoutes = {
                 type: "object",
                 properties: {
                   document: {
-                    $ref: "#/components/schemas/EsDocument"
+                    $ref: "#/components/schemas/ArchiveDocument"
                   }
                 },
                 required: ["document"]

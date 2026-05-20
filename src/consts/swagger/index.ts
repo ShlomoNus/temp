@@ -24,7 +24,7 @@ export const openApiDocument = {
   },
   components: {
     schemas: {
-      EsDocument: {
+      ArchiveDocument: {
         type: "object",
         properties: {
           id: {
@@ -59,11 +59,29 @@ export const openApiDocument = {
           status: {
             type: "string"
           },
-          createdAt: {
+          summary: {
             type: "string"
           },
-          updatedAt: {
+          longSummary: {
             type: "string"
+          },
+          publishDate: {
+            type: "string"
+          },
+          size: {
+            type: "string"
+          },
+          lastModified: {
+            type: "string",
+            format: "date-time"
+          },
+          createdAt: {
+            type: "string",
+            format: "date-time"
+          },
+          updatedAt: {
+            type: "string",
+            format: "date-time"
           }
         }
       },
@@ -79,7 +97,7 @@ export const openApiDocument = {
       AddDocumentRequest: {
         type: "object",
         description:
-          "New document body (same shape as FileItemFinal without id). type and mediaType are required. Omitted or empty isPublish defaults to false, status to init, lastModified to request time. Server assigns a random 5-digit id.",
+          "New document body (same shape as ArchiveDocument without id). type and mediaType are required. Omitted or empty isPublish defaults to false, status to init, lastModified to request time. Server assigns a random 5-digit id.",
         additionalProperties: false,
         properties: {
           type: {

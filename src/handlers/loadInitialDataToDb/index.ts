@@ -1,11 +1,12 @@
 import { estypes } from "@elastic/elasticsearch";
 
 import { ensureEsDocumentsIndex } from "@/handlers/ensureEsIndex";
+import type { ArchiveDocument, ArchiveDocumentSeed } from "@/types/data";
 import { esClient } from "@/utils/esClient";
 import { logger } from "@/utils/logger";
 
 import { esBaseData } from "./consts";
-import { LoadInitialDataResult, FileItem } from "./types";
+import { LoadInitialDataResult } from "./types";
 
 const BULK_CHUNK_SIZE = 200;
 
@@ -23,7 +24,7 @@ function buildBulkOperations(
   { indexName, nowIso, chunk }: {
     indexName: string
     nowIso: string
-    chunk: FileItem[]
+    chunk: ArchiveDocumentSeed[]
   }
 ): estypes.BulkRequest["operations"] {
   return chunk.flatMap(item => [
@@ -35,9 +36,10 @@ function buildBulkOperations(
     },
     {
       ...item,
+      lastModified: new Date(nowIso),
       createdAt: nowIso,
       updatedAt: nowIso
-    }
+    } satisfies ArchiveDocument
   ]);
 }
 

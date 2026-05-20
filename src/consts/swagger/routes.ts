@@ -31,7 +31,7 @@ export const swaggerRoutes = {
                   documents: {
                     type: "array",
                     items: {
-                      $ref: "#/components/schemas/EsDocument"
+                      $ref: "#/components/schemas/ArchiveDocument"
                     }
                   }
                 },

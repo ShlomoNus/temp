@@ -3,14 +3,11 @@ import { z } from "zod";
 
 import { addDocumentBodySchema, type AddDocumentBodyInput } from "@/handlers/addDocument/schema";
 import { getEsDocumentsIndexName } from "@/handlers/ensureEsIndex";
-import type { FileItemFinal } from "@/types/data";
+import type { ArchiveDocument } from "@/types/data";
 import { esClient } from "@/utils/esClient";
 
 export type UpdateDocumentResult = {
-  document: FileItemFinal & {
-    createdAt: string
-    updatedAt: string
-  }
+  document: ArchiveDocument
 };
 
 export class DocumentNotFoundError extends Error {
@@ -23,11 +20,6 @@ export class DocumentNotFoundError extends Error {
 const documentIdParamSchema = z
   .string()
   .regex(/^\d{5}$/, "Document id must be a 5-digit number");
-
-type EsStoredDocument = FileItemFinal & {
-  createdAt?: string
-  updatedAt?: string
-};
 
 function buildStoredDocument(
   { body, id, createdAt, updatedAt }: {
@@ -65,10 +57,10 @@ export async function updateDocument(
   const indexName = getEsDocumentsIndexName();
   const documentId = parsedId.data;
 
-  let existing: EsStoredDocument;
+  let existing: ArchiveDocument;
 
   try {
-    const response = await esClient.get<EsStoredDocument>({
+    const response = await esClient.get<ArchiveDocument>({
       index: indexName,
       id: documentId
     });
